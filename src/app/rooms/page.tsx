@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "../Footer";
+
 const rooms = [
     {
         name: "Deluxe Room",
@@ -36,7 +38,7 @@ export default function RoomsPage() {
             <header className="border-b border-[#e5e0d5]">
                 <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
                     <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-90" aria-label="La Vivante Homestay">
-                        <span className="flex items-center overflow-hidden rounded-lg bg-[#303733] p-1.5 shadow-xs">
+                        <span className="flex items-center overflow-hidden rounded-lg p-1.5 shadow-xs">
                             <Image
                                 src="/images/lavivante-logo 1.png"
                                 alt="La Vivante Homestay"
@@ -46,16 +48,20 @@ export default function RoomsPage() {
                                 className="h-12 w-auto object-contain sm:h-14"
                             />
                         </span>
+                        <span className="block font-brand font-bold text-2xl ml-3 text-[#263c32]">La Vivante Homestay</span>
                     </Link>
                     <nav className="flex items-center gap-6 text-sm">
                         <Link href="/" className="hover:opacity-70">
                             Home
                         </Link>
-                        <Link href="/rooms" className="font-medium underline underline-offset-4">
+                        {/*<Link href="/rooms" className="font-medium underline underline-offset-4">
                             Rooms
+                        </Link>*/}
+                        <Link href="/#contact" className="hover:opacity-70">
+                            Contact
                         </Link>
                         <Link
-                            href="/#stay"
+                            href="/#booking"
                             className="rounded-full bg-[#294638] px-4 py-3 !text-white hover:bg-[#1e352a] sm:px-5"
                         >
                             Enquire now
@@ -105,7 +111,7 @@ export default function RoomsPage() {
                                 {room.occupancy}
                             </p>
                             <Link
-                                href="/#stay"
+                                href="/#booking"
                                 className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#294638] hover:gap-3"
                             >
                                 Enquire about a stay <span aria-hidden="true">→</span>
@@ -126,27 +132,14 @@ export default function RoomsPage() {
                     Share your dates and group size with us to enquire about your stay.
                 </p>
                 <Link
-                    href="/#stay"
+                    href="/#booking"
                     className="mt-8 inline-block rounded-full bg-[#f8f6f0] px-7 py-4 text-sm font-medium !text-[#294638] hover:bg-white"
                 >
                     Plan your stay
                 </Link>
             </section>
 
-            <footer className="flex flex-col items-center justify-center gap-4 px-6 py-7 text-center text-xs text-[#68746b]">
-                <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-85" aria-label="La Vivante Homestay">
-                    <span className="flex items-center overflow-hidden rounded-md bg-[#303733] p-1 shadow-xs">
-                        <Image
-                            src="/images/lavivante-logo 1.png"
-                            alt="La Vivante Homestay"
-                            width={44}
-                            height={42}
-                            className="h-10 w-auto object-contain"
-                        />
-                    </span>
-                </Link>
-                <span>© 2026 · MADE FOR FEELING AT HOME</span>
-            </footer>
+            <Footer currentPath="/rooms" />
         </main>
     );
 }

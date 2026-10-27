@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import BookingDateInputs from "./BookingDateInputs";
+import BookingSection from "./BookingSection";
+import ContactSection from "./ContactSection";
+import Footer from "./Footer";
+import LocationSection from "./LocationSection";
+import RoomEnquireButton from "./RoomEnquireButton";
 
 const rooms = [
   {
@@ -60,8 +64,10 @@ export default function Home() {
 
         <nav className="desktop-nav" aria-label="Main navigation">
           <a href="#stay">The stay</a>
+          <Link href="/rooms">Rooms</Link>
           <a href="#experience">Experience</a>
           <a href="#location">Location</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <Link className="header-cta" href="#booking">
@@ -86,49 +92,18 @@ export default function Home() {
             Thoughtful spaces, unhurried mornings and the comfort of feeling
             like you belong somewhere.
           </p>
-          <a className="hero-button" href="#stay">
+          <a className="hero-button" href="#booking">
             Find your kind of stay <span aria-hidden="true">↗</span>
           </a>
         </div>
 
         <div className="hero-caption">
           <span>YOUR OWN LITTLE CORNER OF COMFORT</span>
-          <span>01 — A PLACE TO BELONG</span>
+          <span>A PLACE TO BELONG</span>
         </div>
       </section>
 
-      <section className="booking-wrap" id="booking">
-        <form className="booking-panel" action="#stay">
-          <div className="booking-intro">
-            <span className="booking-icon">✳</span>
-            <div>
-              <strong>Make yourself at home</strong>
-              <p>Start planning your next stay.</p>
-            </div>
-          </div>
-
-          <BookingDateInputs />
-
-          <label className="booking-field guest-field">
-            <span>GUESTS</span>
-            <select name="guests" defaultValue="2">
-              <option value="1">1 guest</option>
-              <option value="2">2 guests</option>
-              <option value="3">3 guests</option>
-              <option value="4">4 guests</option>
-              <option value="5">5+ guests</option>
-            </select>
-          </label>
-
-          <button className="booking-button" type="submit">
-            Explore rooms <span aria-hidden="true">→</span>
-          </button>
-        </form>
-        <p className="booking-note">
-          Submitting dates is an enquiry only. Live room availability is not
-          confirmed online yet and will be verified by our team.
-        </p>
-      </section>
+      <BookingSection />
 
       <section className="intro-section" id="experience">
         <div className="intro-label">
@@ -152,9 +127,17 @@ export default function Home() {
           </a>
         </div>
         <div className="intro-stamp" aria-hidden="true">
-          <span>STAY AWHILE</span>
+          {/* <span>STAY AWHILE</span>
           <strong>H.</strong>
-          <span>FEEL AT HOME</span>
+          <span>FEEL AT HOME</span> */}
+          <Image
+            src="/images/lavivante-logo 1.png"
+            alt="La Vivante Homestay"
+            width={200}
+            height={196}
+            priority
+            className="h-36 w-auto object-contain sm:h-36"
+          />
         </div>
       </section>
 
@@ -188,16 +171,14 @@ export default function Home() {
                 <h3>{room.name}</h3>
                 <p>{room.detail}</p>
                 <span className="room-features">{room.features}</span>
-                <a href="#booking" className="room-link">
-                  Enquire about this room <span aria-hidden="true">↗</span>
-                </a>
+                <RoomEnquireButton roomName={room.name} />
               </div>
             </article>
           ))}
         </div>
         <p className="room-disclaimer">
           Room categories and imagery are illustrative for this first design
-          preview. Live room details and rates will come from your PMS.
+          preview. Live room details and rates will be shared after raising enquiry.
         </p>
       </section>
 
@@ -223,45 +204,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="location-section" id="location">
-        <div className="location-image" role="img" aria-label="Warm, welcoming interiors" />
-        <div className="location-copy">
-          <p className="eyebrow light-eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
-          <h2>A little closer to <em>where you want to be.</em></h2>
-          <p>
-            Whether you are here for work, a weekend away or time with your
-            favourite people, let your stay be the easy part of the journey.
-          </p>
-          <a className="location-button" href="#booking">
-            Ask about your stay <span aria-hidden="true">↗</span>
-          </a>
-          <span className="location-footnote">
-            Property address and directions will be added here.
-          </span>
-        </div>
-      </section>
+      <LocationSection />
 
-      <footer className="site-footer">
-        <Link href="/" className="footer-brand" aria-label="La Vivante Homestay">
-          <span className="flex items-center overflow-hidden rounded-lg p-1 shadow-xs transition-opacity hover:opacity-90">
-            <Image
-              src="/images/lavivante-logo 1.png"
-              alt="La Vivante Homestay"
-              width={44}
-              height={42}
-              className="h-10 w-auto object-contain"
-            />
-          </span>
-          <span className="block font-brand font-bold text-2xl">La Vivante Homestay</span>
-        </Link>
-        <p>A more personal kind of stay.</p>
-        <div className="footer-links">
-          <a href="#stay">Rooms</a>
-          <a href="#experience">Experience</a>
-          <a href="#booking">Enquiries</a>
-        </div>
-        <span className="copyright">© 2026 · MADE FOR FEELING AT HOME</span>
-      </footer>
+      <ContactSection />
+
+      <Footer currentPath="/" />
     </main>
   );
 }
