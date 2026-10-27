@@ -19,7 +19,7 @@ export default function Footer({ currentPath = "/" }: { currentPath?: string }) 
                 className="h-10 w-auto object-contain"
               />
             </span>
-            <span className="block font-brand font-bold text-2xl">La Vivante Homestay</span>
+            <span className="block font-brand font-bold text-base sm:text-xl md:text-2xl">La Vivante Homestay</span>
           </Link>
           <p className="footer-tagline">A place to pause, settle in and feel at home.</p>
         </div>

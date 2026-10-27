@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../Footer";
+import Header from "../Header";
 
 const rooms = [
     {
@@ -35,55 +36,22 @@ const rooms = [
 export default function RoomsPage() {
     return (
         <main className="min-h-screen bg-[#f8f6f0] text-[#263c32]">
-            <header className="border-b border-[#e5e0d5]">
-                <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-                    <Link href="/" className="inline-flex items-center transition-opacity hover:opacity-90" aria-label="La Vivante Homestay">
-                        <span className="flex items-center overflow-hidden rounded-lg p-1.5 shadow-xs">
-                            <Image
-                                src="/images/lavivante-logo 1.png"
-                                alt="La Vivante Homestay"
-                                width={60}
-                                height={58}
-                                priority
-                                className="h-12 w-auto object-contain sm:h-14"
-                            />
-                        </span>
-                        <span className="block font-brand font-bold text-2xl ml-3 text-[#263c32]">La Vivante Homestay</span>
-                    </Link>
-                    <nav className="flex items-center gap-6 text-sm">
-                        <Link href="/" className="hover:opacity-70">
-                            Home
-                        </Link>
-                        {/*<Link href="/rooms" className="font-medium underline underline-offset-4">
-                            Rooms
-                        </Link>*/}
-                        <Link href="/#contact" className="hover:opacity-70">
-                            Contact
-                        </Link>
-                        <Link
-                            href="/#booking"
-                            className="rounded-full bg-[#294638] px-4 py-3 !text-white hover:bg-[#1e352a] sm:px-5"
-                        >
-                            Enquire now
-                        </Link>
-                    </nav>
-                </div>
-            </header>
+            <Header currentPath="/rooms" />
 
-            <section className="mx-auto max-w-7xl px-6 pb-12 pt-16 md:pb-16 md:pt-24">
-                <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-[#9b8050]">
+            <section className="mx-auto max-w-7xl px-4 sm:px-6 pb-10 pt-12 md:pb-16 md:pt-20">
+                <p className="mb-3 text-[11px] font-semibold tracking-[0.25em] text-[#9b8050]">
                     FIND YOUR SPACE
                 </p>
-                <h1 className="max-w-3xl font-serif text-4xl leading-tight md:text-6xl">
+                <h1 className="max-w-3xl font-serif text-3xl leading-tight sm:text-4xl md:text-6xl">
                     Rooms made for slowing down.
                 </h1>
-                <p className="mt-6 max-w-2xl text-base leading-8 text-[#68746b] md:text-lg">
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-[#68746b] sm:text-base sm:leading-8 md:text-lg">
                     Whether you are travelling solo, with family or with friends,
                     discover the accommodation options available for your stay.
                 </p>
             </section>
 
-            <section className="mx-auto grid max-w-7xl gap-8 px-6 pb-20 md:grid-cols-2 lg:grid-cols-3">
+            <section className="mx-auto grid max-w-7xl gap-6 sm:gap-8 px-4 sm:px-6 pb-16 md:grid-cols-2 lg:grid-cols-3">
                 {rooms.map((room) => (
                     <article
                         key={room.name}
@@ -99,12 +67,12 @@ export default function RoomsPage() {
                             />
                         </div>
 
-                        <div className="p-6">
+                        <div className="p-5 sm:p-6">
                             <p className="text-[10px] font-semibold tracking-[0.2em] text-[#9b8050]">
                                 {room.category}
                             </p>
-                            <h2 className="mt-3 font-serif text-2xl">{room.name}</h2>
-                            <p className="mt-3 min-h-16 text-sm leading-7 text-[#68746b]">
+                            <h2 className="mt-2.5 font-serif text-xl sm:text-2xl">{room.name}</h2>
+                            <p className="mt-2.5 min-h-0 sm:min-h-16 text-xs sm:text-sm leading-6 sm:leading-7 text-[#68746b]">
                                 {room.description}
                             </p>
                             <p className="mt-4 border-t border-[#eee9df] pt-4 text-xs leading-6 text-[#68746b]">
@@ -112,7 +80,7 @@ export default function RoomsPage() {
                             </p>
                             <Link
                                 href="/#booking"
-                                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#294638] hover:gap-3"
+                                className="mt-4 inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#294638] hover:gap-3 min-h-[44px]"
                             >
                                 Enquire about a stay <span aria-hidden="true">→</span>
                             </Link>
@@ -121,19 +89,19 @@ export default function RoomsPage() {
                 ))}
             </section>
 
-            <section className="bg-[#294638] px-6 py-16 text-center text-white md:py-20">
-                <p className="text-xs tracking-[0.25em] text-[#d6c29a]">
+            <section className="bg-[#294638] px-4 sm:px-6 py-12 text-center text-white md:py-20">
+                <p className="text-[11px] tracking-[0.25em] text-[#d6c29a]">
                     YOUR NEXT STAY STARTS HERE
                 </p>
-                <h2 className="mx-auto mt-4 max-w-2xl font-serif text-3xl md:text-4xl">
+                <h2 className="mx-auto mt-3 max-w-2xl font-serif text-2xl sm:text-3xl md:text-4xl">
                     A little more comfort. A little more you.
                 </h2>
-                <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-white/75">
+                <p className="mx-auto mt-3 max-w-xl text-xs sm:text-sm leading-6 sm:leading-7 text-white/75">
                     Share your dates and group size with us to enquire about your stay.
                 </p>
                 <Link
                     href="/#booking"
-                    className="mt-8 inline-block rounded-full bg-[#f8f6f0] px-7 py-4 text-sm font-medium !text-[#294638] hover:bg-white"
+                    className="mt-6 inline-block rounded-full bg-[#f8f6f0] px-6 py-3.5 text-xs sm:text-sm font-medium !text-[#294638] hover:bg-white"
                 >
                     Plan your stay
                 </Link>

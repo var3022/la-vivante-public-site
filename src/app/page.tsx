@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import BookingSection from "./BookingSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer";
+import Header from "./Header";
 import LocationSection from "./LocationSection";
 import RoomEnquireButton from "./RoomEnquireButton";
 
@@ -47,33 +47,7 @@ export default function Home() {
         A place to pause, settle in and feel at home.
       </div>
 
-      <header className="site-header">
-        <Link href="/" className="brand" aria-label="La Vivante Homestay">
-          <span className="flex items-center overflow-hidden rounded-lg p-1.5 shadow-xs transition-opacity hover:opacity-90">
-            <Image
-              src="/images/lavivante-logo 1.png"
-              alt="La Vivante Homestay"
-              width={60}
-              height={58}
-              priority
-              className="h-12 w-auto object-contain sm:h-14"
-            />
-          </span>
-          <span className="block font-brand font-bold text-2xl">La Vivante Homestay</span>
-        </Link>
-
-        <nav className="desktop-nav" aria-label="Main navigation">
-          <a href="#stay">The stay</a>
-          <Link href="/rooms">Rooms</Link>
-          <a href="#experience">Experience</a>
-          <a href="#location">Location</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <Link className="header-cta" href="#booking">
-          Plan your stay <span aria-hidden="true">↗</span>
-        </Link>
-      </header>
+      <Header currentPath="/" />
 
       <section className="hero">
         <div className="hero-image" role="img" aria-label="An inviting, sunlit homestay bedroom" />
@@ -133,10 +107,10 @@ export default function Home() {
           <Image
             src="/images/lavivante-logo 1.png"
             alt="La Vivante Homestay"
-            width={200}
-            height={196}
+            width={100}
+            height={98}
             priority
-            className="h-36 w-auto object-contain sm:h-36"
+            className="h-20 w-auto object-contain"
           />
         </div>
       </section>

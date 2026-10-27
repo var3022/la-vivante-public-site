@@ -434,7 +434,7 @@ function EnquiryDialog({
                 className="btn-modal-whatsapp"
                 onClick={handleWhatsApp}
               >
-                <WhatsAppIcon className="w-5 h-5" />
+                <WhatsAppIcon className="w-5 h-5 flex-shrink-0" />
                 <span>Enquire via WhatsApp</span>
               </button>
 
@@ -443,7 +443,7 @@ function EnquiryDialog({
                 className="btn-modal-email"
                 onClick={handleEmail}
               >
-                <EmailIcon className="w-5 h-5" />
+                <EmailIcon className="w-5 h-5 flex-shrink-0" />
                 <span>Enquire via Email</span>
               </button>
             </div>

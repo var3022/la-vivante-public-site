@@ -55,7 +55,7 @@ export default function LocationSection() {
                   className="location-directions-btn"
                   aria-label="Get directions to La Vivante on Google Maps (opens in a new tab)"
                 >
-                  <DirectionsIcon className="w-4 h-4" />
+                  <DirectionsIcon className="w-4 h-4 flex-shrink-0" />
                   <span>Get Directions</span>
                   <span aria-hidden="true">↗</span>
                 </a>
@@ -66,9 +66,9 @@ export default function LocationSection() {
                 </Link>
               </div>
 
-              <p className="location-navigation-note">
+              {/*<p className="location-navigation-note">
                 <strong>Note:</strong> Tap &ldquo;Get Directions&rdquo; to open Google Maps for turn-by-turn navigation directly to our homestay coordinates ({COORDINATES}).
-              </p>
+              </p>*/}
             </div>
           </div>
 
@@ -86,7 +86,7 @@ export default function LocationSection() {
             </div>
             <div className="location-map-caption">
               <span>COIMBATORE, TAMIL NADU</span>
-              <span>10.991159, 76.988070</span>
+              {/*<span>10.991159, 76.988070</span>*/}
             </div>
           </div>
         </div>
