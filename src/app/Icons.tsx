@@ -187,3 +187,85 @@ export function MenuIcon({ className = "w-5 h-5", ariaHidden = true }: { classNa
   );
 }
 
+
+
+export function GlobeIcon({ className = "w-4 h-4", ariaHidden = true }: { className?: string; ariaHidden?: boolean }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden={ariaHidden}
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+      <path d="M2 12h20" />
+    </svg>
+  );
+}
+
+export function ArrowUpRightIcon({ className = "w-4 h-4", ariaHidden = true }: { className?: string; ariaHidden?: boolean }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden={ariaHidden}
+    >
+      <line x1="7" y1="17" x2="17" y2="7" />
+      <polyline points="7 7 17 7 17 17" />
+    </svg>
+  );
+}
+
+export function QrCodeIcon({ className = "w-4 h-4", ariaHidden = true }: { className?: string; ariaHidden?: boolean }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden={ariaHidden}
+    >
+      <rect width="6" height="6" x="3" y="3" rx="1" />
+      <rect width="6" height="6" x="15" y="3" rx="1" />
+      <rect width="6" height="6" x="3" y="15" rx="1" />
+      <path d="M15 15h2v2h-2z" />
+      <path d="M19 19h2v2h-2z" />
+      <path d="M15 19h2v2h-2z" />
+      <path d="M19 15h2v2h-2z" />
+    </svg>
+  );
+}
+
+export function ShareIcon({ className = "w-4 h-4", ariaHidden = true }: { className?: string; ariaHidden?: boolean }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden={ariaHidden}
+    >
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <line x1="8.59" x2="15.42" y1="13.51" y2="17.49" />
+      <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
+    </svg>
+  );
+}
