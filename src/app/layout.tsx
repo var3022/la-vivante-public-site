@@ -37,9 +37,13 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lavivantegroups.com"),
   title: "La Vivante Homestay | Coimbatore",
   description:
     "Discover La Vivante Homestay in Coimbatore, Tamil Nadu. Explore accommodation options and enquire about your stay.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({

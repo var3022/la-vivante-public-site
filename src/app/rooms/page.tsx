@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../Footer";
 import Header from "../Header";
+
+export const metadata: Metadata = {
+  title: "Rooms & Accommodation | La Vivante Homestay Coimbatore",
+  description:
+    "Explore comfortable room and suite accommodation options at La Vivante Homestay in Ramanathapuram, Coimbatore.",
+  alternates: {
+    canonical: "/rooms",
+  },
+};
 
 const rooms = [
     {
