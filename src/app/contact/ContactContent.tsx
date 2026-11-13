@@ -30,6 +30,7 @@ const LATITUDE = "10.991159";
 const LONGITUDE = "76.988070";
 const COORDINATES = `${LATITUDE},${LONGITUDE}`;
 const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${COORDINATES}`;
+const MAP_EMBED_URL = `https://maps.google.com/maps?q=${COORDINATES}&hl=en&z=17&t=&ie=UTF8&iwloc=&output=embed`;
 function ActionButton({
   href,
   title,
@@ -293,7 +294,7 @@ export default function ContactContent() {
 
             {/* 3. Find Us / Google Maps Button */}
             <ActionButton
-              href={DIRECTIONS_URL}
+              href={MAP_EMBED_URL}
               title="Find Us on Google Maps"
               subtitle="Ramanathapuram, Coimbatore · GPS Directions"
               icon={<MapPinIcon className="w-5 h-5 sm:w-6 sm:h-6" />}
