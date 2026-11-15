@@ -1,0 +1,5384 @@
+/**
+ * La Vivante Homestay — Master Property Images Manifest
+ * Canonical metadata for ALL 113 authentic production-ready homestay photographs.
+ * Auto-generated with EXIF orientation normalization, privacy stripping, and responsive sizing.
+ *
+ * All 113 original captures (56 HEIC, 56 JPG, 1 JPEG) are preserved and viewable.
+ */
+
+export interface PropertyImageVariants {
+  default: string;
+  hero: string;
+  card: string;
+  thumb: string;
+}
+
+export interface PropertyImageDimensions {
+  width: number;
+  height: number;
+}
+
+export interface PropertyImageItem {
+  id: string;
+  originalFilename: string;
+  roomNumber: string | null;
+  categoryProvisional: string | null;
+  area: string;
+  roomTag: string;
+  subject: string;
+  caption: string;
+  altText: string;
+  orientation: "landscape" | "portrait";
+  aspectRatio: string;
+  originalDimensions: PropertyImageDimensions;
+  originalSizeBytes: number;
+  originalSizeFormatted: string;
+  images: PropertyImageVariants;
+  variantDimensions: {
+    hero: PropertyImageDimensions;
+    card: PropertyImageDimensions;
+    thumb: PropertyImageDimensions;
+  };
+  variantSizes: {
+    hero: string;
+    card: string;
+    thumb: string;
+    default: string;
+  };
+  totalConvertedBytes: number;
+  totalConvertedFormatted: string;
+}
+
+export const PROPERTY_IMAGES: PropertyImageItem[] = [
+  {
+    "id": "2ndfloorhallway-1--heic",
+    "originalFilename": "2ndFloorHallway(1).heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Corridor",
+    "subject": "Clean guest corridor and room access",
+    "caption": "Guest Room Hallway",
+    "altText": "Clean and well-lit guest room access corridor at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2252,
+      "height": 4000
+    },
+    "originalSizeBytes": 12340452,
+    "originalSizeFormatted": "11.77 MB",
+    "images": {
+      "default": "/images/property/common-areas/2ndfloorhallway-1--heic.webp",
+      "hero": "/images/property/common-areas/2ndfloorhallway-1--heic-hero.webp",
+      "card": "/images/property/common-areas/2ndfloorhallway-1--heic-card.webp",
+      "thumb": "/images/property/common-areas/2ndfloorhallway-1--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1081,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "155.5 KB",
+      "card": "37.8 KB",
+      "thumb": "7.7 KB",
+      "default": "37.8 KB"
+    },
+    "totalConvertedBytes": 244534,
+    "totalConvertedFormatted": "238.8 KB"
+  },
+  {
+    "id": "2ndfloorhallway-2--heic",
+    "originalFilename": "2ndFloorHallway(2).heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Corridor",
+    "subject": "Clean guest corridor and room access",
+    "caption": "Guest Room Hallway",
+    "altText": "Clean and well-lit guest room access corridor at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2252,
+      "height": 4000
+    },
+    "originalSizeBytes": 13435720,
+    "originalSizeFormatted": "12.81 MB",
+    "images": {
+      "default": "/images/property/common-areas/2ndfloorhallway-2--heic.webp",
+      "hero": "/images/property/common-areas/2ndfloorhallway-2--heic-hero.webp",
+      "card": "/images/property/common-areas/2ndfloorhallway-2--heic-card.webp",
+      "thumb": "/images/property/common-areas/2ndfloorhallway-2--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1081,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "184.5 KB",
+      "card": "40.1 KB",
+      "thumb": "7.4 KB",
+      "default": "40.1 KB"
+    },
+    "totalConvertedBytes": 278502,
+    "totalConvertedFormatted": "272.0 KB"
+  },
+  {
+    "id": "2ndfloorhallway-3--heic",
+    "originalFilename": "2ndFloorHallway(3).heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Corridor",
+    "subject": "Clean guest corridor and room access",
+    "caption": "Guest Room Hallway",
+    "altText": "Clean and well-lit guest room access corridor at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 12644753,
+    "originalSizeFormatted": "12.06 MB",
+    "images": {
+      "default": "/images/property/common-areas/2ndfloorhallway-3--heic.webp",
+      "hero": "/images/property/common-areas/2ndfloorhallway-3--heic-hero.webp",
+      "card": "/images/property/common-areas/2ndfloorhallway-3--heic-card.webp",
+      "thumb": "/images/property/common-areas/2ndfloorhallway-3--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "125.5 KB",
+      "card": "30.4 KB",
+      "thumb": "6.0 KB",
+      "default": "30.4 KB"
+    },
+    "totalConvertedBytes": 197010,
+    "totalConvertedFormatted": "192.4 KB"
+  },
+  {
+    "id": "backyard-jpg",
+    "originalFilename": "Backyard.jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Garden",
+    "subject": "Peaceful backyard",
+    "caption": "Backyard",
+    "altText": "Peaceful backyard at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 5081850,
+    "originalSizeFormatted": "4.85 MB",
+    "images": {
+      "default": "/images/property/common-areas/backyard-jpg.webp",
+      "hero": "/images/property/common-areas/backyard-jpg-hero.webp",
+      "card": "/images/property/common-areas/backyard-jpg-card.webp",
+      "thumb": "/images/property/common-areas/backyard-jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "560.0 KB",
+      "card": "107.9 KB",
+      "thumb": "14.2 KB",
+      "default": "107.9 KB"
+    },
+    "totalConvertedBytes": 808898,
+    "totalConvertedFormatted": "789.9 KB"
+  },
+  {
+    "id": "commanbalcony-1--jpg",
+    "originalFilename": "CommanBalcony(1).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Balcony",
+    "subject": "Shared outdoor balcony terrace with open-air views",
+    "caption": "Common Balcony",
+    "altText": "Shared outdoor balcony terrace with neighborhood greenery at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 2030739,
+    "originalSizeFormatted": "1.94 MB",
+    "images": {
+      "default": "/images/property/common-areas/commanbalcony-1--jpg.webp",
+      "hero": "/images/property/common-areas/commanbalcony-1--jpg-hero.webp",
+      "card": "/images/property/common-areas/commanbalcony-1--jpg-card.webp",
+      "thumb": "/images/property/common-areas/commanbalcony-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "132.0 KB",
+      "card": "41.1 KB",
+      "thumb": "7.7 KB",
+      "default": "41.1 KB"
+    },
+    "totalConvertedBytes": 227380,
+    "totalConvertedFormatted": "222.1 KB"
+  },
+  {
+    "id": "commanbalcony-2--jpg",
+    "originalFilename": "CommanBalcony(2).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Balcony",
+    "subject": "Shared outdoor balcony terrace with open-air views",
+    "caption": "Common Balcony",
+    "altText": "Shared outdoor balcony terrace with neighborhood greenery at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 2023192,
+    "originalSizeFormatted": "1.93 MB",
+    "images": {
+      "default": "/images/property/common-areas/commanbalcony-2--jpg.webp",
+      "hero": "/images/property/common-areas/commanbalcony-2--jpg-hero.webp",
+      "card": "/images/property/common-areas/commanbalcony-2--jpg-card.webp",
+      "thumb": "/images/property/common-areas/commanbalcony-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "150.5 KB",
+      "card": "45.8 KB",
+      "thumb": "7.8 KB",
+      "default": "45.8 KB"
+    },
+    "totalConvertedBytes": 255992,
+    "totalConvertedFormatted": "250.0 KB"
+  },
+  {
+    "id": "commanbalcony-3--jpg",
+    "originalFilename": "CommanBalcony(3).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Balcony",
+    "subject": "Shared outdoor balcony terrace with open-air views",
+    "caption": "Common Balcony",
+    "altText": "Shared outdoor balcony terrace with neighborhood greenery at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 2609156,
+    "originalSizeFormatted": "2.49 MB",
+    "images": {
+      "default": "/images/property/common-areas/commanbalcony-3--jpg.webp",
+      "hero": "/images/property/common-areas/commanbalcony-3--jpg-hero.webp",
+      "card": "/images/property/common-areas/commanbalcony-3--jpg-card.webp",
+      "thumb": "/images/property/common-areas/commanbalcony-3--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "248.8 KB",
+      "card": "70.7 KB",
+      "thumb": "11.2 KB",
+      "default": "70.7 KB"
+    },
+    "totalConvertedBytes": 411170,
+    "totalConvertedFormatted": "401.5 KB"
+  },
+  {
+    "id": "deluxeroom102-1--heic",
+    "originalFilename": "DeluxeRoom102(1).heic",
+    "roomNumber": "Room 102",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 102",
+    "roomTag": "Room 102",
+    "subject": "Deluxe King bedroom with natural light",
+    "caption": "Room 102 · Deluxe Bedroom",
+    "altText": "Deluxe Room 102 spacious bedroom with King bed at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2252,
+      "height": 4000
+    },
+    "originalSizeBytes": 13855070,
+    "originalSizeFormatted": "13.21 MB",
+    "images": {
+      "default": "/images/property/rooms/room-102/deluxeroom102-1--heic.webp",
+      "hero": "/images/property/rooms/room-102/deluxeroom102-1--heic-hero.webp",
+      "card": "/images/property/rooms/room-102/deluxeroom102-1--heic-card.webp",
+      "thumb": "/images/property/rooms/room-102/deluxeroom102-1--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1081,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "209.1 KB",
+      "card": "49.2 KB",
+      "thumb": "7.7 KB",
+      "default": "49.2 KB"
+    },
+    "totalConvertedBytes": 322938,
+    "totalConvertedFormatted": "315.4 KB"
+  },
+  {
+    "id": "deluxeroom102-2--heic",
+    "originalFilename": "DeluxeRoom102(2).heic",
+    "roomNumber": "Room 102",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 102",
+    "roomTag": "Room 102",
+    "subject": "Deluxe King bedroom with natural light",
+    "caption": "Room 102 · Deluxe Bedroom",
+    "altText": "Deluxe Room 102 spacious bedroom with King bed at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 12430789,
+    "originalSizeFormatted": "11.85 MB",
+    "images": {
+      "default": "/images/property/rooms/room-102/deluxeroom102-2--heic.webp",
+      "hero": "/images/property/rooms/room-102/deluxeroom102-2--heic-hero.webp",
+      "card": "/images/property/rooms/room-102/deluxeroom102-2--heic-card.webp",
+      "thumb": "/images/property/rooms/room-102/deluxeroom102-2--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "128.8 KB",
+      "card": "35.3 KB",
+      "thumb": "7.4 KB",
+      "default": "35.3 KB"
+    },
+    "totalConvertedBytes": 211720,
+    "totalConvertedFormatted": "206.8 KB"
+  },
+  {
+    "id": "deluxeroom102-3--heic",
+    "originalFilename": "DeluxeRoom102(3).heic",
+    "roomNumber": "Room 102",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 102",
+    "roomTag": "Room 102",
+    "subject": "Deluxe King bedroom with natural light",
+    "caption": "Room 102 · Deluxe Bedroom",
+    "altText": "Deluxe Room 102 spacious bedroom with King bed at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 14515063,
+    "originalSizeFormatted": "13.84 MB",
+    "images": {
+      "default": "/images/property/rooms/room-102/deluxeroom102-3--heic.webp",
+      "hero": "/images/property/rooms/room-102/deluxeroom102-3--heic-hero.webp",
+      "card": "/images/property/rooms/room-102/deluxeroom102-3--heic-card.webp",
+      "thumb": "/images/property/rooms/room-102/deluxeroom102-3--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "196.4 KB",
+      "card": "39.7 KB",
+      "thumb": "7.4 KB",
+      "default": "39.7 KB"
+    },
+    "totalConvertedBytes": 290030,
+    "totalConvertedFormatted": "283.2 KB"
+  },
+  {
+    "id": "deluxeroom102-4--heic",
+    "originalFilename": "DeluxeRoom102(4).heic",
+    "roomNumber": "Room 102",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 102",
+    "roomTag": "Room 102",
+    "subject": "Deluxe King bedroom with natural light",
+    "caption": "Room 102 · Deluxe Bedroom",
+    "altText": "Deluxe Room 102 spacious bedroom with King bed at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 14957687,
+    "originalSizeFormatted": "14.26 MB",
+    "images": {
+      "default": "/images/property/rooms/room-102/deluxeroom102-4--heic.webp",
+      "hero": "/images/property/rooms/room-102/deluxeroom102-4--heic-hero.webp",
+      "card": "/images/property/rooms/room-102/deluxeroom102-4--heic-card.webp",
+      "thumb": "/images/property/rooms/room-102/deluxeroom102-4--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "202.0 KB",
+      "card": "33.1 KB",
+      "thumb": "6.0 KB",
+      "default": "33.1 KB"
+    },
+    "totalConvertedBytes": 280796,
+    "totalConvertedFormatted": "274.2 KB"
+  },
+  {
+    "id": "deluxeroom102-5--heic",
+    "originalFilename": "DeluxeRoom102(5).heic",
+    "roomNumber": "Room 102",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 102",
+    "roomTag": "Room 102",
+    "subject": "Deluxe King bedroom with natural light",
+    "caption": "Room 102 · Deluxe Bedroom",
+    "altText": "Deluxe Room 102 spacious bedroom with King bed at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13712650,
+    "originalSizeFormatted": "13.08 MB",
+    "images": {
+      "default": "/images/property/rooms/room-102/deluxeroom102-5--heic.webp",
+      "hero": "/images/property/rooms/room-102/deluxeroom102-5--heic-hero.webp",
+      "card": "/images/property/rooms/room-102/deluxeroom102-5--heic-card.webp",
+      "thumb": "/images/property/rooms/room-102/deluxeroom102-5--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "134.5 KB",
+      "card": "30.2 KB",
+      "thumb": "6.1 KB",
+      "default": "30.2 KB"
+    },
+    "totalConvertedBytes": 205882,
+    "totalConvertedFormatted": "201.1 KB"
+  },
+  {
+    "id": "deluxeroom201-1--heic",
+    "originalFilename": "DeluxeRoom201(1).heic",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Upper floor deluxe bedroom",
+    "caption": "Room 201 · Deluxe Bedroom",
+    "altText": "Deluxe Room 201 spacious bedroom interior at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 14169948,
+    "originalSizeFormatted": "13.51 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/deluxeroom201-1--heic.webp",
+      "hero": "/images/property/rooms/room-201/deluxeroom201-1--heic-hero.webp",
+      "card": "/images/property/rooms/room-201/deluxeroom201-1--heic-card.webp",
+      "thumb": "/images/property/rooms/room-201/deluxeroom201-1--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "237.8 KB",
+      "card": "47.3 KB",
+      "thumb": "8.3 KB",
+      "default": "47.3 KB"
+    },
+    "totalConvertedBytes": 348786,
+    "totalConvertedFormatted": "340.6 KB"
+  },
+  {
+    "id": "deluxeroom201-1--jpg",
+    "originalFilename": "DeluxeRoom201(1).jpg",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Upper floor deluxe bedroom",
+    "caption": "Room 201 · Deluxe Bedroom",
+    "altText": "Deluxe Room 201 spacious bedroom interior at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 2915379,
+    "originalSizeFormatted": "2.78 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/deluxeroom201-1--jpg.webp",
+      "hero": "/images/property/rooms/room-201/deluxeroom201-1--jpg-hero.webp",
+      "card": "/images/property/rooms/room-201/deluxeroom201-1--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-201/deluxeroom201-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "301.6 KB",
+      "card": "86.1 KB",
+      "thumb": "13.9 KB",
+      "default": "86.1 KB"
+    },
+    "totalConvertedBytes": 499350,
+    "totalConvertedFormatted": "487.6 KB"
+  },
+  {
+    "id": "deluxeroom201-2--heic",
+    "originalFilename": "DeluxeRoom201(2).heic",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Upper floor deluxe bedroom",
+    "caption": "Room 201 · Deluxe Bedroom",
+    "altText": "Deluxe Room 201 spacious bedroom interior at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 14248788,
+    "originalSizeFormatted": "13.59 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/deluxeroom201-2--heic.webp",
+      "hero": "/images/property/rooms/room-201/deluxeroom201-2--heic-hero.webp",
+      "card": "/images/property/rooms/room-201/deluxeroom201-2--heic-card.webp",
+      "thumb": "/images/property/rooms/room-201/deluxeroom201-2--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "243.8 KB",
+      "card": "48.1 KB",
+      "thumb": "8.5 KB",
+      "default": "48.1 KB"
+    },
+    "totalConvertedBytes": 356864,
+    "totalConvertedFormatted": "348.5 KB"
+  },
+  {
+    "id": "deluxeroom201-2--jpg",
+    "originalFilename": "DeluxeRoom201(2).jpg",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Upper floor deluxe bedroom",
+    "caption": "Room 201 · Deluxe Bedroom",
+    "altText": "Deluxe Room 201 spacious bedroom interior at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 2921534,
+    "originalSizeFormatted": "2.79 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/deluxeroom201-2--jpg.webp",
+      "hero": "/images/property/rooms/room-201/deluxeroom201-2--jpg-hero.webp",
+      "card": "/images/property/rooms/room-201/deluxeroom201-2--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-201/deluxeroom201-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "303.9 KB",
+      "card": "88.6 KB",
+      "thumb": "14.8 KB",
+      "default": "88.6 KB"
+    },
+    "totalConvertedBytes": 507734,
+    "totalConvertedFormatted": "495.8 KB"
+  },
+  {
+    "id": "deluxeroom201-3--heic",
+    "originalFilename": "DeluxeRoom201(3).heic",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Upper floor deluxe bedroom",
+    "caption": "Room 201 · Deluxe Bedroom",
+    "altText": "Deluxe Room 201 spacious bedroom interior at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 8566081,
+    "originalSizeFormatted": "8.17 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/deluxeroom201-3--heic.webp",
+      "hero": "/images/property/rooms/room-201/deluxeroom201-3--heic-hero.webp",
+      "card": "/images/property/rooms/room-201/deluxeroom201-3--heic-card.webp",
+      "thumb": "/images/property/rooms/room-201/deluxeroom201-3--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "53.6 KB",
+      "card": "15.8 KB",
+      "thumb": "3.0 KB",
+      "default": "15.8 KB"
+    },
+    "totalConvertedBytes": 90180,
+    "totalConvertedFormatted": "88.1 KB"
+  },
+  {
+    "id": "deluxeroom201-4--heic",
+    "originalFilename": "DeluxeRoom201(4).heic",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Upper floor deluxe bedroom",
+    "caption": "Room 201 · Deluxe Bedroom",
+    "altText": "Deluxe Room 201 spacious bedroom interior at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13120080,
+    "originalSizeFormatted": "12.51 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/deluxeroom201-4--heic.webp",
+      "hero": "/images/property/rooms/room-201/deluxeroom201-4--heic-hero.webp",
+      "card": "/images/property/rooms/room-201/deluxeroom201-4--heic-card.webp",
+      "thumb": "/images/property/rooms/room-201/deluxeroom201-4--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "146.7 KB",
+      "card": "33.8 KB",
+      "thumb": "6.0 KB",
+      "default": "33.8 KB"
+    },
+    "totalConvertedBytes": 225554,
+    "totalConvertedFormatted": "220.3 KB"
+  },
+  {
+    "id": "deluxeroom201-5--heic",
+    "originalFilename": "DeluxeRoom201(5).heic",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Upper floor deluxe bedroom",
+    "caption": "Room 201 · Deluxe Bedroom",
+    "altText": "Deluxe Room 201 spacious bedroom interior at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 14261678,
+    "originalSizeFormatted": "13.60 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/deluxeroom201-5--heic.webp",
+      "hero": "/images/property/rooms/room-201/deluxeroom201-5--heic-hero.webp",
+      "card": "/images/property/rooms/room-201/deluxeroom201-5--heic-card.webp",
+      "thumb": "/images/property/rooms/room-201/deluxeroom201-5--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "201.9 KB",
+      "card": "43.0 KB",
+      "thumb": "7.7 KB",
+      "default": "43.0 KB"
+    },
+    "totalConvertedBytes": 302724,
+    "totalConvertedFormatted": "295.6 KB"
+  },
+  {
+    "id": "deluxeroom201-6--heic",
+    "originalFilename": "DeluxeRoom201(6).heic",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Upper floor deluxe bedroom",
+    "caption": "Room 201 · Deluxe Bedroom",
+    "altText": "Deluxe Room 201 spacious bedroom interior at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 15092152,
+    "originalSizeFormatted": "14.39 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/deluxeroom201-6--heic.webp",
+      "hero": "/images/property/rooms/room-201/deluxeroom201-6--heic-hero.webp",
+      "card": "/images/property/rooms/room-201/deluxeroom201-6--heic-card.webp",
+      "thumb": "/images/property/rooms/room-201/deluxeroom201-6--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "270.9 KB",
+      "card": "55.8 KB",
+      "thumb": "9.3 KB",
+      "default": "55.8 KB"
+    },
+    "totalConvertedBytes": 401194,
+    "totalConvertedFormatted": "391.8 KB"
+  },
+  {
+    "id": "deluxeroom201-7--heic",
+    "originalFilename": "DeluxeRoom201(7).heic",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Upper floor deluxe bedroom",
+    "caption": "Room 201 · Deluxe Bedroom",
+    "altText": "Deluxe Room 201 spacious bedroom interior at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13783755,
+    "originalSizeFormatted": "13.15 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/deluxeroom201-7--heic.webp",
+      "hero": "/images/property/rooms/room-201/deluxeroom201-7--heic-hero.webp",
+      "card": "/images/property/rooms/room-201/deluxeroom201-7--heic-card.webp",
+      "thumb": "/images/property/rooms/room-201/deluxeroom201-7--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "197.8 KB",
+      "card": "42.5 KB",
+      "thumb": "8.1 KB",
+      "default": "42.5 KB"
+    },
+    "totalConvertedBytes": 297870,
+    "totalConvertedFormatted": "290.9 KB"
+  },
+  {
+    "id": "deluxeroom201-8--heic",
+    "originalFilename": "DeluxeRoom201(8).heic",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Upper floor deluxe bedroom",
+    "caption": "Room 201 · Deluxe Bedroom",
+    "altText": "Deluxe Room 201 spacious bedroom interior at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2252,
+      "height": 4000
+    },
+    "originalSizeBytes": 15550026,
+    "originalSizeFormatted": "14.83 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/deluxeroom201-8--heic.webp",
+      "hero": "/images/property/rooms/room-201/deluxeroom201-8--heic-hero.webp",
+      "card": "/images/property/rooms/room-201/deluxeroom201-8--heic-card.webp",
+      "thumb": "/images/property/rooms/room-201/deluxeroom201-8--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1081,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "306.4 KB",
+      "card": "65.4 KB",
+      "thumb": "10.2 KB",
+      "default": "65.4 KB"
+    },
+    "totalConvertedBytes": 458200,
+    "totalConvertedFormatted": "447.5 KB"
+  },
+  {
+    "id": "deluxeroom202-1--heic",
+    "originalFilename": "DeluxeRoom202(1).heic",
+    "roomNumber": "Room 202",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 202",
+    "roomTag": "Room 202",
+    "subject": "Deluxe bedroom and comfortable bed setup",
+    "caption": "Room 202 · Deluxe Bedroom",
+    "altText": "Deluxe Room 202 comfortable bedroom setup at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13973788,
+    "originalSizeFormatted": "13.33 MB",
+    "images": {
+      "default": "/images/property/rooms/room-202/deluxeroom202-1--heic.webp",
+      "hero": "/images/property/rooms/room-202/deluxeroom202-1--heic-hero.webp",
+      "card": "/images/property/rooms/room-202/deluxeroom202-1--heic-card.webp",
+      "thumb": "/images/property/rooms/room-202/deluxeroom202-1--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "217.1 KB",
+      "card": "53.6 KB",
+      "thumb": "10.2 KB",
+      "default": "53.6 KB"
+    },
+    "totalConvertedBytes": 342406,
+    "totalConvertedFormatted": "334.4 KB"
+  },
+  {
+    "id": "deluxeroom202-2--heic",
+    "originalFilename": "DeluxeRoom202(2).heic",
+    "roomNumber": "Room 202",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 202",
+    "roomTag": "Room 202",
+    "subject": "Deluxe bedroom and comfortable bed setup",
+    "caption": "Room 202 · Deluxe Bedroom",
+    "altText": "Deluxe Room 202 comfortable bedroom setup at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13442593,
+    "originalSizeFormatted": "12.82 MB",
+    "images": {
+      "default": "/images/property/rooms/room-202/deluxeroom202-2--heic.webp",
+      "hero": "/images/property/rooms/room-202/deluxeroom202-2--heic-hero.webp",
+      "card": "/images/property/rooms/room-202/deluxeroom202-2--heic-card.webp",
+      "thumb": "/images/property/rooms/room-202/deluxeroom202-2--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "215.9 KB",
+      "card": "54.0 KB",
+      "thumb": "10.3 KB",
+      "default": "54.0 KB"
+    },
+    "totalConvertedBytes": 342192,
+    "totalConvertedFormatted": "334.2 KB"
+  },
+  {
+    "id": "deluxeroom202-3--heic",
+    "originalFilename": "DeluxeRoom202(3).heic",
+    "roomNumber": "Room 202",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 202",
+    "roomTag": "Room 202",
+    "subject": "Deluxe bedroom and comfortable bed setup",
+    "caption": "Room 202 · Deluxe Bedroom",
+    "altText": "Deluxe Room 202 comfortable bedroom setup at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2252,
+      "height": 4000
+    },
+    "originalSizeBytes": 11959729,
+    "originalSizeFormatted": "11.41 MB",
+    "images": {
+      "default": "/images/property/rooms/room-202/deluxeroom202-3--heic.webp",
+      "hero": "/images/property/rooms/room-202/deluxeroom202-3--heic-hero.webp",
+      "card": "/images/property/rooms/room-202/deluxeroom202-3--heic-card.webp",
+      "thumb": "/images/property/rooms/room-202/deluxeroom202-3--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1081,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "76.6 KB",
+      "card": "21.4 KB",
+      "thumb": "4.3 KB",
+      "default": "21.4 KB"
+    },
+    "totalConvertedBytes": 126630,
+    "totalConvertedFormatted": "123.7 KB"
+  },
+  {
+    "id": "deluxeroom202-4--heic",
+    "originalFilename": "DeluxeRoom202(4).heic",
+    "roomNumber": "Room 202",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 202",
+    "roomTag": "Room 202",
+    "subject": "Deluxe bedroom and comfortable bed setup",
+    "caption": "Room 202 · Deluxe Bedroom",
+    "altText": "Deluxe Room 202 comfortable bedroom setup at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13645046,
+    "originalSizeFormatted": "13.01 MB",
+    "images": {
+      "default": "/images/property/rooms/room-202/deluxeroom202-4--heic.webp",
+      "hero": "/images/property/rooms/room-202/deluxeroom202-4--heic-hero.webp",
+      "card": "/images/property/rooms/room-202/deluxeroom202-4--heic-card.webp",
+      "thumb": "/images/property/rooms/room-202/deluxeroom202-4--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "220.6 KB",
+      "card": "53.6 KB",
+      "thumb": "10.4 KB",
+      "default": "53.6 KB"
+    },
+    "totalConvertedBytes": 346338,
+    "totalConvertedFormatted": "338.2 KB"
+  },
+  {
+    "id": "deluxeroom202-5--heic",
+    "originalFilename": "DeluxeRoom202(5).heic",
+    "roomNumber": "Room 202",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 202",
+    "roomTag": "Room 202",
+    "subject": "Deluxe bedroom and comfortable bed setup",
+    "caption": "Room 202 · Deluxe Bedroom",
+    "altText": "Deluxe Room 202 comfortable bedroom setup at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13971887,
+    "originalSizeFormatted": "13.32 MB",
+    "images": {
+      "default": "/images/property/rooms/room-202/deluxeroom202-5--heic.webp",
+      "hero": "/images/property/rooms/room-202/deluxeroom202-5--heic-hero.webp",
+      "card": "/images/property/rooms/room-202/deluxeroom202-5--heic-card.webp",
+      "thumb": "/images/property/rooms/room-202/deluxeroom202-5--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "203.4 KB",
+      "card": "50.4 KB",
+      "thumb": "9.9 KB",
+      "default": "50.4 KB"
+    },
+    "totalConvertedBytes": 321692,
+    "totalConvertedFormatted": "314.2 KB"
+  },
+  {
+    "id": "entrance-heic",
+    "originalFilename": "Entrance.heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Exterior",
+    "roomTag": "Entrance",
+    "subject": "Gated property entrance and welcoming stairway",
+    "caption": "Property Entrance & Gate",
+    "altText": "Secure entrance gate and entryway at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2252,
+      "height": 4000
+    },
+    "originalSizeBytes": 15037390,
+    "originalSizeFormatted": "14.34 MB",
+    "images": {
+      "default": "/images/property/common-areas/entrance-heic.webp",
+      "hero": "/images/property/common-areas/entrance-heic-hero.webp",
+      "card": "/images/property/common-areas/entrance-heic-card.webp",
+      "thumb": "/images/property/common-areas/entrance-heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1081,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "411.6 KB",
+      "card": "98.4 KB",
+      "thumb": "15.2 KB",
+      "default": "98.4 KB"
+    },
+    "totalConvertedBytes": 638536,
+    "totalConvertedFormatted": "623.6 KB"
+  },
+  {
+    "id": "familyroom103-1--heic",
+    "originalFilename": "FamilyRoom103(1).heic",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Family bedroom",
+    "caption": "Room 103 · Family Room",
+    "altText": "Family Room 103 expansive suite accommodation at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2252,
+      "height": 4000
+    },
+    "originalSizeBytes": 14308081,
+    "originalSizeFormatted": "13.65 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/familyroom103-1--heic.webp",
+      "hero": "/images/property/rooms/room-103/familyroom103-1--heic-hero.webp",
+      "card": "/images/property/rooms/room-103/familyroom103-1--heic-card.webp",
+      "thumb": "/images/property/rooms/room-103/familyroom103-1--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1081,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "241.4 KB",
+      "card": "41.8 KB",
+      "thumb": "7.6 KB",
+      "default": "41.8 KB"
+    },
+    "totalConvertedBytes": 340444,
+    "totalConvertedFormatted": "332.5 KB"
+  },
+  {
+    "id": "familyroom103-2--heic",
+    "originalFilename": "FamilyRoom103(2).heic",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Family bedroom",
+    "caption": "Room 103 · Family Room",
+    "altText": "Family Room 103 expansive suite accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13451837,
+    "originalSizeFormatted": "12.83 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/familyroom103-2--heic.webp",
+      "hero": "/images/property/rooms/room-103/familyroom103-2--heic-hero.webp",
+      "card": "/images/property/rooms/room-103/familyroom103-2--heic-card.webp",
+      "thumb": "/images/property/rooms/room-103/familyroom103-2--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "175.9 KB",
+      "card": "40.7 KB",
+      "thumb": "7.5 KB",
+      "default": "40.7 KB"
+    },
+    "totalConvertedBytes": 271104,
+    "totalConvertedFormatted": "264.8 KB"
+  },
+  {
+    "id": "familyroom103-3--heic",
+    "originalFilename": "FamilyRoom103(3).heic",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Family bedroom",
+    "caption": "Room 103 · Family Room",
+    "altText": "Family Room 103 expansive suite accommodation at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2252,
+      "height": 4000
+    },
+    "originalSizeBytes": 13461503,
+    "originalSizeFormatted": "12.84 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/familyroom103-3--heic.webp",
+      "hero": "/images/property/rooms/room-103/familyroom103-3--heic-hero.webp",
+      "card": "/images/property/rooms/room-103/familyroom103-3--heic-card.webp",
+      "thumb": "/images/property/rooms/room-103/familyroom103-3--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1081,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "212.9 KB",
+      "card": "45.3 KB",
+      "thumb": "8.8 KB",
+      "default": "45.3 KB"
+    },
+    "totalConvertedBytes": 319800,
+    "totalConvertedFormatted": "312.3 KB"
+  },
+  {
+    "id": "familyroom103-4--heic",
+    "originalFilename": "FamilyRoom103(4).heic",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Family bedroom",
+    "caption": "Room 103 · Family Room",
+    "altText": "Family Room 103 expansive suite accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 14918957,
+    "originalSizeFormatted": "14.23 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/familyroom103-4--heic.webp",
+      "hero": "/images/property/rooms/room-103/familyroom103-4--heic-hero.webp",
+      "card": "/images/property/rooms/room-103/familyroom103-4--heic-card.webp",
+      "thumb": "/images/property/rooms/room-103/familyroom103-4--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "242.6 KB",
+      "card": "49.7 KB",
+      "thumb": "9.0 KB",
+      "default": "49.7 KB"
+    },
+    "totalConvertedBytes": 359556,
+    "totalConvertedFormatted": "351.1 KB"
+  },
+  {
+    "id": "familyroom103-5--heic",
+    "originalFilename": "FamilyRoom103(5).heic",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Family bedroom",
+    "caption": "Room 103 · Family Room",
+    "altText": "Family Room 103 expansive suite accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 14408604,
+    "originalSizeFormatted": "13.74 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/familyroom103-5--heic.webp",
+      "hero": "/images/property/rooms/room-103/familyroom103-5--heic-hero.webp",
+      "card": "/images/property/rooms/room-103/familyroom103-5--heic-card.webp",
+      "thumb": "/images/property/rooms/room-103/familyroom103-5--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "257.3 KB",
+      "card": "55.1 KB",
+      "thumb": "9.5 KB",
+      "default": "55.1 KB"
+    },
+    "totalConvertedBytes": 386084,
+    "totalConvertedFormatted": "377.0 KB"
+  },
+  {
+    "id": "familyroom103-6--heic",
+    "originalFilename": "FamilyRoom103(6).heic",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Family bedroom",
+    "caption": "Room 103 · Family Room",
+    "altText": "Family Room 103 expansive suite accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 14243420,
+    "originalSizeFormatted": "13.58 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/familyroom103-6--heic.webp",
+      "hero": "/images/property/rooms/room-103/familyroom103-6--heic-hero.webp",
+      "card": "/images/property/rooms/room-103/familyroom103-6--heic-card.webp",
+      "thumb": "/images/property/rooms/room-103/familyroom103-6--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "245.3 KB",
+      "card": "52.2 KB",
+      "thumb": "9.6 KB",
+      "default": "52.2 KB"
+    },
+    "totalConvertedBytes": 367876,
+    "totalConvertedFormatted": "359.3 KB"
+  },
+  {
+    "id": "familyroom103-7--heic",
+    "originalFilename": "FamilyRoom103(7).heic",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Family bedroom",
+    "caption": "Room 103 · Family Room",
+    "altText": "Family Room 103 expansive suite accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 15050038,
+    "originalSizeFormatted": "14.35 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/familyroom103-7--heic.webp",
+      "hero": "/images/property/rooms/room-103/familyroom103-7--heic-hero.webp",
+      "card": "/images/property/rooms/room-103/familyroom103-7--heic-card.webp",
+      "thumb": "/images/property/rooms/room-103/familyroom103-7--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "264.0 KB",
+      "card": "55.6 KB",
+      "thumb": "9.9 KB",
+      "default": "55.6 KB"
+    },
+    "totalConvertedBytes": 394282,
+    "totalConvertedFormatted": "385.0 KB"
+  },
+  {
+    "id": "familyroom103-8--jpg",
+    "originalFilename": "FamilyRoom103(8).jpg",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Family bedroom",
+    "caption": "Room 103 · Family Room",
+    "altText": "Family Room 103 expansive suite accommodation at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 2268606,
+    "originalSizeFormatted": "2.16 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/familyroom103-8--jpg.webp",
+      "hero": "/images/property/rooms/room-103/familyroom103-8--jpg-hero.webp",
+      "card": "/images/property/rooms/room-103/familyroom103-8--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-103/familyroom103-8--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "193.0 KB",
+      "card": "66.1 KB",
+      "thumb": "12.0 KB",
+      "default": "66.1 KB"
+    },
+    "totalConvertedBytes": 345318,
+    "totalConvertedFormatted": "337.2 KB"
+  },
+  {
+    "id": "firstfloorhallway-jpg",
+    "originalFilename": "FirstFloorHallway.jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Corridor",
+    "subject": "Clean guest corridor and room access",
+    "caption": "Guest Room Hallway",
+    "altText": "Clean and well-lit guest room access corridor at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2911412,
+    "originalSizeFormatted": "2.78 MB",
+    "images": {
+      "default": "/images/property/common-areas/firstfloorhallway-jpg.webp",
+      "hero": "/images/property/common-areas/firstfloorhallway-jpg-hero.webp",
+      "card": "/images/property/common-areas/firstfloorhallway-jpg-card.webp",
+      "thumb": "/images/property/common-areas/firstfloorhallway-jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "200.7 KB",
+      "card": "47.0 KB",
+      "thumb": "7.6 KB",
+      "default": "47.0 KB"
+    },
+    "totalConvertedBytes": 309514,
+    "totalConvertedFormatted": "302.3 KB"
+  },
+  {
+    "id": "kitchen-1--jpg",
+    "originalFilename": "Kitchen(1).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Service Area",
+    "subject": "Staff service kitchen for breakfast preparation (staff-operated service area)",
+    "caption": "Staff Service Kitchen & Dining",
+    "altText": "Operational staff meal preparation kitchen facility at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 2340
+    },
+    "originalSizeBytes": 2336743,
+    "originalSizeFormatted": "2.23 MB",
+    "images": {
+      "default": "/images/property/common-areas/kitchen-1--jpg.webp",
+      "hero": "/images/property/common-areas/kitchen-1--jpg-hero.webp",
+      "card": "/images/property/common-areas/kitchen-1--jpg-card.webp",
+      "thumb": "/images/property/common-areas/kitchen-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1080
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "224.9 KB",
+      "card": "61.1 KB",
+      "thumb": "9.3 KB",
+      "default": "61.1 KB"
+    },
+    "totalConvertedBytes": 364946,
+    "totalConvertedFormatted": "356.4 KB"
+  },
+  {
+    "id": "kitchen-2--jpg",
+    "originalFilename": "Kitchen(2).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Service Area",
+    "subject": "Staff service kitchen for breakfast preparation (staff-operated service area)",
+    "caption": "Staff Service Kitchen & Dining",
+    "altText": "Operational staff meal preparation kitchen facility at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2381853,
+    "originalSizeFormatted": "2.27 MB",
+    "images": {
+      "default": "/images/property/common-areas/kitchen-2--jpg.webp",
+      "hero": "/images/property/common-areas/kitchen-2--jpg-hero.webp",
+      "card": "/images/property/common-areas/kitchen-2--jpg-card.webp",
+      "thumb": "/images/property/common-areas/kitchen-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "187.8 KB",
+      "card": "60.7 KB",
+      "thumb": "10.8 KB",
+      "default": "60.7 KB"
+    },
+    "totalConvertedBytes": 327740,
+    "totalConvertedFormatted": "320.1 KB"
+  },
+  {
+    "id": "mainpropertyfrontview-1--jpg",
+    "originalFilename": "MainPropertyFrontView(1).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Exterior",
+    "roomTag": "Exterior",
+    "subject": "Main building front architectural elevation",
+    "caption": "Main Building Facade",
+    "altText": "La Vivante Homestay architectural front elevation view in Ramanathapuram, Coimbatore",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 6210657,
+    "originalSizeFormatted": "5.92 MB",
+    "images": {
+      "default": "/images/property/common-areas/mainpropertyfrontview-1--jpg.webp",
+      "hero": "/images/property/common-areas/mainpropertyfrontview-1--jpg-hero.webp",
+      "card": "/images/property/common-areas/mainpropertyfrontview-1--jpg-card.webp",
+      "thumb": "/images/property/common-areas/mainpropertyfrontview-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "795.4 KB",
+      "card": "203.5 KB",
+      "thumb": "27.7 KB",
+      "default": "203.5 KB"
+    },
+    "totalConvertedBytes": 1259680,
+    "totalConvertedFormatted": "1230.2 KB"
+  },
+  {
+    "id": "mainpropertyfrontview-2--jpg",
+    "originalFilename": "MainPropertyFrontView(2).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Exterior",
+    "roomTag": "Exterior",
+    "subject": "Main building front architectural elevation",
+    "caption": "Main Building Facade",
+    "altText": "La Vivante Homestay architectural front elevation view in Ramanathapuram, Coimbatore",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 6229424,
+    "originalSizeFormatted": "5.94 MB",
+    "images": {
+      "default": "/images/property/common-areas/mainpropertyfrontview-2--jpg.webp",
+      "hero": "/images/property/common-areas/mainpropertyfrontview-2--jpg-hero.webp",
+      "card": "/images/property/common-areas/mainpropertyfrontview-2--jpg-card.webp",
+      "thumb": "/images/property/common-areas/mainpropertyfrontview-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "803.8 KB",
+      "card": "205.9 KB",
+      "thumb": "27.9 KB",
+      "default": "205.9 KB"
+    },
+    "totalConvertedBytes": 1273440,
+    "totalConvertedFormatted": "1243.6 KB"
+  },
+  {
+    "id": "mainpropertyfrontview-3--jpg",
+    "originalFilename": "MainPropertyFrontView(3).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Exterior",
+    "roomTag": "Exterior",
+    "subject": "Main building front architectural elevation",
+    "caption": "Main Building Facade",
+    "altText": "La Vivante Homestay architectural front elevation view in Ramanathapuram, Coimbatore",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 6268673,
+    "originalSizeFormatted": "5.98 MB",
+    "images": {
+      "default": "/images/property/common-areas/mainpropertyfrontview-3--jpg.webp",
+      "hero": "/images/property/common-areas/mainpropertyfrontview-3--jpg-hero.webp",
+      "card": "/images/property/common-areas/mainpropertyfrontview-3--jpg-card.webp",
+      "thumb": "/images/property/common-areas/mainpropertyfrontview-3--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "809.0 KB",
+      "card": "207.0 KB",
+      "thumb": "28.1 KB",
+      "default": "207.0 KB"
+    },
+    "totalConvertedBytes": 1281112,
+    "totalConvertedFormatted": "1251.1 KB"
+  },
+  {
+    "id": "mainpropertyfrontview-4--heic",
+    "originalFilename": "MainPropertyFrontView(4).heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Exterior",
+    "roomTag": "Exterior",
+    "subject": "Main building front architectural elevation",
+    "caption": "Main Building Facade",
+    "altText": "La Vivante Homestay architectural front elevation view in Ramanathapuram, Coimbatore",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 10077048,
+    "originalSizeFormatted": "9.61 MB",
+    "images": {
+      "default": "/images/property/common-areas/mainpropertyfrontview-4--heic.webp",
+      "hero": "/images/property/common-areas/mainpropertyfrontview-4--heic-hero.webp",
+      "card": "/images/property/common-areas/mainpropertyfrontview-4--heic-card.webp",
+      "thumb": "/images/property/common-areas/mainpropertyfrontview-4--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "65.4 KB",
+      "card": "21.5 KB",
+      "thumb": "5.0 KB",
+      "default": "21.5 KB"
+    },
+    "totalConvertedBytes": 116192,
+    "totalConvertedFormatted": "113.5 KB"
+  },
+  {
+    "id": "mainpropertyfrontview-5--heic",
+    "originalFilename": "MainPropertyFrontView(5).heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Exterior",
+    "roomTag": "Exterior",
+    "subject": "Main building front architectural elevation",
+    "caption": "Main Building Facade",
+    "altText": "La Vivante Homestay architectural front elevation view in Ramanathapuram, Coimbatore",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13898199,
+    "originalSizeFormatted": "13.25 MB",
+    "images": {
+      "default": "/images/property/common-areas/mainpropertyfrontview-5--heic.webp",
+      "hero": "/images/property/common-areas/mainpropertyfrontview-5--heic-hero.webp",
+      "card": "/images/property/common-areas/mainpropertyfrontview-5--heic-card.webp",
+      "thumb": "/images/property/common-areas/mainpropertyfrontview-5--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "281.4 KB",
+      "card": "75.2 KB",
+      "thumb": "13.1 KB",
+      "default": "75.2 KB"
+    },
+    "totalConvertedBytes": 455546,
+    "totalConvertedFormatted": "444.9 KB"
+  },
+  {
+    "id": "mainpropertyfrontview-6--heic",
+    "originalFilename": "MainPropertyFrontView(6).heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Exterior",
+    "roomTag": "Exterior",
+    "subject": "Main building front architectural elevation",
+    "caption": "Main Building Facade",
+    "altText": "La Vivante Homestay architectural front elevation view in Ramanathapuram, Coimbatore",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 10612376,
+    "originalSizeFormatted": "10.12 MB",
+    "images": {
+      "default": "/images/property/common-areas/mainpropertyfrontview-6--heic.webp",
+      "hero": "/images/property/common-areas/mainpropertyfrontview-6--heic-hero.webp",
+      "card": "/images/property/common-areas/mainpropertyfrontview-6--heic-card.webp",
+      "thumb": "/images/property/common-areas/mainpropertyfrontview-6--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "94.9 KB",
+      "card": "28.7 KB",
+      "thumb": "5.8 KB",
+      "default": "28.7 KB"
+    },
+    "totalConvertedBytes": 161838,
+    "totalConvertedFormatted": "158.0 KB"
+  },
+  {
+    "id": "mainpropertysideview-1--jpg",
+    "originalFilename": "MainPropertySideView(1).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Exterior",
+    "roomTag": "Exterior",
+    "subject": "Building side architectural view and vehicle approach",
+    "caption": "Side Building Elevation",
+    "altText": "La Vivante Homestay side elevation and parking entrance view",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 5853388,
+    "originalSizeFormatted": "5.58 MB",
+    "images": {
+      "default": "/images/property/common-areas/mainpropertysideview-1--jpg.webp",
+      "hero": "/images/property/common-areas/mainpropertysideview-1--jpg-hero.webp",
+      "card": "/images/property/common-areas/mainpropertysideview-1--jpg-card.webp",
+      "thumb": "/images/property/common-areas/mainpropertysideview-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "749.7 KB",
+      "card": "188.4 KB",
+      "thumb": "26.3 KB",
+      "default": "188.4 KB"
+    },
+    "totalConvertedBytes": 1180392,
+    "totalConvertedFormatted": "1152.7 KB"
+  },
+  {
+    "id": "mainpropertysideview-2--jpg",
+    "originalFilename": "MainPropertySideView(2).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Exterior",
+    "roomTag": "Exterior",
+    "subject": "Building side architectural view and vehicle approach",
+    "caption": "Side Building Elevation",
+    "altText": "La Vivante Homestay side elevation and parking entrance view",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 5741250,
+    "originalSizeFormatted": "5.48 MB",
+    "images": {
+      "default": "/images/property/common-areas/mainpropertysideview-2--jpg.webp",
+      "hero": "/images/property/common-areas/mainpropertysideview-2--jpg-hero.webp",
+      "card": "/images/property/common-areas/mainpropertysideview-2--jpg-card.webp",
+      "thumb": "/images/property/common-areas/mainpropertysideview-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "743.7 KB",
+      "card": "190.6 KB",
+      "thumb": "26.7 KB",
+      "default": "190.6 KB"
+    },
+    "totalConvertedBytes": 1179102,
+    "totalConvertedFormatted": "1151.5 KB"
+  },
+  {
+    "id": "mainpropertysideview-3--jpg",
+    "originalFilename": "MainPropertySideView(3).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Exterior",
+    "roomTag": "Exterior",
+    "subject": "Building side architectural view and vehicle approach",
+    "caption": "Side Building Elevation",
+    "altText": "La Vivante Homestay side elevation and parking entrance view",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 5434799,
+    "originalSizeFormatted": "5.18 MB",
+    "images": {
+      "default": "/images/property/common-areas/mainpropertysideview-3--jpg.webp",
+      "hero": "/images/property/common-areas/mainpropertysideview-3--jpg-hero.webp",
+      "card": "/images/property/common-areas/mainpropertysideview-3--jpg-card.webp",
+      "thumb": "/images/property/common-areas/mainpropertysideview-3--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "680.7 KB",
+      "card": "171.0 KB",
+      "thumb": "23.6 KB",
+      "default": "171.0 KB"
+    },
+    "totalConvertedBytes": 1071504,
+    "totalConvertedFormatted": "1046.4 KB"
+  },
+  {
+    "id": "parking-1--jpg",
+    "originalFilename": "Parking(1).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Parking",
+    "subject": "Secure on-premise vehicular parking",
+    "caption": "On-Premise Parking",
+    "altText": "Secure covered vehicle parking area inside La Vivante Homestay compound",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 3506749,
+    "originalSizeFormatted": "3.34 MB",
+    "images": {
+      "default": "/images/property/common-areas/parking-1--jpg.webp",
+      "hero": "/images/property/common-areas/parking-1--jpg-hero.webp",
+      "card": "/images/property/common-areas/parking-1--jpg-card.webp",
+      "thumb": "/images/property/common-areas/parking-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "423.1 KB",
+      "card": "117.4 KB",
+      "thumb": "17.7 KB",
+      "default": "117.4 KB"
+    },
+    "totalConvertedBytes": 691728,
+    "totalConvertedFormatted": "675.5 KB"
+  },
+  {
+    "id": "parking-2--jpg",
+    "originalFilename": "Parking(2).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Parking",
+    "subject": "Secure on-premise vehicular parking",
+    "caption": "On-Premise Parking",
+    "altText": "Secure covered vehicle parking area inside La Vivante Homestay compound",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 2938602,
+    "originalSizeFormatted": "2.80 MB",
+    "images": {
+      "default": "/images/property/common-areas/parking-2--jpg.webp",
+      "hero": "/images/property/common-areas/parking-2--jpg-hero.webp",
+      "card": "/images/property/common-areas/parking-2--jpg-card.webp",
+      "thumb": "/images/property/common-areas/parking-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "292.2 KB",
+      "card": "84.6 KB",
+      "thumb": "12.3 KB",
+      "default": "84.6 KB"
+    },
+    "totalConvertedBytes": 484990,
+    "totalConvertedFormatted": "473.6 KB"
+  },
+  {
+    "id": "premierroom203-1--heic",
+    "originalFilename": "PremierRoom203(1).heic",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Generous premier bedroom",
+    "caption": "Room 203 · Premier Bedroom",
+    "altText": "Premier Room 203 generous bedroom accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 12519044,
+    "originalSizeFormatted": "11.94 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/premierroom203-1--heic.webp",
+      "hero": "/images/property/rooms/room-203/premierroom203-1--heic-hero.webp",
+      "card": "/images/property/rooms/room-203/premierroom203-1--heic-card.webp",
+      "thumb": "/images/property/rooms/room-203/premierroom203-1--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "145.9 KB",
+      "card": "36.2 KB",
+      "thumb": "6.7 KB",
+      "default": "36.2 KB"
+    },
+    "totalConvertedBytes": 230300,
+    "totalConvertedFormatted": "224.9 KB"
+  },
+  {
+    "id": "premierroom203-2--heic",
+    "originalFilename": "PremierRoom203(2).heic",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Generous premier bedroom",
+    "caption": "Room 203 · Premier Bedroom",
+    "altText": "Premier Room 203 generous bedroom accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 12619341,
+    "originalSizeFormatted": "12.03 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/premierroom203-2--heic.webp",
+      "hero": "/images/property/rooms/room-203/premierroom203-2--heic-hero.webp",
+      "card": "/images/property/rooms/room-203/premierroom203-2--heic-card.webp",
+      "thumb": "/images/property/rooms/room-203/premierroom203-2--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "145.4 KB",
+      "card": "37.1 KB",
+      "thumb": "7.2 KB",
+      "default": "37.1 KB"
+    },
+    "totalConvertedBytes": 232182,
+    "totalConvertedFormatted": "226.7 KB"
+  },
+  {
+    "id": "premierroom203-3--heic",
+    "originalFilename": "PremierRoom203(3).heic",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Generous premier bedroom",
+    "caption": "Room 203 · Premier Bedroom",
+    "altText": "Premier Room 203 generous bedroom accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13000521,
+    "originalSizeFormatted": "12.40 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/premierroom203-3--heic.webp",
+      "hero": "/images/property/rooms/room-203/premierroom203-3--heic-hero.webp",
+      "card": "/images/property/rooms/room-203/premierroom203-3--heic-card.webp",
+      "thumb": "/images/property/rooms/room-203/premierroom203-3--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "173.9 KB",
+      "card": "45.5 KB",
+      "thumb": "6.7 KB",
+      "default": "45.5 KB"
+    },
+    "totalConvertedBytes": 278088,
+    "totalConvertedFormatted": "271.6 KB"
+  },
+  {
+    "id": "premierroom203-4--heic",
+    "originalFilename": "PremierRoom203(4).heic",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Generous premier bedroom",
+    "caption": "Room 203 · Premier Bedroom",
+    "altText": "Premier Room 203 generous bedroom accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13426502,
+    "originalSizeFormatted": "12.80 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/premierroom203-4--heic.webp",
+      "hero": "/images/property/rooms/room-203/premierroom203-4--heic-hero.webp",
+      "card": "/images/property/rooms/room-203/premierroom203-4--heic-card.webp",
+      "thumb": "/images/property/rooms/room-203/premierroom203-4--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "162.6 KB",
+      "card": "39.7 KB",
+      "thumb": "7.5 KB",
+      "default": "39.7 KB"
+    },
+    "totalConvertedBytes": 255422,
+    "totalConvertedFormatted": "249.4 KB"
+  },
+  {
+    "id": "premierroom203-5--heic",
+    "originalFilename": "PremierRoom203(5).heic",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Generous premier bedroom",
+    "caption": "Room 203 · Premier Bedroom",
+    "altText": "Premier Room 203 generous bedroom accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 11124398,
+    "originalSizeFormatted": "10.61 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/premierroom203-5--heic.webp",
+      "hero": "/images/property/rooms/room-203/premierroom203-5--heic-hero.webp",
+      "card": "/images/property/rooms/room-203/premierroom203-5--heic-card.webp",
+      "thumb": "/images/property/rooms/room-203/premierroom203-5--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "78.1 KB",
+      "card": "19.6 KB",
+      "thumb": "3.6 KB",
+      "default": "19.6 KB"
+    },
+    "totalConvertedBytes": 123876,
+    "totalConvertedFormatted": "121.0 KB"
+  },
+  {
+    "id": "premierroom203-6--heic",
+    "originalFilename": "PremierRoom203(6).heic",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Generous premier bedroom",
+    "caption": "Room 203 · Premier Bedroom",
+    "altText": "Premier Room 203 generous bedroom accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 11218556,
+    "originalSizeFormatted": "10.70 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/premierroom203-6--heic.webp",
+      "hero": "/images/property/rooms/room-203/premierroom203-6--heic-hero.webp",
+      "card": "/images/property/rooms/room-203/premierroom203-6--heic-card.webp",
+      "thumb": "/images/property/rooms/room-203/premierroom203-6--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "80.6 KB",
+      "card": "20.4 KB",
+      "thumb": "3.8 KB",
+      "default": "20.4 KB"
+    },
+    "totalConvertedBytes": 128168,
+    "totalConvertedFormatted": "125.2 KB"
+  },
+  {
+    "id": "premierroom203-7--heic",
+    "originalFilename": "PremierRoom203(7).heic",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Generous premier bedroom",
+    "caption": "Room 203 · Premier Bedroom",
+    "altText": "Premier Room 203 generous bedroom accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13826018,
+    "originalSizeFormatted": "13.19 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/premierroom203-7--heic.webp",
+      "hero": "/images/property/rooms/room-203/premierroom203-7--heic-hero.webp",
+      "card": "/images/property/rooms/room-203/premierroom203-7--heic-card.webp",
+      "thumb": "/images/property/rooms/room-203/premierroom203-7--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "199.7 KB",
+      "card": "50.2 KB",
+      "thumb": "8.2 KB",
+      "default": "50.2 KB"
+    },
+    "totalConvertedBytes": 315688,
+    "totalConvertedFormatted": "308.3 KB"
+  },
+  {
+    "id": "premierroom203-8--heic",
+    "originalFilename": "PremierRoom203(8).heic",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Generous premier bedroom",
+    "caption": "Room 203 · Premier Bedroom",
+    "altText": "Premier Room 203 generous bedroom accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 12224792,
+    "originalSizeFormatted": "11.66 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/premierroom203-8--heic.webp",
+      "hero": "/images/property/rooms/room-203/premierroom203-8--heic-hero.webp",
+      "card": "/images/property/rooms/room-203/premierroom203-8--heic-card.webp",
+      "thumb": "/images/property/rooms/room-203/premierroom203-8--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "145.2 KB",
+      "card": "37.1 KB",
+      "thumb": "5.4 KB",
+      "default": "37.1 KB"
+    },
+    "totalConvertedBytes": 230132,
+    "totalConvertedFormatted": "224.7 KB"
+  },
+  {
+    "id": "premierroom203-9--heic",
+    "originalFilename": "PremierRoom203(9).heic",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Generous premier bedroom",
+    "caption": "Room 203 · Premier Bedroom",
+    "altText": "Premier Room 203 generous bedroom accommodation at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13600919,
+    "originalSizeFormatted": "12.97 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/premierroom203-9--heic.webp",
+      "hero": "/images/property/rooms/room-203/premierroom203-9--heic-hero.webp",
+      "card": "/images/property/rooms/room-203/premierroom203-9--heic-card.webp",
+      "thumb": "/images/property/rooms/room-203/premierroom203-9--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "134.1 KB",
+      "card": "34.2 KB",
+      "thumb": "7.1 KB",
+      "default": "34.2 KB"
+    },
+    "totalConvertedBytes": 214630,
+    "totalConvertedFormatted": "209.6 KB"
+  },
+  {
+    "id": "premierwithbalconyroom101-1--jpg",
+    "originalFilename": "PremierwithBalconyRoom101(1).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 2897457,
+    "originalSizeFormatted": "2.76 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/premierwithbalconyroom101-1--jpg.webp",
+      "hero": "/images/property/rooms/room-101/premierwithbalconyroom101-1--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/premierwithbalconyroom101-1--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/premierwithbalconyroom101-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "302.4 KB",
+      "card": "73.2 KB",
+      "thumb": "11.3 KB",
+      "default": "73.2 KB"
+    },
+    "totalConvertedBytes": 471252,
+    "totalConvertedFormatted": "460.2 KB"
+  },
+  {
+    "id": "premierwithbalconyroom101-2--jpg",
+    "originalFilename": "PremierwithBalconyRoom101(2).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 2710926,
+    "originalSizeFormatted": "2.59 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/premierwithbalconyroom101-2--jpg.webp",
+      "hero": "/images/property/rooms/room-101/premierwithbalconyroom101-2--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/premierwithbalconyroom101-2--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/premierwithbalconyroom101-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "223.0 KB",
+      "card": "69.5 KB",
+      "thumb": "13.6 KB",
+      "default": "69.5 KB"
+    },
+    "totalConvertedBytes": 384634,
+    "totalConvertedFormatted": "375.6 KB"
+  },
+  {
+    "id": "premierwithbalconyroom101-3--jpg",
+    "originalFilename": "PremierwithBalconyRoom101(3).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 2696334,
+    "originalSizeFormatted": "2.57 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/premierwithbalconyroom101-3--jpg.webp",
+      "hero": "/images/property/rooms/room-101/premierwithbalconyroom101-3--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/premierwithbalconyroom101-3--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/premierwithbalconyroom101-3--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "220.2 KB",
+      "card": "68.3 KB",
+      "thumb": "13.4 KB",
+      "default": "68.3 KB"
+    },
+    "totalConvertedBytes": 379136,
+    "totalConvertedFormatted": "370.3 KB"
+  },
+  {
+    "id": "premierwithbalconyroom101-4--jpg",
+    "originalFilename": "PremierwithBalconyRoom101(4).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 2744638,
+    "originalSizeFormatted": "2.62 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/premierwithbalconyroom101-4--jpg.webp",
+      "hero": "/images/property/rooms/room-101/premierwithbalconyroom101-4--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/premierwithbalconyroom101-4--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/premierwithbalconyroom101-4--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "276.5 KB",
+      "card": "66.6 KB",
+      "thumb": "10.4 KB",
+      "default": "66.6 KB"
+    },
+    "totalConvertedBytes": 430212,
+    "totalConvertedFormatted": "420.1 KB"
+  },
+  {
+    "id": "premierwithbalconyroom101-5--jpg",
+    "originalFilename": "PremierwithBalconyRoom101(5).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 4880200,
+    "originalSizeFormatted": "4.65 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/premierwithbalconyroom101-5--jpg.webp",
+      "hero": "/images/property/rooms/room-101/premierwithbalconyroom101-5--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/premierwithbalconyroom101-5--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/premierwithbalconyroom101-5--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "282.7 KB",
+      "card": "35.5 KB",
+      "thumb": "5.7 KB",
+      "default": "35.5 KB"
+    },
+    "totalConvertedBytes": 367900,
+    "totalConvertedFormatted": "359.3 KB"
+  },
+  {
+    "id": "premierwithbalconyroom101-6--jpg",
+    "originalFilename": "PremierwithBalconyRoom101(6).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 4866987,
+    "originalSizeFormatted": "4.64 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/premierwithbalconyroom101-6--jpg.webp",
+      "hero": "/images/property/rooms/room-101/premierwithbalconyroom101-6--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/premierwithbalconyroom101-6--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/premierwithbalconyroom101-6--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "255.7 KB",
+      "card": "35.0 KB",
+      "thumb": "5.6 KB",
+      "default": "35.0 KB"
+    },
+    "totalConvertedBytes": 339282,
+    "totalConvertedFormatted": "331.3 KB"
+  },
+  {
+    "id": "premierwithbalconyroom101-7--jpg",
+    "originalFilename": "PremierwithBalconyRoom101(7).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 4825066,
+    "originalSizeFormatted": "4.60 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/premierwithbalconyroom101-7--jpg.webp",
+      "hero": "/images/property/rooms/room-101/premierwithbalconyroom101-7--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/premierwithbalconyroom101-7--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/premierwithbalconyroom101-7--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "218.6 KB",
+      "card": "24.3 KB",
+      "thumb": "5.4 KB",
+      "default": "24.3 KB"
+    },
+    "totalConvertedBytes": 279166,
+    "totalConvertedFormatted": "272.6 KB"
+  },
+  {
+    "id": "premierwithbalconyroom101-8--jpg",
+    "originalFilename": "PremierwithBalconyRoom101(8).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 4422270,
+    "originalSizeFormatted": "4.22 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/premierwithbalconyroom101-8--jpg.webp",
+      "hero": "/images/property/rooms/room-101/premierwithbalconyroom101-8--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/premierwithbalconyroom101-8--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/premierwithbalconyroom101-8--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "200.3 KB",
+      "card": "29.1 KB",
+      "thumb": "5.9 KB",
+      "default": "29.1 KB"
+    },
+    "totalConvertedBytes": 270794,
+    "totalConvertedFormatted": "264.4 KB"
+  },
+  {
+    "id": "premierwithbalconyroom101-9--jpg",
+    "originalFilename": "PremierwithBalconyRoom101(9).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2291722,
+    "originalSizeFormatted": "2.19 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/premierwithbalconyroom101-9--jpg.webp",
+      "hero": "/images/property/rooms/room-101/premierwithbalconyroom101-9--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/premierwithbalconyroom101-9--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/premierwithbalconyroom101-9--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "207.6 KB",
+      "card": "60.1 KB",
+      "thumb": "10.9 KB",
+      "default": "60.1 KB"
+    },
+    "totalConvertedBytes": 346828,
+    "totalConvertedFormatted": "338.7 KB"
+  },
+  {
+    "id": "premierwithbalconyroom101-10--jpg",
+    "originalFilename": "PremierwithBalconyRoom101(10).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony (PremierwithBalconyRoom101(10))",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2304149,
+    "originalSizeFormatted": "2.20 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/premierwithbalconyroom101-10--jpg.webp",
+      "hero": "/images/property/rooms/room-101/premierwithbalconyroom101-10--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/premierwithbalconyroom101-10--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/premierwithbalconyroom101-10--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "207.2 KB",
+      "card": "60.7 KB",
+      "thumb": "11.1 KB",
+      "default": "60.7 KB"
+    },
+    "totalConvertedBytes": 347804,
+    "totalConvertedFormatted": "339.7 KB"
+  },
+  {
+    "id": "reception-1--heic",
+    "originalFilename": "Reception(1).heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Reception",
+    "subject": "Welcoming reception lobby and guest arrival lounge",
+    "caption": "Reception & Lounge",
+    "altText": "Welcoming reception desk and guest arrival lobby at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13828327,
+    "originalSizeFormatted": "13.19 MB",
+    "images": {
+      "default": "/images/property/common-areas/reception-1--heic.webp",
+      "hero": "/images/property/common-areas/reception-1--heic-hero.webp",
+      "card": "/images/property/common-areas/reception-1--heic-card.webp",
+      "thumb": "/images/property/common-areas/reception-1--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "210.1 KB",
+      "card": "48.2 KB",
+      "thumb": "10.1 KB",
+      "default": "48.2 KB"
+    },
+    "totalConvertedBytes": 324222,
+    "totalConvertedFormatted": "316.6 KB"
+  },
+  {
+    "id": "reception-2--heic",
+    "originalFilename": "Reception(2).heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Reception",
+    "subject": "Welcoming reception lobby and guest arrival lounge",
+    "caption": "Reception & Lounge",
+    "altText": "Welcoming reception desk and guest arrival lobby at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13716847,
+    "originalSizeFormatted": "13.08 MB",
+    "images": {
+      "default": "/images/property/common-areas/reception-2--heic.webp",
+      "hero": "/images/property/common-areas/reception-2--heic-hero.webp",
+      "card": "/images/property/common-areas/reception-2--heic-card.webp",
+      "thumb": "/images/property/common-areas/reception-2--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "204.3 KB",
+      "card": "47.3 KB",
+      "thumb": "9.9 KB",
+      "default": "47.3 KB"
+    },
+    "totalConvertedBytes": 316222,
+    "totalConvertedFormatted": "308.8 KB"
+  },
+  {
+    "id": "reception-3--heic",
+    "originalFilename": "Reception(3).heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Reception",
+    "subject": "Welcoming reception lobby and guest arrival lounge",
+    "caption": "Reception & Lounge",
+    "altText": "Welcoming reception desk and guest arrival lobby at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13260113,
+    "originalSizeFormatted": "12.65 MB",
+    "images": {
+      "default": "/images/property/common-areas/reception-3--heic.webp",
+      "hero": "/images/property/common-areas/reception-3--heic-hero.webp",
+      "card": "/images/property/common-areas/reception-3--heic-card.webp",
+      "thumb": "/images/property/common-areas/reception-3--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "181.7 KB",
+      "card": "46.4 KB",
+      "thumb": "9.2 KB",
+      "default": "46.4 KB"
+    },
+    "totalConvertedBytes": 290584,
+    "totalConvertedFormatted": "283.8 KB"
+  },
+  {
+    "id": "room003bathroom-1--jpeg",
+    "originalFilename": "Room003Bathroom(1).jpeg",
+    "roomNumber": "Room 003",
+    "categoryProvisional": "Standard",
+    "area": "Room 003",
+    "roomTag": "Room 003",
+    "subject": "Bathroom",
+    "caption": "Room 003 · Bathroom",
+    "altText": "Standard Room 003 bathroom at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2160,
+      "height": 3840
+    },
+    "originalSizeBytes": 16676789,
+    "originalSizeFormatted": "15.90 MB",
+    "images": {
+      "default": "/images/property/rooms/room-003/room003bathroom-1--jpeg.webp",
+      "hero": "/images/property/rooms/room-003/room003bathroom-1--jpeg-hero.webp",
+      "card": "/images/property/rooms/room-003/room003bathroom-1--jpeg-card.webp",
+      "thumb": "/images/property/rooms/room-003/room003bathroom-1--jpeg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1080,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "232.1 KB",
+      "card": "51.8 KB",
+      "thumb": "7.9 KB",
+      "default": "51.8 KB"
+    },
+    "totalConvertedBytes": 351964,
+    "totalConvertedFormatted": "343.7 KB"
+  },
+  {
+    "id": "room101bathroom-1--jpg",
+    "originalFilename": "Room101Bathroom(1).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Bathroom",
+    "caption": "Room 101 · Bathroom",
+    "altText": "Premier with Balcony Room 101 ensuite bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 3296565,
+    "originalSizeFormatted": "3.14 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/room101bathroom-1--jpg.webp",
+      "hero": "/images/property/rooms/room-101/room101bathroom-1--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/room101bathroom-1--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/room101bathroom-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "309.3 KB",
+      "card": "98.8 KB",
+      "thumb": "19.1 KB",
+      "default": "98.8 KB"
+    },
+    "totalConvertedBytes": 538604,
+    "totalConvertedFormatted": "526.0 KB"
+  },
+  {
+    "id": "room101bathroom-2--jpg",
+    "originalFilename": "Room101Bathroom(2).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Bathroom",
+    "caption": "Room 101 · Bathroom",
+    "altText": "Premier with Balcony Room 101 ensuite bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 2902996,
+    "originalSizeFormatted": "2.77 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/room101bathroom-2--jpg.webp",
+      "hero": "/images/property/rooms/room-101/room101bathroom-2--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/room101bathroom-2--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/room101bathroom-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "270.8 KB",
+      "card": "90.5 KB",
+      "thumb": "17.9 KB",
+      "default": "90.5 KB"
+    },
+    "totalConvertedBytes": 481036,
+    "totalConvertedFormatted": "469.8 KB"
+  },
+  {
+    "id": "room101bathroom-3--jpg",
+    "originalFilename": "Room101Bathroom(3).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Bathroom",
+    "caption": "Room 101 · Bathroom",
+    "altText": "Premier with Balcony Room 101 ensuite bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 3128437,
+    "originalSizeFormatted": "2.98 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/room101bathroom-3--jpg.webp",
+      "hero": "/images/property/rooms/room-101/room101bathroom-3--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/room101bathroom-3--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/room101bathroom-3--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "300.6 KB",
+      "card": "94.4 KB",
+      "thumb": "17.0 KB",
+      "default": "94.4 KB"
+    },
+    "totalConvertedBytes": 518506,
+    "totalConvertedFormatted": "506.4 KB"
+  },
+  {
+    "id": "room101privatebalcony-1--jpg",
+    "originalFilename": "Room101PrivateBalcony(1).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 4721464,
+    "originalSizeFormatted": "4.50 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/room101privatebalcony-1--jpg.webp",
+      "hero": "/images/property/rooms/room-101/room101privatebalcony-1--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/room101privatebalcony-1--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/room101privatebalcony-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "554.4 KB",
+      "card": "144.8 KB",
+      "thumb": "21.8 KB",
+      "default": "144.8 KB"
+    },
+    "totalConvertedBytes": 886492,
+    "totalConvertedFormatted": "865.7 KB"
+  },
+  {
+    "id": "room101privatebalcony-2--jpg",
+    "originalFilename": "Room101PrivateBalcony(2).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 3468413,
+    "originalSizeFormatted": "3.31 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/room101privatebalcony-2--jpg.webp",
+      "hero": "/images/property/rooms/room-101/room101privatebalcony-2--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/room101privatebalcony-2--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/room101privatebalcony-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "318.2 KB",
+      "card": "80.3 KB",
+      "thumb": "12.6 KB",
+      "default": "80.3 KB"
+    },
+    "totalConvertedBytes": 503056,
+    "totalConvertedFormatted": "491.3 KB"
+  },
+  {
+    "id": "room101privatebalcony-3--jpg",
+    "originalFilename": "Room101PrivateBalcony(3).jpg",
+    "roomNumber": "Room 101",
+    "categoryProvisional": "Premier with Balcony",
+    "area": "Room 101",
+    "roomTag": "Room 101",
+    "subject": "Dedicated private open-air balcony",
+    "caption": "Room 101 · Private Balcony",
+    "altText": "Premier Room 101 dedicated outdoor balcony overlooking neighborhood greenery",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 3951703,
+    "originalSizeFormatted": "3.77 MB",
+    "images": {
+      "default": "/images/property/rooms/room-101/room101privatebalcony-3--jpg.webp",
+      "hero": "/images/property/rooms/room-101/room101privatebalcony-3--jpg-hero.webp",
+      "card": "/images/property/rooms/room-101/room101privatebalcony-3--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-101/room101privatebalcony-3--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "414.1 KB",
+      "card": "102.3 KB",
+      "thumb": "15.7 KB",
+      "default": "102.3 KB"
+    },
+    "totalConvertedBytes": 649600,
+    "totalConvertedFormatted": "634.4 KB"
+  },
+  {
+    "id": "room102bathroom-1--jpg",
+    "originalFilename": "Room102Bathroom(1).jpg",
+    "roomNumber": "Room 102",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 102",
+    "roomTag": "Room 102",
+    "subject": "Bathroom",
+    "caption": "Room 102 · Bathroom",
+    "altText": "Deluxe Room 102 ensuite tiled bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 2309094,
+    "originalSizeFormatted": "2.20 MB",
+    "images": {
+      "default": "/images/property/rooms/room-102/room102bathroom-1--jpg.webp",
+      "hero": "/images/property/rooms/room-102/room102bathroom-1--jpg-hero.webp",
+      "card": "/images/property/rooms/room-102/room102bathroom-1--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-102/room102bathroom-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "134.7 KB",
+      "card": "37.2 KB",
+      "thumb": "6.8 KB",
+      "default": "37.2 KB"
+    },
+    "totalConvertedBytes": 221174,
+    "totalConvertedFormatted": "216.0 KB"
+  },
+  {
+    "id": "room102bathroom-2--jpg",
+    "originalFilename": "Room102Bathroom(2).jpg",
+    "roomNumber": "Room 102",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 102",
+    "roomTag": "Room 102",
+    "subject": "Bathroom",
+    "caption": "Room 102 · Bathroom",
+    "altText": "Deluxe Room 102 ensuite tiled bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 2353219,
+    "originalSizeFormatted": "2.24 MB",
+    "images": {
+      "default": "/images/property/rooms/room-102/room102bathroom-2--jpg.webp",
+      "hero": "/images/property/rooms/room-102/room102bathroom-2--jpg-hero.webp",
+      "card": "/images/property/rooms/room-102/room102bathroom-2--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-102/room102bathroom-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "145.0 KB",
+      "card": "41.2 KB",
+      "thumb": "7.3 KB",
+      "default": "41.2 KB"
+    },
+    "totalConvertedBytes": 240228,
+    "totalConvertedFormatted": "234.6 KB"
+  },
+  {
+    "id": "room102bathroom-3--jpg",
+    "originalFilename": "Room102Bathroom(3).jpg",
+    "roomNumber": "Room 102",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 102",
+    "roomTag": "Room 102",
+    "subject": "Bathroom",
+    "caption": "Room 102 · Bathroom",
+    "altText": "Deluxe Room 102 ensuite tiled bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4160,
+      "height": 3120
+    },
+    "originalSizeBytes": 2090005,
+    "originalSizeFormatted": "1.99 MB",
+    "images": {
+      "default": "/images/property/rooms/room-102/room102bathroom-3--jpg.webp",
+      "hero": "/images/property/rooms/room-102/room102bathroom-3--jpg-hero.webp",
+      "card": "/images/property/rooms/room-102/room102bathroom-3--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-102/room102bathroom-3--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "105.4 KB",
+      "card": "31.5 KB",
+      "thumb": "5.8 KB",
+      "default": "31.5 KB"
+    },
+    "totalConvertedBytes": 178470,
+    "totalConvertedFormatted": "174.3 KB"
+  },
+  {
+    "id": "room103bathroom1-1--jpg",
+    "originalFilename": "Room103Bathroom1(1).jpg",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Bathroom 1",
+    "caption": "Room 103 · Bathroom 1",
+    "altText": "Family Room 103 bathroom 1 at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 1819816,
+    "originalSizeFormatted": "1.74 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/room103bathroom1-1--jpg.webp",
+      "hero": "/images/property/rooms/room-103/room103bathroom1-1--jpg-hero.webp",
+      "card": "/images/property/rooms/room-103/room103bathroom1-1--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-103/room103bathroom1-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "99.9 KB",
+      "card": "27.2 KB",
+      "thumb": "4.9 KB",
+      "default": "27.2 KB"
+    },
+    "totalConvertedBytes": 162958,
+    "totalConvertedFormatted": "159.1 KB"
+  },
+  {
+    "id": "room103bathroom1-2--jpg",
+    "originalFilename": "Room103Bathroom1(2).jpg",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Bathroom 1",
+    "caption": "Room 103 · Bathroom 1",
+    "altText": "Family Room 103 ensuite bathroom facility at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 2755806,
+    "originalSizeFormatted": "2.63 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/room103bathroom1-2--jpg.webp",
+      "hero": "/images/property/rooms/room-103/room103bathroom1-2--jpg-hero.webp",
+      "card": "/images/property/rooms/room-103/room103bathroom1-2--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-103/room103bathroom1-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "203.1 KB",
+      "card": "43.2 KB",
+      "thumb": "7.1 KB",
+      "default": "43.2 KB"
+    },
+    "totalConvertedBytes": 303608,
+    "totalConvertedFormatted": "296.5 KB"
+  },
+  {
+    "id": "room103bathroom2-1--jpg",
+    "originalFilename": "Room103Bathroom2(1).jpg",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Bathroom 2",
+    "caption": "Room 103 · Bathroom 2",
+    "altText": "Family Room 103 ensuite bathroom facility at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 2900876,
+    "originalSizeFormatted": "2.77 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/room103bathroom2-1--jpg.webp",
+      "hero": "/images/property/rooms/room-103/room103bathroom2-1--jpg-hero.webp",
+      "card": "/images/property/rooms/room-103/room103bathroom2-1--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-103/room103bathroom2-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "167.2 KB",
+      "card": "43.5 KB",
+      "thumb": "8.4 KB",
+      "default": "43.5 KB"
+    },
+    "totalConvertedBytes": 268940,
+    "totalConvertedFormatted": "262.6 KB"
+  },
+  {
+    "id": "room103bathroom2-2--jpg",
+    "originalFilename": "Room103Bathroom2(2).jpg",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Bathroom 2",
+    "caption": "Room 103 · Bathroom 2",
+    "altText": "Family Room 103 ensuite bathroom facility at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 1839796,
+    "originalSizeFormatted": "1.75 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/room103bathroom2-2--jpg.webp",
+      "hero": "/images/property/rooms/room-103/room103bathroom2-2--jpg-hero.webp",
+      "card": "/images/property/rooms/room-103/room103bathroom2-2--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-103/room103bathroom2-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "112.3 KB",
+      "card": "37.1 KB",
+      "thumb": "7.9 KB",
+      "default": "37.1 KB"
+    },
+    "totalConvertedBytes": 199100,
+    "totalConvertedFormatted": "194.4 KB"
+  },
+  {
+    "id": "room103bathroom2-3--jpg",
+    "originalFilename": "Room103Bathroom2(3).jpg",
+    "roomNumber": "Room 103",
+    "categoryProvisional": "Family",
+    "area": "Room 103",
+    "roomTag": "Room 103",
+    "subject": "Bathroom 2",
+    "caption": "Room 103 · Bathroom 2",
+    "altText": "Family Room 103 ensuite bathroom facility at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.75",
+    "originalDimensions": {
+      "width": 3072,
+      "height": 4096
+    },
+    "originalSizeBytes": 1873777,
+    "originalSizeFormatted": "1.79 MB",
+    "images": {
+      "default": "/images/property/rooms/room-103/room103bathroom2-3--jpg.webp",
+      "hero": "/images/property/rooms/room-103/room103bathroom2-3--jpg-hero.webp",
+      "card": "/images/property/rooms/room-103/room103bathroom2-3--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-103/room103bathroom2-3--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1440,
+        "height": 1920
+      },
+      "card": {
+        "width": 750,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 300,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "110.9 KB",
+      "card": "35.9 KB",
+      "thumb": "7.8 KB",
+      "default": "35.9 KB"
+    },
+    "totalConvertedBytes": 195084,
+    "totalConvertedFormatted": "190.5 KB"
+  },
+  {
+    "id": "room201bathroom-1--jpg",
+    "originalFilename": "Room201Bathroom(1).jpg",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Bathroom",
+    "caption": "Room 201 · Bathroom",
+    "altText": "Deluxe Room 201 private bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2658967,
+    "originalSizeFormatted": "2.54 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/room201bathroom-1--jpg.webp",
+      "hero": "/images/property/rooms/room-201/room201bathroom-1--jpg-hero.webp",
+      "card": "/images/property/rooms/room-201/room201bathroom-1--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-201/room201bathroom-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "128.9 KB",
+      "card": "33.3 KB",
+      "thumb": "6.3 KB",
+      "default": "33.3 KB"
+    },
+    "totalConvertedBytes": 206690,
+    "totalConvertedFormatted": "201.8 KB"
+  },
+  {
+    "id": "room201bathroom-2--jpg",
+    "originalFilename": "Room201Bathroom(2).jpg",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Bathroom",
+    "caption": "Room 201 · Bathroom",
+    "altText": "Deluxe Room 201 private bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2314169,
+    "originalSizeFormatted": "2.21 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/room201bathroom-2--jpg.webp",
+      "hero": "/images/property/rooms/room-201/room201bathroom-2--jpg-hero.webp",
+      "card": "/images/property/rooms/room-201/room201bathroom-2--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-201/room201bathroom-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "155.7 KB",
+      "card": "41.6 KB",
+      "thumb": "7.7 KB",
+      "default": "41.6 KB"
+    },
+    "totalConvertedBytes": 252448,
+    "totalConvertedFormatted": "246.5 KB"
+  },
+  {
+    "id": "room201bathroom-3--heic",
+    "originalFilename": "Room201Bathroom(3).heic",
+    "roomNumber": "Room 201",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 201",
+    "roomTag": "Room 201",
+    "subject": "Bathroom",
+    "caption": "Room 201 · Bathroom",
+    "altText": "Deluxe Room 201 private bathroom at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2252,
+      "height": 4000
+    },
+    "originalSizeBytes": 13419025,
+    "originalSizeFormatted": "12.80 MB",
+    "images": {
+      "default": "/images/property/rooms/room-201/room201bathroom-3--heic.webp",
+      "hero": "/images/property/rooms/room-201/room201bathroom-3--heic-hero.webp",
+      "card": "/images/property/rooms/room-201/room201bathroom-3--heic-card.webp",
+      "thumb": "/images/property/rooms/room-201/room201bathroom-3--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1081,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "152.8 KB",
+      "card": "34.7 KB",
+      "thumb": "6.3 KB",
+      "default": "34.7 KB"
+    },
+    "totalConvertedBytes": 233938,
+    "totalConvertedFormatted": "228.5 KB"
+  },
+  {
+    "id": "room202-1--jpg",
+    "originalFilename": "Room202(1).jpg",
+    "roomNumber": "Room 202",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 202",
+    "roomTag": "Room 202",
+    "subject": "Deluxe bedroom and comfortable bed setup",
+    "caption": "Room 202 · Deluxe Bedroom",
+    "altText": "Deluxe Room 202 comfortable bedroom setup at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2370416,
+    "originalSizeFormatted": "2.26 MB",
+    "images": {
+      "default": "/images/property/rooms/room-202/room202-1--jpg.webp",
+      "hero": "/images/property/rooms/room-202/room202-1--jpg-hero.webp",
+      "card": "/images/property/rooms/room-202/room202-1--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-202/room202-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "191.3 KB",
+      "card": "56.0 KB",
+      "thumb": "9.7 KB",
+      "default": "56.0 KB"
+    },
+    "totalConvertedBytes": 320460,
+    "totalConvertedFormatted": "312.9 KB"
+  },
+  {
+    "id": "room202bathroom-1--jpg",
+    "originalFilename": "Room202Bathroom(1).jpg",
+    "roomNumber": "Room 202",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 202",
+    "roomTag": "Room 202",
+    "subject": "Bathroom",
+    "caption": "Room 202 · Bathroom",
+    "altText": "Deluxe Room 202 modern ensuite bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2243249,
+    "originalSizeFormatted": "2.14 MB",
+    "images": {
+      "default": "/images/property/rooms/room-202/room202bathroom-1--jpg.webp",
+      "hero": "/images/property/rooms/room-202/room202bathroom-1--jpg-hero.webp",
+      "card": "/images/property/rooms/room-202/room202bathroom-1--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-202/room202bathroom-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "130.3 KB",
+      "card": "34.1 KB",
+      "thumb": "6.5 KB",
+      "default": "34.1 KB"
+    },
+    "totalConvertedBytes": 210000,
+    "totalConvertedFormatted": "205.1 KB"
+  },
+  {
+    "id": "room202bathroom-2--jpg",
+    "originalFilename": "Room202Bathroom(2).jpg",
+    "roomNumber": "Room 202",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 202",
+    "roomTag": "Room 202",
+    "subject": "Bathroom",
+    "caption": "Room 202 · Bathroom",
+    "altText": "Deluxe Room 202 modern ensuite bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2479215,
+    "originalSizeFormatted": "2.36 MB",
+    "images": {
+      "default": "/images/property/rooms/room-202/room202bathroom-2--jpg.webp",
+      "hero": "/images/property/rooms/room-202/room202bathroom-2--jpg-hero.webp",
+      "card": "/images/property/rooms/room-202/room202bathroom-2--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-202/room202bathroom-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "114.9 KB",
+      "card": "30.3 KB",
+      "thumb": "5.6 KB",
+      "default": "30.3 KB"
+    },
+    "totalConvertedBytes": 185366,
+    "totalConvertedFormatted": "181.0 KB"
+  },
+  {
+    "id": "room202bathroom-3--jpg",
+    "originalFilename": "Room202Bathroom(3).jpg",
+    "roomNumber": "Room 202",
+    "categoryProvisional": "Deluxe",
+    "area": "Room 202",
+    "roomTag": "Room 202",
+    "subject": "Bathroom",
+    "caption": "Room 202 · Bathroom",
+    "altText": "Deluxe Room 202 modern ensuite bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2269069,
+    "originalSizeFormatted": "2.16 MB",
+    "images": {
+      "default": "/images/property/rooms/room-202/room202bathroom-3--jpg.webp",
+      "hero": "/images/property/rooms/room-202/room202bathroom-3--jpg-hero.webp",
+      "card": "/images/property/rooms/room-202/room202bathroom-3--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-202/room202bathroom-3--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "158.0 KB",
+      "card": "45.2 KB",
+      "thumb": "8.0 KB",
+      "default": "45.2 KB"
+    },
+    "totalConvertedBytes": 262598,
+    "totalConvertedFormatted": "256.4 KB"
+  },
+  {
+    "id": "room203bathroom-1--heic",
+    "originalFilename": "Room203Bathroom(1).heic",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Bathroom",
+    "caption": "Room 203 · Bathroom",
+    "altText": "Premier Room 203 private bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 12665068,
+    "originalSizeFormatted": "12.08 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/room203bathroom-1--heic.webp",
+      "hero": "/images/property/rooms/room-203/room203bathroom-1--heic-hero.webp",
+      "card": "/images/property/rooms/room-203/room203bathroom-1--heic-card.webp",
+      "thumb": "/images/property/rooms/room-203/room203bathroom-1--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "121.1 KB",
+      "card": "25.1 KB",
+      "thumb": "4.6 KB",
+      "default": "25.1 KB"
+    },
+    "totalConvertedBytes": 180130,
+    "totalConvertedFormatted": "175.9 KB"
+  },
+  {
+    "id": "room203bathroom-1--jpg",
+    "originalFilename": "Room203Bathroom(1).jpg",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Bathroom",
+    "caption": "Room 203 · Bathroom",
+    "altText": "Premier Room 203 private bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2636134,
+    "originalSizeFormatted": "2.51 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/room203bathroom-1--jpg.webp",
+      "hero": "/images/property/rooms/room-203/room203bathroom-1--jpg-hero.webp",
+      "card": "/images/property/rooms/room-203/room203bathroom-1--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-203/room203bathroom-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "133.5 KB",
+      "card": "31.0 KB",
+      "thumb": "5.6 KB",
+      "default": "31.0 KB"
+    },
+    "totalConvertedBytes": 205802,
+    "totalConvertedFormatted": "201.0 KB"
+  },
+  {
+    "id": "room203bathroom-2--heic",
+    "originalFilename": "Room203Bathroom(2).heic",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Bathroom",
+    "caption": "Room 203 · Bathroom",
+    "altText": "Premier Room 203 private bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 12926311,
+    "originalSizeFormatted": "12.33 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/room203bathroom-2--heic.webp",
+      "hero": "/images/property/rooms/room-203/room203bathroom-2--heic-hero.webp",
+      "card": "/images/property/rooms/room-203/room203bathroom-2--heic-card.webp",
+      "thumb": "/images/property/rooms/room-203/room203bathroom-2--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "135.8 KB",
+      "card": "27.5 KB",
+      "thumb": "5.1 KB",
+      "default": "27.5 KB"
+    },
+    "totalConvertedBytes": 200554,
+    "totalConvertedFormatted": "195.9 KB"
+  },
+  {
+    "id": "room203bathroom-2--jpg",
+    "originalFilename": "Room203Bathroom(2).jpg",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Bathroom",
+    "caption": "Room 203 · Bathroom",
+    "altText": "Premier Room 203 private bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2025190,
+    "originalSizeFormatted": "1.93 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/room203bathroom-2--jpg.webp",
+      "hero": "/images/property/rooms/room-203/room203bathroom-2--jpg-hero.webp",
+      "card": "/images/property/rooms/room-203/room203bathroom-2--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-203/room203bathroom-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "78.3 KB",
+      "card": "21.8 KB",
+      "thumb": "4.1 KB",
+      "default": "21.8 KB"
+    },
+    "totalConvertedBytes": 129072,
+    "totalConvertedFormatted": "126.0 KB"
+  },
+  {
+    "id": "room203bathroom-3--jpg",
+    "originalFilename": "Room203Bathroom(3).jpg",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Bathroom",
+    "caption": "Room 203 · Bathroom",
+    "altText": "Premier Room 203 private bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2553118,
+    "originalSizeFormatted": "2.43 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/room203bathroom-3--jpg.webp",
+      "hero": "/images/property/rooms/room-203/room203bathroom-3--jpg-hero.webp",
+      "card": "/images/property/rooms/room-203/room203bathroom-3--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-203/room203bathroom-3--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "124.5 KB",
+      "card": "30.1 KB",
+      "thumb": "5.6 KB",
+      "default": "30.1 KB"
+    },
+    "totalConvertedBytes": 194980,
+    "totalConvertedFormatted": "190.4 KB"
+  },
+  {
+    "id": "room203bathroom-4--jpg",
+    "originalFilename": "Room203Bathroom(4).jpg",
+    "roomNumber": "Room 203",
+    "categoryProvisional": "Premier",
+    "area": "Room 203",
+    "roomTag": "Room 203",
+    "subject": "Premier ensuite bathroom",
+    "caption": "Room 203 · Bathroom",
+    "altText": "Premier Room 203 private bathroom at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2629495,
+    "originalSizeFormatted": "2.51 MB",
+    "images": {
+      "default": "/images/property/rooms/room-203/room203bathroom-4--jpg.webp",
+      "hero": "/images/property/rooms/room-203/room203bathroom-4--jpg-hero.webp",
+      "card": "/images/property/rooms/room-203/room203bathroom-4--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-203/room203bathroom-4--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "134.3 KB",
+      "card": "29.2 KB",
+      "thumb": "5.2 KB",
+      "default": "29.2 KB"
+    },
+    "totalConvertedBytes": 202578,
+    "totalConvertedFormatted": "197.8 KB"
+  },
+  {
+    "id": "standardroom003-1--heic",
+    "originalFilename": "StandardRoom003(1).heic",
+    "roomNumber": "Room 003",
+    "categoryProvisional": "Standard",
+    "area": "Room 003",
+    "roomTag": "Room 003",
+    "subject": "King bed and bedroom view",
+    "caption": "Room 003 · Bedroom View",
+    "altText": "Standard Room 003 bedroom interior view at La Vivante Homestay - StandardRoom003(1)",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13441967,
+    "originalSizeFormatted": "12.82 MB",
+    "images": {
+      "default": "/images/property/rooms/room-003/standardroom003-1--heic.webp",
+      "hero": "/images/property/rooms/room-003/standardroom003-1--heic-hero.webp",
+      "card": "/images/property/rooms/room-003/standardroom003-1--heic-card.webp",
+      "thumb": "/images/property/rooms/room-003/standardroom003-1--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "131.0 KB",
+      "card": "29.7 KB",
+      "thumb": "5.7 KB",
+      "default": "29.7 KB"
+    },
+    "totalConvertedBytes": 200746,
+    "totalConvertedFormatted": "196.0 KB"
+  },
+  {
+    "id": "standardroom003-2--heic",
+    "originalFilename": "StandardRoom003(2).heic",
+    "roomNumber": "Room 003",
+    "categoryProvisional": "Standard",
+    "area": "Room 003",
+    "roomTag": "Room 003",
+    "subject": "King bed and bedroom view",
+    "caption": "Room 003 · Bedroom View",
+    "altText": "Standard Room 003 bedroom interior view at La Vivante Homestay - StandardRoom003(2)",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13691936,
+    "originalSizeFormatted": "13.06 MB",
+    "images": {
+      "default": "/images/property/rooms/room-003/standardroom003-2--heic.webp",
+      "hero": "/images/property/rooms/room-003/standardroom003-2--heic-hero.webp",
+      "card": "/images/property/rooms/room-003/standardroom003-2--heic-card.webp",
+      "thumb": "/images/property/rooms/room-003/standardroom003-2--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "154.1 KB",
+      "card": "34.2 KB",
+      "thumb": "6.6 KB",
+      "default": "34.2 KB"
+    },
+    "totalConvertedBytes": 234638,
+    "totalConvertedFormatted": "229.1 KB"
+  },
+  {
+    "id": "standardroom003-3--heic",
+    "originalFilename": "StandardRoom003(3).heic",
+    "roomNumber": "Room 003",
+    "categoryProvisional": "Standard",
+    "area": "Room 003",
+    "roomTag": "Room 003",
+    "subject": "King bed and bedroom view",
+    "caption": "Room 003 · Bedroom View",
+    "altText": "Standard Room 003 bedroom interior view at La Vivante Homestay - StandardRoom003(3)",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 12894203,
+    "originalSizeFormatted": "12.30 MB",
+    "images": {
+      "default": "/images/property/rooms/room-003/standardroom003-3--heic.webp",
+      "hero": "/images/property/rooms/room-003/standardroom003-3--heic-hero.webp",
+      "card": "/images/property/rooms/room-003/standardroom003-3--heic-card.webp",
+      "thumb": "/images/property/rooms/room-003/standardroom003-3--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "154.4 KB",
+      "card": "34.4 KB",
+      "thumb": "6.6 KB",
+      "default": "34.4 KB"
+    },
+    "totalConvertedBytes": 235296,
+    "totalConvertedFormatted": "229.8 KB"
+  },
+  {
+    "id": "standardroom003-4--heic",
+    "originalFilename": "StandardRoom003(4).heic",
+    "roomNumber": "Room 003",
+    "categoryProvisional": "Standard",
+    "area": "Room 003",
+    "roomTag": "Room 003",
+    "subject": "King bed and bedroom view",
+    "caption": "Room 003 · Bedroom View",
+    "altText": "Standard Room 003 bedroom interior view at La Vivante Homestay - StandardRoom003(4)",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13424600,
+    "originalSizeFormatted": "12.80 MB",
+    "images": {
+      "default": "/images/property/rooms/room-003/standardroom003-4--heic.webp",
+      "hero": "/images/property/rooms/room-003/standardroom003-4--heic-hero.webp",
+      "card": "/images/property/rooms/room-003/standardroom003-4--heic-card.webp",
+      "thumb": "/images/property/rooms/room-003/standardroom003-4--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "142.1 KB",
+      "card": "31.8 KB",
+      "thumb": "6.5 KB",
+      "default": "31.8 KB"
+    },
+    "totalConvertedBytes": 217374,
+    "totalConvertedFormatted": "212.3 KB"
+  },
+  {
+    "id": "standardroom003-5--heic",
+    "originalFilename": "StandardRoom003(5).heic",
+    "roomNumber": "Room 003",
+    "categoryProvisional": "Standard",
+    "area": "Room 003",
+    "roomTag": "Room 003",
+    "subject": "King bed and bedroom view",
+    "caption": "Room 003 · Bedroom View",
+    "altText": "Standard Room 003 bedroom interior view at La Vivante Homestay - StandardRoom003(5)",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13881848,
+    "originalSizeFormatted": "13.24 MB",
+    "images": {
+      "default": "/images/property/rooms/room-003/standardroom003-5--heic.webp",
+      "hero": "/images/property/rooms/room-003/standardroom003-5--heic-hero.webp",
+      "card": "/images/property/rooms/room-003/standardroom003-5--heic-card.webp",
+      "thumb": "/images/property/rooms/room-003/standardroom003-5--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "182.9 KB",
+      "card": "41.9 KB",
+      "thumb": "8.3 KB",
+      "default": "41.9 KB"
+    },
+    "totalConvertedBytes": 281610,
+    "totalConvertedFormatted": "275.0 KB"
+  },
+  {
+    "id": "standardroom003-6--heic",
+    "originalFilename": "StandardRoom003(6).heic",
+    "roomNumber": "Room 003",
+    "categoryProvisional": "Standard",
+    "area": "Room 003",
+    "roomTag": "Room 003",
+    "subject": "King bed and bedroom view",
+    "caption": "Room 003 · Bedroom View",
+    "altText": "Standard Room 003 bedroom interior view at La Vivante Homestay - StandardRoom003(6)",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 13602314,
+    "originalSizeFormatted": "12.97 MB",
+    "images": {
+      "default": "/images/property/rooms/room-003/standardroom003-6--heic.webp",
+      "hero": "/images/property/rooms/room-003/standardroom003-6--heic-hero.webp",
+      "card": "/images/property/rooms/room-003/standardroom003-6--heic-card.webp",
+      "thumb": "/images/property/rooms/room-003/standardroom003-6--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "201.1 KB",
+      "card": "46.9 KB",
+      "thumb": "9.3 KB",
+      "default": "46.9 KB"
+    },
+    "totalConvertedBytes": 311572,
+    "totalConvertedFormatted": "304.3 KB"
+  },
+  {
+    "id": "standardroom003-7--heic",
+    "originalFilename": "StandardRoom003(7).heic",
+    "roomNumber": "Room 003",
+    "categoryProvisional": "Standard",
+    "area": "Room 003",
+    "roomTag": "Room 003",
+    "subject": "King bed and bedroom view",
+    "caption": "Room 003 · Bedroom View",
+    "altText": "Standard Room 003 bedroom interior view at La Vivante Homestay - StandardRoom003(7)",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 4000,
+      "height": 2252
+    },
+    "originalSizeBytes": 14825094,
+    "originalSizeFormatted": "14.14 MB",
+    "images": {
+      "default": "/images/property/rooms/room-003/standardroom003-7--heic.webp",
+      "hero": "/images/property/rooms/room-003/standardroom003-7--heic-hero.webp",
+      "card": "/images/property/rooms/room-003/standardroom003-7--heic-card.webp",
+      "thumb": "/images/property/rooms/room-003/standardroom003-7--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1081
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "245.4 KB",
+      "card": "57.0 KB",
+      "thumb": "11.1 KB",
+      "default": "57.0 KB"
+    },
+    "totalConvertedBytes": 379362,
+    "totalConvertedFormatted": "370.5 KB"
+  },
+  {
+    "id": "standardroom003-8--jpg",
+    "originalFilename": "StandardRoom003(8).jpg",
+    "roomNumber": "Room 003",
+    "categoryProvisional": "Standard",
+    "area": "Room 003",
+    "roomTag": "Room 003",
+    "subject": "King bed and bedroom view",
+    "caption": "Room 003 · Bedroom View",
+    "altText": "Standard Room 003 bedroom interior view at La Vivante Homestay - StandardRoom003(8)",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 1600,
+      "height": 900
+    },
+    "originalSizeBytes": 132811,
+    "originalSizeFormatted": "0.13 MB",
+    "images": {
+      "default": "/images/property/rooms/room-003/standardroom003-8--jpg.webp",
+      "hero": "/images/property/rooms/room-003/standardroom003-8--jpg-hero.webp",
+      "card": "/images/property/rooms/room-003/standardroom003-8--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-003/standardroom003-8--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1600,
+        "height": 900
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "89.5 KB",
+      "card": "39.9 KB",
+      "thumb": "8.7 KB",
+      "default": "39.9 KB"
+    },
+    "totalConvertedBytes": 182290,
+    "totalConvertedFormatted": "178.0 KB"
+  },
+  {
+    "id": "standardroom003-9--jpg",
+    "originalFilename": "StandardRoom003(9).jpg",
+    "roomNumber": "Room 003",
+    "categoryProvisional": "Standard",
+    "area": "Room 003",
+    "roomTag": "Room 003",
+    "subject": "King bed and bedroom view",
+    "caption": "Room 003 · Bedroom View",
+    "altText": "Standard Room 003 bedroom interior view at La Vivante Homestay - StandardRoom003(9)",
+    "orientation": "landscape",
+    "aspectRatio": "1.78",
+    "originalDimensions": {
+      "width": 1600,
+      "height": 900
+    },
+    "originalSizeBytes": 111122,
+    "originalSizeFormatted": "0.11 MB",
+    "images": {
+      "default": "/images/property/rooms/room-003/standardroom003-9--jpg.webp",
+      "hero": "/images/property/rooms/room-003/standardroom003-9--jpg-hero.webp",
+      "card": "/images/property/rooms/room-003/standardroom003-9--jpg-card.webp",
+      "thumb": "/images/property/rooms/room-003/standardroom003-9--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1600,
+        "height": 900
+      },
+      "card": {
+        "width": 1000,
+        "height": 563
+      },
+      "thumb": {
+        "width": 400,
+        "height": 225
+      }
+    },
+    "variantSizes": {
+      "hero": "68.4 KB",
+      "card": "32.0 KB",
+      "thumb": "7.1 KB",
+      "default": "32.0 KB"
+    },
+    "totalConvertedBytes": 142958,
+    "totalConvertedFormatted": "139.6 KB"
+  },
+  {
+    "id": "starirstofirstfloor-1--jpg",
+    "originalFilename": "StarirsToFirstFloor(1).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Staircase",
+    "subject": "Architectural interior staircase with handrails",
+    "caption": "Interior Staircase",
+    "altText": "Architectural interior stairway connecting floors at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2303467,
+    "originalSizeFormatted": "2.20 MB",
+    "images": {
+      "default": "/images/property/common-areas/starirstofirstfloor-1--jpg.webp",
+      "hero": "/images/property/common-areas/starirstofirstfloor-1--jpg-hero.webp",
+      "card": "/images/property/common-areas/starirstofirstfloor-1--jpg-card.webp",
+      "thumb": "/images/property/common-areas/starirstofirstfloor-1--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "193.6 KB",
+      "card": "57.3 KB",
+      "thumb": "10.6 KB",
+      "default": "57.3 KB"
+    },
+    "totalConvertedBytes": 326508,
+    "totalConvertedFormatted": "318.9 KB"
+  },
+  {
+    "id": "starirstofirstfloor-2--jpg",
+    "originalFilename": "StarirsToFirstFloor(2).jpg",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Staircase",
+    "subject": "Architectural interior staircase with handrails",
+    "caption": "Interior Staircase",
+    "altText": "Architectural interior stairway connecting floors at La Vivante Homestay",
+    "orientation": "landscape",
+    "aspectRatio": "1.33",
+    "originalDimensions": {
+      "width": 4096,
+      "height": 3072
+    },
+    "originalSizeBytes": 2408827,
+    "originalSizeFormatted": "2.30 MB",
+    "images": {
+      "default": "/images/property/common-areas/starirstofirstfloor-2--jpg.webp",
+      "hero": "/images/property/common-areas/starirstofirstfloor-2--jpg-hero.webp",
+      "card": "/images/property/common-areas/starirstofirstfloor-2--jpg-card.webp",
+      "thumb": "/images/property/common-areas/starirstofirstfloor-2--jpg-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1920,
+        "height": 1440
+      },
+      "card": {
+        "width": 1000,
+        "height": 750
+      },
+      "thumb": {
+        "width": 400,
+        "height": 300
+      }
+    },
+    "variantSizes": {
+      "hero": "216.0 KB",
+      "card": "64.3 KB",
+      "thumb": "12.6 KB",
+      "default": "64.3 KB"
+    },
+    "totalConvertedBytes": 365932,
+    "totalConvertedFormatted": "357.4 KB"
+  },
+  {
+    "id": "starirstofirstfloor-3--heic",
+    "originalFilename": "StarirsToFirstFloor(3).heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Staircase",
+    "subject": "Architectural interior staircase with handrails",
+    "caption": "Interior Staircase",
+    "altText": "Architectural interior stairway connecting floors at La Vivante Homestay",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2252,
+      "height": 4000
+    },
+    "originalSizeBytes": 14624126,
+    "originalSizeFormatted": "13.95 MB",
+    "images": {
+      "default": "/images/property/common-areas/starirstofirstfloor-3--heic.webp",
+      "hero": "/images/property/common-areas/starirstofirstfloor-3--heic-hero.webp",
+      "card": "/images/property/common-areas/starirstofirstfloor-3--heic-card.webp",
+      "thumb": "/images/property/common-areas/starirstofirstfloor-3--heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1081,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "230.7 KB",
+      "card": "47.3 KB",
+      "thumb": "8.4 KB",
+      "default": "47.3 KB"
+    },
+    "totalConvertedBytes": 341698,
+    "totalConvertedFormatted": "333.7 KB"
+  },
+  {
+    "id": "strairsto2ndfloor-heic",
+    "originalFilename": "StrairsTo2ndFloor.heic",
+    "roomNumber": null,
+    "categoryProvisional": null,
+    "area": "Common Areas",
+    "roomTag": "Common Space",
+    "subject": "",
+    "caption": "Property Space",
+    "altText": "La Vivante Homestay property space - StrairsTo2ndFloor",
+    "orientation": "portrait",
+    "aspectRatio": "0.56",
+    "originalDimensions": {
+      "width": 2252,
+      "height": 4000
+    },
+    "originalSizeBytes": 12277801,
+    "originalSizeFormatted": "11.71 MB",
+    "images": {
+      "default": "/images/property/common-areas/strairsto2ndfloor-heic.webp",
+      "hero": "/images/property/common-areas/strairsto2ndfloor-heic-hero.webp",
+      "card": "/images/property/common-areas/strairsto2ndfloor-heic-card.webp",
+      "thumb": "/images/property/common-areas/strairsto2ndfloor-heic-thumb.webp"
+    },
+    "variantDimensions": {
+      "hero": {
+        "width": 1081,
+        "height": 1920
+      },
+      "card": {
+        "width": 563,
+        "height": 1000
+      },
+      "thumb": {
+        "width": 225,
+        "height": 400
+      }
+    },
+    "variantSizes": {
+      "hero": "97.4 KB",
+      "card": "26.0 KB",
+      "thumb": "5.6 KB",
+      "default": "26.0 KB"
+    },
+    "totalConvertedBytes": 158644,
+    "totalConvertedFormatted": "154.9 KB"
+  }
+];
+
+export function getImagesByRoom(roomNumber: string): PropertyImageItem[] {
+  return PROPERTY_IMAGES.filter((img) => img.roomNumber === roomNumber);
+}
+
+export function getImagesByCategory(category: string): PropertyImageItem[] {
+  return PROPERTY_IMAGES.filter(
+    (img) => img.categoryProvisional?.toLowerCase() === category.toLowerCase()
+  );
+}
+
+export function getExteriorHeroImages(): PropertyImageItem[] {
+  return PROPERTY_IMAGES.filter(
+    (img) => img.area === "Exterior" && img.orientation === "landscape"
+  );
+}
+
+export function getCommonAreaImages(): PropertyImageItem[] {
+  return PROPERTY_IMAGES.filter((img) => img.roomNumber === null);
+}

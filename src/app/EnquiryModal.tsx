@@ -1,8 +1,19 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { EARLIEST_CHECK_IN, DEFAULT_CHECK_OUT_MIN, getNextDay } from "./dateUtils";
 import { WhatsAppIcon, EmailIcon, CloseIcon } from "./Icons";
+import {
+  ROOM_CATEGORIES,
+  PACKAGES,
+  DEFAULT_PACKAGE_ID,
+  PackageId,
+  RoomCategory,
+  calculateStayEstimate,
+  calculateNightsBetween,
+  formatCurrency,
+  getRoomById,
+} from "./pricingData";
 
 export interface EnquiryModalProps {
   isOpen: boolean;
@@ -11,15 +22,14 @@ export interface EnquiryModalProps {
   initialCheckOut?: string;
   initialGuests?: string;
   initialRoom?: string;
+  initialPackage?: PackageId;
 }
 
-const ROOM_OPTIONS = [
-  "No specific preference",
-  "The Deluxe Room",
-  "The Balcony Room",
-  "The Family Room",
-  "Shared Accommodation",
-];
+function parseGuestsInput(val?: string): number {
+  if (!val) return 2;
+  const match = val.match(/\d+/);
+  return match ? parseInt(match[0], 10) : 2;
+}
 
 function EnquiryDialog({
   onClose,
@@ -27,22 +37,47 @@ function EnquiryDialog({
   initialCheckOut = "",
   initialGuests = "2",
   initialRoom = "No specific preference",
+  initialPackage = DEFAULT_PACKAGE_ID,
 }: Omit<EnquiryModalProps, "isOpen">) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [checkIn, setCheckIn] = useState(initialCheckIn);
   const [checkOut, setCheckOut] = useState(initialCheckOut);
-  const [guests, setGuests] = useState(initialGuests || "2");
-  const [room, setRoom] = useState(initialRoom || "No specific preference");
+  const [selectedRoomName, setSelectedRoomName] = useState(() => {
+    // Check if initialRoom matches a category
+    const found = getRoomById(initialRoom);
+    return found ? found.name : initialRoom || "No specific preference";
+  });
+  const [selectedPackageId, setSelectedPackageId] = useState<PackageId>(initialPackage);
+  const [guestsCount, setGuestsCount] = useState<number>(() => {
+    const parsed = parseGuestsInput(initialGuests);
+    const found = getRoomById(initialRoom);
+    if (found && parsed > found.maxGuests) {
+      return found.maxGuests;
+    }
+    return parsed;
+  });
   const [notes, setNotes] = useState("");
 
   const [errors, setErrors] = useState<Record<string, string>>({});
-  // const [copied, setCopied] = useState(false);
   const [actionNotice, setActionNotice] = useState<string | null>(null);
 
   const dialogRef = useRef<HTMLDivElement>(null);
   const firstInputRef = useRef<HTMLInputElement>(null);
+
+  // Identify selected room category object if any
+  const selectedRoom: RoomCategory | undefined = useMemo(() => {
+    return ROOM_CATEGORIES.find((r) => r.name.toLowerCase() === selectedRoomName.toLowerCase());
+  }, [selectedRoomName]);
+
+  const handleRoomChange = (roomName: string) => {
+    setSelectedRoomName(roomName);
+    const room = ROOM_CATEGORIES.find((r) => r.name.toLowerCase() === roomName.toLowerCase());
+    if (room && guestsCount > room.maxGuests) {
+      setGuestsCount(room.maxGuests);
+    }
+  };
 
   // Manage body scroll lock and escape key handling
   useEffect(() => {
@@ -94,6 +129,22 @@ function EnquiryDialog({
     }
   };
 
+  // Pricing calculation
+  const estimate = useMemo(() => {
+    if (!selectedRoom) return null;
+    return calculateStayEstimate({
+      roomId: selectedRoom.id,
+      packageId: selectedPackageId,
+      guestsCount,
+      checkIn,
+      checkOut,
+    });
+  }, [selectedRoom, selectedPackageId, guestsCount, checkIn, checkOut]);
+
+  const numberOfNights = useMemo(() => {
+    return checkIn && checkOut ? calculateNightsBetween(checkIn, checkOut) : 0;
+  }, [checkIn, checkOut]);
+
   const validate = (): boolean => {
     const newErrors: Record<string, string> = {};
 
@@ -127,24 +178,52 @@ function EnquiryDialog({
       newErrors.checkOut = "Check-out date must be at least one day after check-in.";
     }
 
+    // Occupancy enforcement
+    if (selectedRoom && guestsCount > selectedRoom.maxGuests) {
+      newErrors.guests = `${selectedRoom.name} accommodates a maximum of ${selectedRoom.maxGuests} guests.`;
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const generateEnquiryText = (): string => {
+    const pkg = PACKAGES.find((p) => p.id === selectedPackageId) || PACKAGES[0];
+    const nightsText = numberOfNights > 0 ? `${numberOfNights} night${numberOfNights > 1 ? "s" : ""}` : "Dates pending";
+
     const lines = [
       "Hello La Vivante Homestay Team,",
       "",
-      "I would like to enquire about staying at La Vivante Homestay:",
+      "I would like to enquire about staying at La Vivante Homestay (Enquiry Only):",
       "",
       `• Guest Name: ${name.trim()}`,
       `• Phone Number: ${phone.trim()}`,
       `• Email: ${email.trim() ? email.trim() : "Not provided"}`,
       `• Check-in Date: ${checkIn}`,
-      `• Check-out Date: ${checkOut}`,
-      `• Number of Guests: ${guests}`,
-      `• Preferred Room: ${room}`,
+      `• Check-out Date: ${checkOut} (${nightsText})`,
+      `• Number of Guests: ${guestsCount} guest${guestsCount > 1 ? "s" : ""}`,
+      `• Room Preference: ${selectedRoomName}${selectedRoom ? ` (Base: ${selectedRoom.baseGuests} / Max: ${selectedRoom.maxGuests} guests)` : ""}`,
+      `• Selected Package: ${pkg.name}`,
     ];
+
+    if (estimate && numberOfNights > 0) {
+      const extraGuestText =
+        estimate.extraGuests > 0
+          ? ` (incl. ${estimate.extraGuests} extra guest @ ${formatCurrency(estimate.extraPersonRatePerNight)}/night)`
+          : "";
+      lines.push(
+        `• Nightly Rate: ${formatCurrency(estimate.effectiveNightlyRate)}/night${extraGuestText} [was ${formatCurrency(estimate.baseOriginalPrice + estimate.totalExtraPersonPerNight)}, ${estimate.discountPercent}% OFF base]`,
+        `• Estimated Total Amount: ${formatCurrency(estimate.estimatedTotal)} for ${numberOfNights} night${numberOfNights > 1 ? "s" : ""} (Estimate for enquiry only)`
+      );
+    } else if (estimate) {
+      lines.push(
+        `• Estimated Nightly Rate: ${formatCurrency(estimate.effectiveNightlyRate)}/night [was ${formatCurrency(estimate.baseOriginalPrice + estimate.totalExtraPersonPerNight)}, ${estimate.discountPercent}% OFF base] (Final total requires check-in & check-out dates)`
+      );
+    } else {
+      lines.push(
+        `• Estimated Pricing: Customized quote requested based on preferred package (${pkg.name})`
+      );
+    }
 
     if (notes.trim()) {
       lines.push(`• Special Requests / Notes: ${notes.trim()}`);
@@ -152,7 +231,7 @@ function EnquiryDialog({
 
     lines.push(
       "",
-      "Please let me know about availability and booking details. Thank you!"
+      "Please note: This is an enquiry only and does not constitute a confirmed booking. Please share availability and details. Thank you!"
     );
 
     return lines.join("\n");
@@ -164,44 +243,20 @@ function EnquiryDialog({
     const whatsappUrl = `https://wa.me/916369137468?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     setActionNotice(
-      "WhatsApp has been opened in a new tab with your pre-filled enquiry. Please click 'Send' in WhatsApp to deliver your message to La Vivante."
+      "WhatsApp has opened in a new tab with your pre-filled enquiry. Please click 'Send' in WhatsApp to deliver your message to La Vivante."
     );
   };
 
   const handleEmail = () => {
     if (!validate()) return;
     const text = generateEnquiryText();
-    const subject = `Stay Enquiry - ${name.trim()} (${checkIn} to ${checkOut})`;
+    const subject = `Stay Enquiry - ${name.trim()} (${checkIn} to ${checkOut} · ${selectedRoomName})`;
     const mailtoUrl = `mailto:stay@lavivantegroups.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
     window.location.href = mailtoUrl;
     setActionNotice(
       "Your email client is opening with your pre-filled enquiry to stay@lavivantegroups.com. Please review and click 'Send' in your email app."
     );
   };
-
-  /*
-  const handleCopy = async () => {
-    if (!validate()) return;
-    const text = generateEnquiryText();
-    try {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(text);
-      } else {
-        const textarea = document.createElement("textarea");
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
-      }
-      setCopied(true);
-      setActionNotice("Enquiry details copied to clipboard! You can paste and send this via any messaging app.");
-      setTimeout(() => setCopied(false), 4000);
-    } catch {
-      setActionNotice("Could not copy automatically. Please use the WhatsApp or Email button.");
-    }
-  };
-  */
 
   return (
     <div
@@ -226,7 +281,7 @@ function EnquiryDialog({
               Enquire About <em>Your Stay</em>
             </h2>
             <p id="enquiry-modal-desc" className="modal-subtitle">
-              Share your preferred dates and details with our team.
+              Share your preferred room, package, and dates for an estimated quote.
             </p>
           </div>
           <button
@@ -239,16 +294,13 @@ function EnquiryDialog({
           </button>
         </div>
 
-        {/* Prominent honesty banner 
-        <div className="enquiry-notice-box" role="status">
-          <span className="notice-icon" aria-hidden="true">ℹ</span>
-          <div>
-            <strong>This is an enquiry only. Your stay is not confirmed until La Vivante responds.</strong>
-            <p>
-              When you click WhatsApp or Email, your chosen app will open with your details pre-filled. You must click <em>Send</em> in that app to deliver your message.
-            </p>
-          </div>
-        </div>*/}
+        {/* Clear Enquiry Notice */}
+        <div className="rounded-lg bg-[#fbf8ee] border border-[#e5ddc8] p-3 text-xs text-[#524d40] mb-4 flex items-start gap-2.5">
+          <span className="text-[#9b8050] text-sm mt-0.5">ℹ</span>
+          <p className="m-0 leading-relaxed">
+            <strong>Enquiry only:</strong> This request does not confirm a booking or guarantee availability. Rates shown are preliminary promotional estimates. Final confirmation is provided by La Vivante upon direct contact.
+          </p>
+        </div>
 
         {actionNotice && (
           <div className="action-feedback-box" role="alert">
@@ -342,6 +394,7 @@ function EnquiryDialog({
             {errors.email && <span className="field-error" role="alert">{errors.email}</span>}
           </div>
 
+          {/* Dates & Guests */}
           <div className="form-grid-3">
             <div className="form-field">
               <label htmlFor="enquiry-checkin">
@@ -373,7 +426,9 @@ function EnquiryDialog({
                 aria-required="true"
                 aria-invalid={errors.checkOut ? "true" : "false"}
               />
-              <span className="field-hint">Min 1 night after check-in</span>
+              <span className="field-hint">
+                {numberOfNights > 0 ? `${numberOfNights} night${numberOfNights > 1 ? "s" : ""}` : "Min 1 night"}
+              </span>
               {errors.checkOut && <span className="field-error" role="alert">{errors.checkOut}</span>}
             </div>
 
@@ -383,34 +438,147 @@ function EnquiryDialog({
               </label>
               <select
                 id="enquiry-guests"
-                value={guests}
-                onChange={(e) => setGuests(e.target.value)}
+                value={guestsCount}
+                onChange={(e) => setGuestsCount(parseInt(e.target.value, 10))}
               >
-                <option value="1 guest">1 guest</option>
-                <option value="2 guests">2 guests</option>
-                <option value="3 guests">3 guests</option>
-                <option value="4 guests">4 guests</option>
-                <option value="5+ guests">5+ guests</option>
+                {selectedRoom ? (
+                  Array.from({ length: selectedRoom.maxGuests }, (_, i) => i + 1).map((num) => {
+                    let label = `${num} guest${num > 1 ? "s" : ""}`;
+                    if (num > selectedRoom.baseGuests) {
+                      label += ` (+ extra guest)`;
+                    } else if (num === selectedRoom.baseGuests) {
+                      label += ` (base)`;
+                    }
+                    return (
+                      <option key={num} value={num}>
+                        {label}
+                      </option>
+                    );
+                  })
+                ) : (
+                  <>
+                    <option value={1}>1 guest</option>
+                    <option value={2}>2 guests</option>
+                    <option value={3}>3 guests</option>
+                    <option value={4}>4 guests</option>
+                  </>
+                )}
               </select>
+              {selectedRoom && (
+                <span className="field-hint">
+                  Max {selectedRoom.maxGuests} guests for {selectedRoom.name}
+                </span>
+              )}
             </div>
           </div>
 
+          {/* Room Selection */}
           <div className="form-field">
             <label htmlFor="enquiry-room">
-              Room Preference <span className="optional">(optional)</span>
+              Room Category <span className="optional">(5 categories available)</span>
             </label>
             <select
               id="enquiry-room"
-              value={room}
-              onChange={(e) => setRoom(e.target.value)}
+              value={selectedRoomName}
+              onChange={(e) => handleRoomChange(e.target.value)}
             >
-              {ROOM_OPTIONS.map((opt) => (
-                <option key={opt} value={opt}>
-                  {opt}
+              <option value="No specific preference">No specific preference (Recommend best)</option>
+              {ROOM_CATEGORIES.map((cat) => (
+                <option key={cat.id} value={cat.name}>
+                  {cat.name} ({cat.totalUnits} unit{cat.totalUnits > 1 ? "s" : ""} · Base {cat.baseGuests} / Max {cat.maxGuests} guests)
                 </option>
               ))}
             </select>
           </div>
+
+          {/* Package Selection */}
+          <div className="form-field">
+            <label htmlFor="enquiry-package">
+              Stay Package Option <span className="req">*</span>
+            </label>
+            <select
+              id="enquiry-package"
+              value={selectedPackageId}
+              onChange={(e) => setSelectedPackageId(e.target.value as PackageId)}
+            >
+              {PACKAGES.map((pkg) => (
+                <option key={pkg.id} value={pkg.id}>
+                  {pkg.name} — Extra person: {formatCurrency(pkg.extraPersonCharge)}/night
+                </option>
+              ))}
+            </select>
+            <span className="field-hint">
+              Includes natural or AC options, with or without breakfast.
+            </span>
+          </div>
+
+          {/* Live Pricing Breakdown Box */}
+          {estimate && (
+            <div className="rounded-xl border border-[#ded6c5] bg-[#faf7ef] p-4 mb-4 text-xs">
+              <div className="flex items-start justify-between gap-2 border-b border-[#ece4d3] pb-2.5 mb-2.5">
+                <div>
+                  <span className="text-[10px] uppercase tracking-wider font-semibold text-[#8b764b]">
+                    {estimate.room?.name} · {estimate.package.shortLabel}
+                  </span>
+                  <div className="flex items-baseline gap-2 mt-0.5">
+                    <del className="text-[#8c9182] text-xs">
+                      {formatCurrency(estimate.baseOriginalPrice)}
+                    </del>
+                    <span className="text-base font-bold text-[#1f372a]">
+                      {formatCurrency(estimate.baseDiscountedPrice)}
+                    </span>
+                    <span className="text-[11px] text-[#6f756a]">/ night (base)</span>
+                    <span className="rounded bg-emerald-100 text-emerald-800 border border-emerald-200 px-1.5 py-0.2 text-[10px] font-bold">
+                      {estimate.discountPercent}% OFF
+                    </span>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <span className="inline-block rounded-full bg-[#f0ede3] px-2 py-0.5 text-[10px] font-medium text-[#4a5046]">
+                    Base: {estimate.baseGuests} | Max: {estimate.room?.maxGuests} guests
+                  </span>
+                </div>
+              </div>
+
+              {/* Extra person calculation note */}
+              {estimate.extraGuests > 0 ? (
+                <div className="text-[#656c5e] mb-2 flex items-center justify-between">
+                  <span>
+                    Extra guests ({estimate.extraGuests} guest{estimate.extraGuests > 1 ? "s" : ""} above base {estimate.baseGuests}):
+                  </span>
+                  <span className="font-semibold text-[#294b3b]">
+                    +{formatCurrency(estimate.totalExtraPersonPerNight)} / night
+                  </span>
+                </div>
+              ) : (
+                <div className="text-[#7c8274] mb-2 text-[11px]">
+                  Standard base occupancy applies (no extra guest fee).
+                </div>
+              )}
+
+              {/* Nightly & Total Calculation */}
+              <div className="pt-2 border-t border-[#ece4d3] flex items-center justify-between">
+                <div>
+                  <span className="font-medium text-[#2f352b]">
+                    Nightly Rate ({guestsCount} guest{guestsCount > 1 ? "s" : ""}):
+                  </span>
+                  <span className="block text-[11px] text-[#7a8072]">
+                    {numberOfNights > 0 ? `For ${numberOfNights} night${numberOfNights > 1 ? "s" : ""}` : "Select check-in & check-out dates"}
+                  </span>
+                </div>
+                <div className="text-right">
+                  <span className="text-sm font-semibold text-[#1f372a]">
+                    {formatCurrency(estimate.effectiveNightlyRate)} / night
+                  </span>
+                  {numberOfNights > 0 && (
+                    <div className="text-base font-bold text-[#1c352a]">
+                      Est. Total: {formatCurrency(estimate.estimatedTotal)}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
 
           <div className="form-field">
             <label htmlFor="enquiry-notes">
@@ -421,7 +589,7 @@ function EnquiryDialog({
               rows={3}
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              placeholder="e.g. Estimated arrival time, dietary considerations, or room questions..."
+              placeholder="e.g. Arrival timing, extra bed query, meal preferences, or local travel guidance..."
             />
           </div>
 
@@ -447,25 +615,6 @@ function EnquiryDialog({
                 <span>Enquire via Email</span>
               </button>
             </div>
-
-            {/*<button
-              type="button"
-              className="btn-modal-copy"
-              onClick={handleCopy}
-              title="Copy enquiry text to paste anywhere"
-            >
-              {copied ? (
-                <>
-                  <CheckIcon className="w-4 h-4 text-emerald-600" />
-                  <span>Enquiry Copied to Clipboard</span>
-                </>
-              ) : (
-                <>
-                  <CopyIcon className="w-4 h-4" />
-                  <span>Copy Enquiry Details</span>
-                </>
-              )}
-            </button>*/}
           </div>
         </form>
       </div>
@@ -477,7 +626,7 @@ export default function EnquiryModal(props: EnquiryModalProps) {
   if (!props.isOpen) return null;
   return (
     <EnquiryDialog
-      key={`${props.initialCheckIn}_${props.initialCheckOut}_${props.initialGuests}_${props.initialRoom}`}
+      key={`${props.initialCheckIn}_${props.initialCheckOut}_${props.initialGuests}_${props.initialRoom}_${props.initialPackage}`}
       {...props}
     />
   );

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { EARLIEST_CHECK_IN, DEFAULT_CHECK_OUT_MIN, getNextDay } from "./dateUtils";
 import EnquiryModal from "./EnquiryModal";
+import { PackageId, DEFAULT_PACKAGE_ID } from "./pricingData";
 
 export default function BookingSection() {
 	const [checkIn, setCheckIn] = useState("");
@@ -11,14 +12,18 @@ export default function BookingSection() {
 	const [checkOutMin, setCheckOutMin] = useState(DEFAULT_CHECK_OUT_MIN);
 	const [guests, setGuests] = useState("2 guests");
 	const [selectedRoom, setSelectedRoom] = useState("No specific preference");
+	const [selectedPackage, setSelectedPackage] = useState<PackageId>(DEFAULT_PACKAGE_ID);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
-	// Listen for custom "open-enquiry" events (e.g. from room cards or header links)
+	// Listen for custom "open-enquiry" events (e.g. from room cards or explore buttons)
 	useEffect(() => {
 		const handleOpenEnquiry = (event: Event) => {
-			const customEvent = event as CustomEvent<{ room?: string }>;
+			const customEvent = event as CustomEvent<{ room?: string; packageId?: PackageId }>;
 			if (customEvent.detail?.room) {
 				setSelectedRoom(customEvent.detail.room);
+			}
+			if (customEvent.detail?.packageId) {
+				setSelectedPackage(customEvent.detail.packageId);
 			}
 			setIsModalOpen(true);
 		};
@@ -101,7 +106,7 @@ export default function BookingSection() {
 							<option value="2 guests">2 guests</option>
 							<option value="3 guests">3 guests</option>
 							<option value="4 guests">4 guests</option>
-							<option value="5+ guests">5+ guests</option>
+							<option value="5+ guests">5+ guests (Multi-room)</option>
 						</select>
 					</label>
 
@@ -135,6 +140,7 @@ export default function BookingSection() {
 				initialCheckOut={checkOut}
 				initialGuests={guests}
 				initialRoom={selectedRoom}
+				initialPackage={selectedPackage}
 			/>
 		</>
 	);

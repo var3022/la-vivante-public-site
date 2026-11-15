@@ -4,34 +4,9 @@ import ContactSection from "./ContactSection";
 import Footer from "./Footer";
 import Header from "./Header";
 import LocationSection from "./LocationSection";
-import RoomEnquireButton from "./RoomEnquireButton";
-
-const rooms = [
-  {
-    number: "01",
-    name: "The Deluxe Room",
-    detail: "A quiet retreat with thoughtful comforts.",
-    features: "Queen beds · Air conditioning · Ensuite bathroom",
-    image:
-      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1100&q=85",
-  },
-  {
-    number: "02",
-    name: "The Balcony Room",
-    detail: "Slow mornings and a little more breathing room.",
-    features: "Private balcony · Air conditioning · Ensuite bathroom",
-    image:
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1100&q=85",
-  },
-  {
-    number: "03",
-    name: "The Family Room",
-    detail: "Space to settle in, reconnect and feel at home.",
-    features: "Flexible sleeping · Shared moments · Modern comforts",
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1100&q=85",
-  },
-];
+import HeroCarousel from "./HeroCarousel";
+import HomeRoomsShowcase from "./HomeRoomsShowcase";
+import PropertyGallerySection from "./PropertyGallerySection";
 
 const amenities = [
   ["01", "A comfortable stay", "Air-conditioned rooms and considered essentials"],
@@ -49,33 +24,8 @@ export default function Home() {
 
       <Header currentPath="/" />
 
-      <section className="hero">
-        <div className="hero-image" role="img" aria-label="An inviting, sunlit homestay bedroom" />
-        <div className="hero-shade" />
-
-        <div className="hero-content">
-          <p className="eyebrow light-eyebrow">
-            <span /> A STAY THAT FEELS DIFFERENT
-          </p>
-          <h1>
-            Come as you are.
-            <br />
-            <em>Feel at home.</em>
-          </h1>
-          <p className="hero-description">
-            Thoughtful spaces, unhurried mornings and the comfort of feeling
-            like you belong somewhere.
-          </p>
-          <a className="hero-button" href="#booking">
-            Find your kind of stay <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-
-        <div className="hero-caption">
-          <span>YOUR OWN LITTLE CORNER OF COMFORT</span>
-          <span>A PLACE TO BELONG</span>
-        </div>
-      </section>
+      {/* Auto-playing Hero Carousel with Wide Exterior & Common Areas */}
+      <HeroCarousel />
 
       <BookingSection />
 
@@ -101,9 +51,6 @@ export default function Home() {
           </a>
         </div>
         <div className="intro-stamp" aria-hidden="true">
-          {/* <span>STAY AWHILE</span>
-          <strong>H.</strong>
-          <span>FEEL AT HOME</span> */}
           <Image
             src="/images/lavivante-logo 1.png"
             alt="La Vivante Homestay"
@@ -115,6 +62,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Five Room Categories with Auto-playing Carousel & Lightbox */}
       <section className="rooms-section" id="stay">
         <div className="section-heading">
           <div>
@@ -122,39 +70,17 @@ export default function Home() {
             <h2>Find your <em>place.</em></h2>
           </div>
           <p className="section-aside">
-            Different ways to stay.
+            Five thoughtful room categories.
             <br />
-            The same feeling of home.
+            Four transparent stay packages.
           </p>
         </div>
 
-        <div className="room-grid">
-          {rooms.map((room) => (
-            <article className="room-card" key={room.number}>
-              <div className="room-image-wrap">
-                <div
-                  className="room-image"
-                  role="img"
-                  aria-label={room.name}
-                  style={{ backgroundImage: `url("${room.image}")` }}
-                />
-                <span className="room-number">{room.number}</span>
-                <span className="room-image-label">YOUR SPACE TO UNWIND</span>
-              </div>
-              <div className="room-card-content">
-                <h3>{room.name}</h3>
-                <p>{room.detail}</p>
-                <span className="room-features">{room.features}</span>
-                <RoomEnquireButton roomName={room.name} />
-              </div>
-            </article>
-          ))}
-        </div>
-        <p className="room-disclaimer">
-          Room categories and imagery are illustrative for this first design
-          preview. Live room details and rates will be shared after raising enquiry.
-        </p>
+        <HomeRoomsShowcase />
       </section>
+
+      {/* Dedicated Property Architecture, Grounds & Common Areas Gallery */}
+      <PropertyGallerySection />
 
       <section className="amenities-section">
         <div className="amenities-heading">

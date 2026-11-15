@@ -330,8 +330,8 @@ select {
 }
 
 .hero-image {
-  background-image: url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=2200&q=90");
-  background-position: center 54%;
+  background-image: url("/images/property/exterior/front-facade-wide-hero.webp");
+  background-position: center 48%;
   background-size: cover;
   transform: scale(1.01);
 }
@@ -810,6 +810,122 @@ button.room-link:hover {
   color: #858678;
   font-size: 10px;
   line-height: 1.7;
+}
+
+.room-units-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--green-dark);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  backdrop-filter: blur(4px);
+}
+
+.room-occupancy-pill {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 8px;
+  background: #e7e4d8;
+  color: #4a5246;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.room-pricing-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 8px 10px;
+  background: #f8f6f0;
+  border: 1px solid #e3decb;
+  border-radius: 3px;
+}
+
+.room-pricing-label {
+  display: block;
+  font-size: 8px;
+  color: #7b8173;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.room-pricing-figures {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.room-price-original {
+  font-size: 11px;
+  color: #93988b;
+  text-decoration: line-through;
+}
+
+.room-price-discounted {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.room-price-unit {
+  font-size: 10px;
+  color: #697063;
+}
+
+.room-discount-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.rooms-footer-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid #ded8cb;
+  text-align: center;
+}
+
+.rooms-explore-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: var(--green);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 180ms ease, transform 150ms ease;
+  box-shadow: 0 4px 12px rgba(41, 75, 59, 0.15);
+}
+
+.rooms-explore-button:hover {
+  background: var(--green-dark);
+  transform: translateY(-1px);
 }
 
 .amenities-section {
