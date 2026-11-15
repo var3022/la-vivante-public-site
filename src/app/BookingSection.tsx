@@ -2,18 +2,20 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { EARLIEST_CHECK_IN, DEFAULT_CHECK_OUT_MIN, getNextDay } from "./dateUtils";
+import { useTodayDate, getTodayDateString, getNextDay } from "./dateUtils";
 import EnquiryModal from "./EnquiryModal";
 import { PackageId, DEFAULT_PACKAGE_ID } from "./pricingData";
 
 export default function BookingSection() {
+	const today = useTodayDate();
 	const [checkIn, setCheckIn] = useState("");
 	const [checkOut, setCheckOut] = useState("");
-	const [checkOutMin, setCheckOutMin] = useState(DEFAULT_CHECK_OUT_MIN);
 	const [guests, setGuests] = useState("2 guests");
 	const [selectedRoom, setSelectedRoom] = useState("No specific preference");
 	const [selectedPackage, setSelectedPackage] = useState<PackageId>(DEFAULT_PACKAGE_ID);
 	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const checkOutMin = checkIn ? getNextDay(checkIn) : (today ? getNextDay(today) : undefined);
 
 	// Listen for custom "open-enquiry" events (e.g. from room cards or explore buttons)
 	useEffect(() => {
@@ -36,16 +38,16 @@ export default function BookingSection() {
 		const newCheckIn = e.target.value;
 		setCheckIn(newCheckIn);
 
-		if (newCheckIn && newCheckIn >= EARLIEST_CHECK_IN) {
+		const currentToday = getTodayDateString();
+		if (newCheckIn && newCheckIn >= currentToday) {
 			const nextDay = getNextDay(newCheckIn);
-			setCheckOutMin(nextDay);
 			if (checkOut && checkOut <= newCheckIn) {
 				setCheckOut(nextDay);
 			}
 		} else {
-			setCheckOutMin(DEFAULT_CHECK_OUT_MIN);
-			if (checkOut && checkOut < DEFAULT_CHECK_OUT_MIN) {
-				setCheckOut(DEFAULT_CHECK_OUT_MIN);
+			const defaultNext = getNextDay(currentToday);
+			if (checkOut && checkOut < defaultNext) {
+				setCheckOut(defaultNext);
 			}
 		}
 	};
@@ -74,7 +76,7 @@ export default function BookingSection() {
 							type="date"
 							name="checkIn"
 							aria-label="Check-in date"
-							min={EARLIEST_CHECK_IN}
+							min={today || undefined}
 							value={checkIn}
 							onChange={handleCheckInChange}
 						/>

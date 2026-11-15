@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { EARLIEST_CHECK_IN, DEFAULT_CHECK_OUT_MIN, getNextDay } from "./dateUtils";
+import { useTodayDate, getTodayDateString, getNextDay } from "./dateUtils";
 import { WhatsAppIcon, EmailIcon, CloseIcon } from "./Icons";
 import {
   ROOM_CATEGORIES,
@@ -35,10 +35,11 @@ function EnquiryDialog({
   onClose,
   initialCheckIn = "",
   initialCheckOut = "",
-  initialGuests = "2",
+  initialGuests,
   initialRoom = "No specific preference",
   initialPackage = DEFAULT_PACKAGE_ID,
 }: Omit<EnquiryModalProps, "isOpen">) {
+  const today = useTodayDate();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -51,12 +52,14 @@ function EnquiryDialog({
   });
   const [selectedPackageId, setSelectedPackageId] = useState<PackageId>(initialPackage);
   const [guestsCount, setGuestsCount] = useState<number>(() => {
-    const parsed = parseGuestsInput(initialGuests);
     const found = getRoomById(initialRoom);
-    if (found && parsed > found.maxGuests) {
-      return found.maxGuests;
+    if (initialGuests) {
+      const parsed = parseGuestsInput(initialGuests);
+      if (found && parsed > found.maxGuests) return found.maxGuests;
+      return parsed;
     }
-    return parsed;
+    // Default to the room's base guests if no initial guests specified
+    return found ? found.baseGuests : 2;
   });
   const [notes, setNotes] = useState("");
 
@@ -74,8 +77,12 @@ function EnquiryDialog({
   const handleRoomChange = (roomName: string) => {
     setSelectedRoomName(roomName);
     const room = ROOM_CATEGORIES.find((r) => r.name.toLowerCase() === roomName.toLowerCase());
-    if (room && guestsCount > room.maxGuests) {
-      setGuestsCount(room.maxGuests);
+    if (room) {
+      if (guestsCount > room.maxGuests) {
+        setGuestsCount(room.maxGuests);
+      } else if (guestsCount < room.baseGuests) {
+        setGuestsCount(room.baseGuests);
+      }
     }
   };
 
@@ -98,7 +105,7 @@ function EnquiryDialog({
   }, [onClose]);
 
   // Compute minimum check-out date based on current checkIn
-  const minCheckOut = checkIn && checkIn >= EARLIEST_CHECK_IN ? getNextDay(checkIn) : DEFAULT_CHECK_OUT_MIN;
+  const minCheckOut = checkIn ? getNextDay(checkIn) : (today ? getNextDay(today) : undefined);
 
   const handleCheckInChange = (val: string) => {
     setCheckIn(val);
@@ -110,7 +117,8 @@ function EnquiryDialog({
       });
     }
 
-    if (val && val >= EARLIEST_CHECK_IN) {
+    const currentToday = getTodayDateString();
+    if (val && val >= currentToday) {
       const nextDay = getNextDay(val);
       if (checkOut && checkOut <= val) {
         setCheckOut(nextDay);
@@ -166,16 +174,19 @@ function EnquiryDialog({
       }
     }
 
+    const currentToday = getTodayDateString();
     if (!checkIn) {
       newErrors.checkIn = "Please select a check-in date.";
-    } else if (checkIn < EARLIEST_CHECK_IN) {
-      newErrors.checkIn = "Please select a valid check-in date.";
+    } else if (checkIn < currentToday) {
+      newErrors.checkIn = "Check-in date cannot be in the past.";
     }
 
     if (!checkOut) {
       newErrors.checkOut = "Please select a check-out date.";
     } else if (checkIn && checkOut <= checkIn) {
       newErrors.checkOut = "Check-out date must be at least one day after check-in.";
+    } else if (!checkIn && checkOut <= currentToday) {
+      newErrors.checkOut = "Check-out date must be in the future.";
     }
 
     // Occupancy enforcement
@@ -209,15 +220,23 @@ function EnquiryDialog({
     if (estimate && numberOfNights > 0) {
       const extraGuestText =
         estimate.extraGuests > 0
-          ? ` (incl. ${estimate.extraGuests} extra guest @ ${formatCurrency(estimate.extraPersonRatePerNight)}/night)`
+          ? ` (incl. ${estimate.extraGuests} extra bed @ ${formatCurrency(estimate.extraPersonRatePerNight)}/night)`
+          : "";
+      const breakdownText =
+        estimate.extraGuests > 0
+          ? ` [Room: ${formatCurrency(estimate.baseDiscountedPrice * numberOfNights)} + Extra Bed: ${formatCurrency(estimate.totalExtraPersonPerNight * numberOfNights)}]`
           : "";
       lines.push(
         `• Nightly Rate: ${formatCurrency(estimate.effectiveNightlyRate)}/night${extraGuestText} [was ${formatCurrency(estimate.baseOriginalPrice + estimate.totalExtraPersonPerNight)}, ${estimate.discountPercent}% OFF base]`,
-        `• Estimated Total Amount: ${formatCurrency(estimate.estimatedTotal)} for ${numberOfNights} night${numberOfNights > 1 ? "s" : ""} (Estimate for enquiry only)`
+        `• Estimated Total Amount: ${formatCurrency(estimate.estimatedTotal)} for ${numberOfNights} night${numberOfNights > 1 ? "s" : ""}${breakdownText} (Estimate for enquiry only)`
       );
     } else if (estimate) {
+      const extraGuestText =
+        estimate.extraGuests > 0
+          ? ` (incl. ${estimate.extraGuests} extra bed @ ${formatCurrency(estimate.extraPersonRatePerNight)}/night)`
+          : "";
       lines.push(
-        `• Estimated Nightly Rate: ${formatCurrency(estimate.effectiveNightlyRate)}/night [was ${formatCurrency(estimate.baseOriginalPrice + estimate.totalExtraPersonPerNight)}, ${estimate.discountPercent}% OFF base] (Final total requires check-in & check-out dates)`
+        `• Estimated Nightly Rate: ${formatCurrency(estimate.effectiveNightlyRate)}/night${extraGuestText} [was ${formatCurrency(estimate.baseOriginalPrice + estimate.totalExtraPersonPerNight)}, ${estimate.discountPercent}% OFF base] (Final total requires check-in & check-out dates)`
       );
     } else {
       lines.push(
@@ -403,13 +422,13 @@ function EnquiryDialog({
               <input
                 id="enquiry-checkin"
                 type="date"
-                min={EARLIEST_CHECK_IN}
+                min={today || undefined}
                 value={checkIn}
                 onChange={(e) => handleCheckInChange(e.target.value)}
                 aria-required="true"
                 aria-invalid={errors.checkIn ? "true" : "false"}
               />
-              <span className="field-hint">From Nov 1, 2026</span>
+              <span className="field-hint">Today or future date</span>
               {errors.checkIn && <span className="field-error" role="alert">{errors.checkIn}</span>}
             </div>
 
@@ -445,9 +464,10 @@ function EnquiryDialog({
                   Array.from({ length: selectedRoom.maxGuests }, (_, i) => i + 1).map((num) => {
                     let label = `${num} guest${num > 1 ? "s" : ""}`;
                     if (num > selectedRoom.baseGuests) {
-                      label += ` (+ extra guest)`;
+                      const extraBeds = num - selectedRoom.baseGuests;
+                      label += ` (incl. ${extraBeds} extra bed${extraBeds > 1 ? "s" : ""})`;
                     } else if (num === selectedRoom.baseGuests) {
-                      label += ` (base)`;
+                      label += ` (base capacity)`;
                     }
                     return (
                       <option key={num} value={num}>
@@ -514,7 +534,8 @@ function EnquiryDialog({
 
           {/* Live Pricing Breakdown Box */}
           {estimate && (
-            <div className="rounded-xl border border-[#ded6c5] bg-[#faf7ef] p-4 mb-4 text-xs">
+            <div className="rounded-xl border border-[#ded6c5] bg-[#faf7ef] p-4 mb-4 text-xs shadow-2xs">
+              {/* Header: Room Name & Total Nightly Rate */}
               <div className="flex items-start justify-between gap-2 border-b border-[#ece4d3] pb-2.5 mb-2.5">
                 <div>
                   <span className="text-[10px] uppercase tracking-wider font-semibold text-[#8b764b]">
@@ -522,14 +543,14 @@ function EnquiryDialog({
                   </span>
                   <div className="flex items-baseline gap-2 mt-0.5">
                     <del className="text-[#8c9182] text-xs">
-                      {formatCurrency(estimate.baseOriginalPrice)}
+                      {formatCurrency(estimate.baseOriginalPrice + estimate.totalExtraPersonPerNight)}
                     </del>
                     <span className="text-base font-bold text-[#1f372a]">
-                      {formatCurrency(estimate.baseDiscountedPrice)}
+                      {formatCurrency(estimate.effectiveNightlyRate)}
                     </span>
-                    <span className="text-[11px] text-[#6f756a]">/ night (base)</span>
+                    <span className="text-[11px] text-[#6f756a]">/ night</span>
                     <span className="rounded bg-emerald-100 text-emerald-800 border border-emerald-200 px-1.5 py-0.2 text-[10px] font-bold">
-                      {estimate.discountPercent}% OFF
+                      {estimate.discountPercent}% OFF base
                     </span>
                   </div>
                 </div>
@@ -540,38 +561,59 @@ function EnquiryDialog({
                 </div>
               </div>
 
-              {/* Extra person calculation note */}
-              {estimate.extraGuests > 0 ? (
-                <div className="text-[#656c5e] mb-2 flex items-center justify-between">
+              {/* Itemized Nightly Breakdown */}
+              <div className="space-y-1.5 pb-2.5 mb-2.5 border-b border-[#ece4d3] text-[11px]">
+                <div className="flex items-center justify-between text-[#535a4d]">
                   <span>
-                    Extra guests ({estimate.extraGuests} guest{estimate.extraGuests > 1 ? "s" : ""} above base {estimate.baseGuests}):
+                    Base room tariff ({estimate.baseGuests} guests included):
                   </span>
-                  <span className="font-semibold text-[#294b3b]">
-                    +{formatCurrency(estimate.totalExtraPersonPerNight)} / night
+                  <span className="font-semibold text-[#2f352b]">
+                    {formatCurrency(estimate.baseDiscountedPrice)} / night
                   </span>
                 </div>
-              ) : (
-                <div className="text-[#7c8274] mb-2 text-[11px]">
-                  Standard base occupancy applies (no extra guest fee).
-                </div>
-              )}
 
-              {/* Nightly & Total Calculation */}
-              <div className="pt-2 border-t border-[#ece4d3] flex items-center justify-between">
+                {estimate.extraGuests > 0 ? (
+                  <div className="flex items-center justify-between text-[#294b3b] font-medium bg-[#eef5ee] border border-[#d8e8d8] px-2.5 py-1.5 rounded-lg">
+                    <span className="flex items-center gap-1.5">
+                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#294b3b]" />
+                      <span>
+                        Extra bed / cot ({estimate.extraGuests} extra {estimate.extraGuests > 1 ? "beds" : "bed"} @ {formatCurrency(estimate.extraPersonRatePerNight)}/night):
+                      </span>
+                    </span>
+                    <span className="font-bold">
+                      +{formatCurrency(estimate.totalExtraPersonPerNight)} / night
+                    </span>
+                  </div>
+                ) : (
+                  <div className="text-[#7c8274] text-[10px]">
+                    Standard base occupancy (no extra bed charge required).
+                  </div>
+                )}
+              </div>
+
+              {/* Nightly & Multi-Night Total Calculation */}
+              <div className="flex items-start justify-between">
                 <div>
-                  <span className="font-medium text-[#2f352b]">
-                    Nightly Rate ({guestsCount} guest{guestsCount > 1 ? "s" : ""}):
+                  <span className="font-semibold text-[#1f372a] text-xs">
+                    Total Nightly Rate ({guestsCount} guest{guestsCount > 1 ? "s" : ""}):
                   </span>
-                  <span className="block text-[11px] text-[#7a8072]">
-                    {numberOfNights > 0 ? `For ${numberOfNights} night${numberOfNights > 1 ? "s" : ""}` : "Select check-in & check-out dates"}
+                  <span className="block text-[11px] text-[#6d7568] mt-0.5">
+                    {numberOfNights > 0
+                      ? `Calculation for ${numberOfNights} night${numberOfNights > 1 ? "s" : ""}:`
+                      : "Select check-in & check-out dates for total stay estimate"}
                   </span>
+                  {numberOfNights > 0 && estimate.extraGuests > 0 && (
+                    <span className="block text-[10px] text-[#788072] mt-0.5">
+                      {numberOfNights} × {formatCurrency(estimate.baseDiscountedPrice)} (room) + {numberOfNights} × {formatCurrency(estimate.totalExtraPersonPerNight)} (extra bed)
+                    </span>
+                  )}
                 </div>
                 <div className="text-right">
-                  <span className="text-sm font-semibold text-[#1f372a]">
+                  <span className="text-sm font-bold text-[#1f372a]">
                     {formatCurrency(estimate.effectiveNightlyRate)} / night
                   </span>
                   {numberOfNights > 0 && (
-                    <div className="text-base font-bold text-[#1c352a]">
+                    <div className="text-base font-bold text-[#1c352a] mt-0.5">
                       Est. Total: {formatCurrency(estimate.estimatedTotal)}
                     </div>
                   )}
