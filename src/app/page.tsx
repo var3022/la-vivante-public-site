@@ -10,9 +10,9 @@ import PropertyGallerySection from "./PropertyGallerySection";
 
 const amenities = [
   ["01", "A comfortable stay", "Air-conditioned rooms and considered essentials"],
-  ["02", "Room to arrive", "Parking options and lift access"],
-  ["03", "Little pleasures", "Books, board games and time to unwind"],
-  ["04", "Everyday ease", "Laundry facilities available on request"],
+  ["02", "Room to arrive", "Secure compound parking and ground-floor room options"],
+  ["03", "Peaceful spaces", "Open-air balcony terraces and calm spaces to unwind"],
+  ["04", "Everyday ease", "Dedicated housekeeping and local host assistance on request"],
 ];
 
 export default function Home() {

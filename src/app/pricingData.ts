@@ -71,21 +71,12 @@ export const ROOM_CATEGORIES: RoomCategory[] = [
     baseGuests: 2,
     maxGuests: 2,
     description: "A cozy and peaceful room with thoughtful essentials for a quiet stay.",
-    features: "Queen bed · Ensuite bathroom · Work desk · Garden view",
+    features: "Queen bed · Ensuite bathroom · Ground floor · Quiet outlook",
     bedConfig: "Queen bed",
-    image: "/images/property/rooms/room-003/room003bathroom-1--jpeg-card.webp",
+    image: "/images/property/rooms/room-003/standardroom003-1--heic-card.webp",
     imageAlt: "Standard Room (Room 003) bedroom with queen bed at La Vivante Homestay",
     //photographedRoomsNote: "Photographed from Room 003 (10 original photos; 1 of 1 room in category)",
     gallery: [
-      {
-            "id": "room003bathroom-1--jpeg",
-            "url": "/images/property/rooms/room-003/room003bathroom-1--jpeg-card.webp",
-            "heroUrl": "/images/property/rooms/room-003/room003bathroom-1--jpeg-hero.webp",
-            "thumbUrl": "/images/property/rooms/room-003/room003bathroom-1--jpeg-thumb.webp",
-            "caption": "Room 003 · Bathroom",
-            "roomTag": "Room 003",
-            "alt": "Standard Room 003 ensuite modern bathroom with shower at La Vivante Homestay"
-      },
       {
             "id": "standardroom003-1--heic",
             "url": "/images/property/rooms/room-003/standardroom003-1--heic-card.webp",
@@ -94,6 +85,15 @@ export const ROOM_CATEGORIES: RoomCategory[] = [
             "caption": "Room 003 · Bedroom View",
             "roomTag": "Room 003",
             "alt": "Standard Room 003 bedroom interior view at La Vivante Homestay - StandardRoom003(1)"
+      },
+      {
+            "id": "room003bathroom-1--jpeg",
+            "url": "/images/property/rooms/room-003/room003bathroom-1--jpeg-card.webp",
+            "heroUrl": "/images/property/rooms/room-003/room003bathroom-1--jpeg-hero.webp",
+            "thumbUrl": "/images/property/rooms/room-003/room003bathroom-1--jpeg-thumb.webp",
+            "caption": "Room 003 · Bathroom",
+            "roomTag": "Room 003",
+            "alt": "Standard Room 003 ensuite modern bathroom with shower at La Vivante Homestay"
       },
       {
             "id": "standardroom003-2--heic",

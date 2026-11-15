@@ -129,7 +129,7 @@ export default function BookingSection() {
 				</div>
 
 				<p className="booking-note">
-					This is an enquiry only. Your stay is not confirmed until La Vivante responds. Bookings open from November 1, 2026.
+					Direct reservation enquiries. Your stay is confirmed directly by La Vivante Homestay upon review.
 				</p>
 			</section>
 

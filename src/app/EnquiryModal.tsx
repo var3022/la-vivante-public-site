@@ -169,7 +169,7 @@ function EnquiryDialog({
     if (!checkIn) {
       newErrors.checkIn = "Please select a check-in date.";
     } else if (checkIn < EARLIEST_CHECK_IN) {
-      newErrors.checkIn = "Check-in date must be on or after November 1, 2026.";
+      newErrors.checkIn = "Please select a valid check-in date.";
     }
 
     if (!checkOut) {

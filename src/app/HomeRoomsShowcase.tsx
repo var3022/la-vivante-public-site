@@ -49,36 +49,35 @@ export default function HomeRoomsShowcase() {
               </div>
 
               {/* Room Card Content */}
-              <div className="room-card-content">
-                <h3>{room.name}</h3>
-                <span className="room-occupancy-pill">
-                  Base: {room.baseGuests} · Max: {room.maxGuests} guests
-                </span>
-                {room.photographedRoomsNote && (
-                  <span className="text-[10px] text-[#788075] block mt-1">
-                    {room.photographedRoomsNote}
+              <div className="room-card-content flex flex-col justify-between flex-1">
+                <div>
+                  <h3>{room.name}</h3>
+                  <span className="room-occupancy-pill">
+                    Base: {room.baseGuests} · Max: {room.maxGuests} guests
                   </span>
-                )}
-                <p>{room.description}</p>
-                <span className="room-features">{room.features}</span>
-
-                <div className="room-pricing-row">
-                  <div className="room-pricing-main">
-                    <span className="room-pricing-label">Starting tariff</span>
-                    <div className="room-pricing-figures">
-                      <del className="room-price-original">
-                        {formatCurrency(pricing.original)}
-                      </del>
-                      <strong className="room-price-discounted">
-                        {formatCurrency(pricing.discounted)}
-                      </strong>
-                      <span className="room-price-unit">/ night</span>
-                    </div>
-                  </div>
-                  <span className="room-discount-badge">{discountPct}% OFF</span>
+                  <p>{room.description}</p>
+                  <span className="room-features">{room.features}</span>
                 </div>
 
-                <RoomEnquireButton roomName={room.name} packageId={basePackage.id} />
+                <div className="mt-auto pt-2">
+                  <div className="room-pricing-row">
+                    <div className="room-pricing-main">
+                      <span className="room-pricing-label">Starting tariff ({basePackage.shortLabel})</span>
+                      <div className="room-pricing-figures">
+                        <del className="room-price-original">
+                          {formatCurrency(pricing.original)}
+                        </del>
+                        <strong className="room-price-discounted">
+                          {formatCurrency(pricing.discounted)}
+                        </strong>
+                        <span className="room-price-unit">/ night</span>
+                      </div>
+                    </div>
+                    <span className="room-discount-badge">{discountPct}% OFF</span>
+                  </div>
+
+                  <RoomEnquireButton roomName={room.name} packageId={basePackage.id} />
+                </div>
               </div>
             </article>
           );

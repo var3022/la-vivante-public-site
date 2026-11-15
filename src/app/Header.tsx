@@ -78,21 +78,21 @@ export default function Header({ currentPath = "/" }: HeaderProps) {
     <header className="site-header" ref={headerRef}>
       <Link
         href="/"
-        className="brand"
-        aria-label="La Vivante Homestay"
+        className="brand flex items-center gap-2.5 sm:gap-3"
+        aria-label="La Vivante Homestay - Home"
         onClick={closeMenu}
       >
-        <span className="flex items-center overflow-hidden rounded-lg p-1.5 shadow-xs transition-opacity hover:opacity-90">
+        <span className="flex items-center transition-opacity hover:opacity-90">
           <Image
             src="/images/lavivante-logo 1.png"
             alt="La Vivante Homestay"
-            width={60}
-            height={58}
+            width={48}
+            height={46}
             priority
-            className="h-10 w-auto object-contain sm:h-12 md:h-14"
+            className="h-9 w-auto object-contain sm:h-11 md:h-12"
           />
         </span>
-        <span className="block font-brand font-bold text-base sm:text-xl md:text-2xl whitespace-nowrap">
+        <span className="block font-brand font-bold text-sm sm:text-lg md:text-xl tracking-tight text-[#1f372a] whitespace-nowrap">
           La Vivante Homestay
         </span>
       </Link>
@@ -105,7 +105,11 @@ export default function Header({ currentPath = "/" }: HeaderProps) {
             <Link
               key={link.label}
               href={link.href}
-              className={isActive ? "active-nav-link" : ""}
+              className={`transition-colors text-xs uppercase tracking-wider font-medium ${
+                isActive
+                  ? "text-[#294b3b] font-bold border-b border-[#294b3b] pb-0.5"
+                  : "text-[#546258] hover:text-[#294b3b]"
+              }`}
             >
               {link.label}
             </Link>

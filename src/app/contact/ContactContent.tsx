@@ -251,7 +251,7 @@ export default function ContactContent() {
               className="font-brand text-2xl sm:text-3xl font-bold tracking-wider text-white"
               style={{ fontFamily: "var(--font-cinzel-decorative), serif" }}
             >
-              La Vivante
+              La Vivante Homestay
             </h1>
 
             {/* Tagline */}

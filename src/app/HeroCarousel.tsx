@@ -12,22 +12,16 @@ interface HeroSlide {
 
 const HERO_SLIDES: HeroSlide[] = [
   {
-    id: "hero-front-1",
-    image: "/images/property/common-areas/mainpropertyfrontview-1--jpg-hero.webp",
-    alt: "La Vivante Homestay architectural front facade in Ramanathapuram, Coimbatore",
-    caption: "Main Building Facade · Ramanathapuram, Coimbatore",
+    id: "hero-front-4",
+    image: "/images/property/common-areas/mainpropertyfrontview-4--heic-hero.webp",
+    alt: "La Vivante Homestay authentic architectural exterior elevation in Ramanathapuram, Coimbatore",
+    caption: "Daytime Architectural Elevation · Main Facade",
   },
   {
     id: "hero-reception-1",
     image: "/images/property/common-areas/reception-1--heic-hero.webp",
     alt: "Welcoming reception desk and guest arrival lounge at La Vivante Homestay",
     caption: "Welcoming Reception & Arrival Lounge",
-  },
-  {
-    id: "hero-front-4",
-    image: "/images/property/common-areas/mainpropertyfrontview-4--heic-hero.webp",
-    alt: "Daytime front architectural elevation of La Vivante Homestay",
-    caption: "Daytime Architectural Elevation",
   },
   {
     id: "hero-balcony-1",
@@ -58,6 +52,12 @@ const HERO_SLIDES: HeroSlide[] = [
     image: "/images/property/common-areas/parking-1--jpg-hero.webp",
     alt: "Secure on-premise vehicular parking at La Vivante Homestay",
     caption: "Secure On-Premise Compound Parking",
+  },
+  {
+    id: "hero-front-1",
+    image: "/images/property/common-areas/mainpropertyfrontview-1--jpg-hero.webp",
+    alt: "La Vivante Homestay front entrance approach in Ramanathapuram, Coimbatore",
+    caption: "Front Entrance & Compound Gate",
   },
 ];
 
@@ -98,12 +98,6 @@ export default function HeroCarousel() {
     setIsTransitioning(true);
     setTrackIndex((prev) => prev - 1);
   }, []);
-
-  const goToSlide = (idx: number) => {
-    if (isTransitioningRef.current) return;
-    setIsTransitioning(true);
-    setTrackIndex(idx + 1);
-  };
 
   const handleTransitionEnd = () => {
     setIsTransitioning(false);
@@ -261,55 +255,38 @@ export default function HeroCarousel() {
         </a>
       </div>
 
-      {/* Interactive Controls Overlay */}
-      <div className="absolute bottom-6 right-6 z-[3] flex flex-col sm:flex-row items-end sm:items-center gap-3">
-        {/* Slide Counter & Caption Tag */}
-        <div className="bg-black/60 backdrop-blur-sm border border-white/20 px-3 py-1.5 rounded-full text-white text-[10px] sm:text-[11px] font-medium flex items-center gap-2 shadow-lg">
-          <span className="text-[#d6c29a] font-bold">
-            {realIndex + 1 < 10 ? `0${realIndex + 1}` : realIndex + 1} / {total < 10 ? `0${total}` : total}
+      {/* Refined Minimal Controls Overlay */}
+      <div className="absolute bottom-5 right-5 sm:bottom-6 sm:right-8 z-[3] flex items-center">
+        <div className="flex items-center gap-2 rounded-full bg-black/60 backdrop-blur-md border border-white/20 px-3.5 py-1.5 text-white shadow-lg text-xs">
+          <span className="font-serif font-bold text-[#d6c29a] tracking-wider text-[11px]">
+            {realIndex + 1 < 10 ? `0${realIndex + 1}` : realIndex + 1}
           </span>
-          <span className="text-white/40">&bull;</span>
-          <span className="hidden sm:inline max-w-[240px] truncate text-white/95">
+          <span className="text-white/35 text-[10px]">/</span>
+          <span className="text-white/60 text-[10px]">
+            {total < 10 ? `0${total}` : total}
+          </span>
+          <span className="text-white/30 hidden md:inline">•</span>
+          <span className="hidden md:inline text-white/85 text-[11px] max-w-[220px] truncate">
             {currentSlide.caption}
           </span>
-        </div>
-
-        {/* Previous / Next Buttons & Dots */}
-        <div className="flex items-center gap-1.5 bg-black/60 backdrop-blur-sm border border-white/20 p-1 rounded-full shadow-lg">
-          <button
-            type="button"
-            onClick={slidePrev}
-            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center text-sm sm:text-base transition cursor-pointer"
-            aria-label="Previous hero image"
-          >
-            &#8249;
-          </button>
-
-          {/* Dots Indicator */}
-          <div className="flex items-center gap-1 px-1.5">
-            {HERO_SLIDES.map((_, dotIdx) => (
-              <button
-                key={dotIdx}
-                type="button"
-                onClick={() => goToSlide(dotIdx)}
-                className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
-                  dotIdx === realIndex
-                    ? "w-4 bg-[#d6c29a]"
-                    : "w-1.5 bg-white/40 hover:bg-white/70"
-                }`}
-                aria-label={`Go to slide ${dotIdx + 1}`}
-              />
-            ))}
+          <div className="flex items-center gap-1 ml-1 border-l border-white/20 pl-2">
+            <button
+              type="button"
+              onClick={slidePrev}
+              className="w-6 h-6 rounded-full hover:bg-white/20 text-white flex items-center justify-center text-sm transition-colors cursor-pointer"
+              aria-label="Previous hero photograph"
+            >
+              &#8249;
+            </button>
+            <button
+              type="button"
+              onClick={slideNext}
+              className="w-6 h-6 rounded-full hover:bg-white/20 text-white flex items-center justify-center text-sm transition-colors cursor-pointer"
+              aria-label="Next hero photograph"
+            >
+              &#8250;
+            </button>
           </div>
-
-          <button
-            type="button"
-            onClick={slideNext}
-            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center text-sm sm:text-base transition cursor-pointer"
-            aria-label="Next hero image"
-          >
-            &#8250;
-          </button>
         </div>
       </div>
 

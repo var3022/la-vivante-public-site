@@ -248,24 +248,24 @@ export default function HorizontalSlidingTrack({
           })}
         </div>
 
-        {/* Category & Total Units Tags (Top) */}
-        {categoryTag && (
-          <span className="absolute top-3 left-3 rounded-md bg-[#294b3b]/90 px-2.5 py-1 text-[9px] font-semibold tracking-wider uppercase text-white backdrop-blur-xs z-20 shadow-xs pointer-events-none">
-            {categoryTag}
-          </span>
-        )}
+        {/* Subtle Category & Photo Counter Header (Top) */}
+        <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between z-20 pointer-events-none">
+          <div className="flex items-center gap-1.5">
+            {categoryTag && (
+              <span className="rounded bg-[#294b3b]/90 px-2 py-0.5 text-[9px] font-semibold tracking-wider uppercase text-white/95 backdrop-blur-xs shadow-xs">
+                {categoryTag}
+              </span>
+            )}
+            {totalUnitsBadge && (
+              <span className="rounded bg-black/60 px-2 py-0.5 text-[9px] font-medium tracking-wide text-white/90 backdrop-blur-xs shadow-xs">
+                {totalUnitsBadge}
+              </span>
+            )}
+          </div>
 
-        <div className="absolute top-3 right-3 flex items-center gap-1 z-20 pointer-events-none">
-          {currentPhoto.roomTag && (
-            <span className="rounded-md bg-[#294b3b] text-[#f8f6f0] px-2 py-1 text-[9px] font-bold shadow-xs">
-              {currentPhoto.roomTag}
-            </span>
-          )}
-          {totalUnitsBadge && (
-            <span className="rounded-md bg-white/95 px-2 py-1 text-[9px] font-semibold text-[#294b3b] shadow-xs">
-              {totalUnitsBadge}
-            </span>
-          )}
+          <span className="rounded bg-black/60 px-2 py-0.5 text-[9px] font-medium tracking-wide text-white/90 backdrop-blur-xs shadow-xs">
+            {realIndex + 1} / {total}
+          </span>
         </div>
 
         {/* Previous / Next Overlay Buttons */}
@@ -277,7 +277,7 @@ export default function HorizontalSlidingTrack({
                 e.stopPropagation();
                 slidePrev();
               }}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-30 w-8 h-8 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/20 flex items-center justify-center text-lg opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity cursor-pointer shadow-md"
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-30 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-black/50 hover:bg-black/80 text-white border border-white/20 flex items-center justify-center text-sm sm:text-base opacity-75 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity cursor-pointer shadow-md"
               aria-label="Previous photograph"
             >
               &#8249;
@@ -288,7 +288,7 @@ export default function HorizontalSlidingTrack({
                 e.stopPropagation();
                 slideNext();
               }}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-30 w-8 h-8 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/20 flex items-center justify-center text-lg opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity cursor-pointer shadow-md"
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-30 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-black/50 hover:bg-black/80 text-white border border-white/20 flex items-center justify-center text-sm sm:text-base opacity-75 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity cursor-pointer shadow-md"
               aria-label="Next photograph"
             >
               &#8250;
@@ -296,19 +296,16 @@ export default function HorizontalSlidingTrack({
           </>
         )}
 
-        {/* Caption & Counter Overlay (Bottom) */}
+        {/* Caption Overlay (Bottom) */}
         {showCaptionOverlay && (
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-3 pt-6 flex items-end justify-between text-white z-20 pointer-events-none">
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-2.5 pt-6 flex items-end justify-between text-white z-20 pointer-events-none">
             <div className="min-w-0 pr-2">
-              <span className="text-[11px] font-medium leading-tight drop-shadow-xs block truncate text-white">
+              <span className="text-[10px] sm:text-[11px] font-medium leading-tight drop-shadow-xs block truncate text-white/95">
                 {currentPhoto.caption}
               </span>
-              <span className="text-[9px] text-[#d6c29a] font-semibold block mt-0.5">
-                Photo {realIndex + 1} of {total} {currentPhoto.roomTag ? `· ${currentPhoto.roomTag}` : ""}
-              </span>
             </div>
-            <span className="text-[9px] uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded text-white font-medium flex items-center gap-1 flex-shrink-0">
-              <span>Full Photo</span>
+            <span className="text-[9px] uppercase tracking-wider bg-white/20 px-1.5 py-0.5 rounded text-white font-medium flex items-center gap-1 flex-shrink-0">
+              <span>View</span>
               <span aria-hidden="true">&rarr;</span>
             </span>
           </div>

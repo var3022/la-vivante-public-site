@@ -58,43 +58,116 @@ export default function RoomsExplorer() {
           Explore genuine photography of our five homestay room categories in Ramanathapuram, Coimbatore. Select a comfort package below to preview transparent promotional tariffs.
         </p>
 
-        {/* Package Selector Filter */}
-        <div className="mt-8 rounded-2xl border border-[#e3dcd0] bg-white p-5 sm:p-6 shadow-xs">
-          <div>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#9b8050] flex items-center gap-1.5">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#9b8050]" />
-              CHOOSE COMFORT &amp; MEAL PACKAGE
-            </span>
-            <p className="text-xs text-[#6e756b] mt-1 max-w-2xl leading-relaxed">
-              Tariffs vary by air-conditioning and breakfast inclusion. Extra person charges apply above base room occupancy.
-            </p>
-          </div>
+        {/* Two Compact Tariff Controls: Air-Conditioning & Breakfast */}
+        <div className="mt-8 rounded-2xl border border-[#ded7c8] bg-white p-5 sm:p-6 shadow-xs">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#9b8050] flex items-center gap-1.5">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#9b8050]" />
+                CUSTOMISE TARIFF &amp; STAY COMFORT
+              </span>
+              <p className="text-xs text-[#6e756b] mt-0.5 max-w-xl">
+                Choose cooling and morning breakfast. Extra person charges apply above base room occupancy.
+              </p>
+            </div>
 
-          {/* Package Option Buttons - Compact, neat, uniform spacing */}
-          <div className="mt-3.5 flex flex-wrap items-center gap-1.5" role="group" aria-label="Stay package selection">
-            {PACKAGES.map((pkg) => {
-              const isSelected = pkg.id === selectedPackageId;
-              return (
+            {/* Two Compact Segmented Controls */}
+            <div className="flex flex-wrap items-center gap-3">
+              {/* Control 1: AC Toggle */}
+              <div
+                className="flex items-center gap-1 rounded-full bg-[#f6f3eb] p-1 border border-[#ded8cb]"
+                role="group"
+                aria-label="Air conditioning selection"
+              >
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#7a857b] px-2.5">
+                  Cooling
+                </span>
                 <button
-                  key={pkg.id}
                   type="button"
-                  onClick={() => setSelectedPackageId(pkg.id)}
-                  className={`px-2.5 py-1 text-[11px] font-medium rounded-full whitespace-nowrap transition-all duration-150 cursor-pointer ${
-                    isSelected
-                      ? "bg-[#294b3b] text-white shadow-xs ring-1 ring-[#294b3b]"
-                      : "bg-[#f8f6f0] border border-[#ded8cb] text-[#2c3d34] hover:bg-white hover:border-[#294b3b]"
+                  onClick={() => {
+                    const target = PACKAGES.find(
+                      (p) => !p.hasAc && p.hasBreakfast === currentPackage.hasBreakfast
+                    );
+                    if (target) setSelectedPackageId(target.id);
+                  }}
+                  className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-150 cursor-pointer ${
+                    !currentPackage.hasAc
+                      ? "bg-[#294b3b] text-white shadow-xs"
+                      : "text-[#3e4c41] hover:text-[#1f372a]"
                   }`}
-                  aria-pressed={isSelected}
+                  aria-pressed={!currentPackage.hasAc}
                 >
-                  <span>{pkg.shortLabel}</span>
+                  Non-AC
                 </button>
-              );
-            })}
+                <button
+                  type="button"
+                  onClick={() => {
+                    const target = PACKAGES.find(
+                      (p) => p.hasAc && p.hasBreakfast === currentPackage.hasBreakfast
+                    );
+                    if (target) setSelectedPackageId(target.id);
+                  }}
+                  className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-150 cursor-pointer ${
+                    currentPackage.hasAc
+                      ? "bg-[#294b3b] text-white shadow-xs"
+                      : "text-[#3e4c41] hover:text-[#1f372a]"
+                  }`}
+                  aria-pressed={currentPackage.hasAc}
+                >
+                  AC
+                </button>
+              </div>
+
+              {/* Control 2: Breakfast Toggle */}
+              <div
+                className="flex items-center gap-1 rounded-full bg-[#f6f3eb] p-1 border border-[#ded8cb]"
+                role="group"
+                aria-label="Meal plan selection"
+              >
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#7a857b] px-2.5">
+                  Meal
+                </span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const target = PACKAGES.find(
+                      (p) => p.hasAc === currentPackage.hasAc && !p.hasBreakfast
+                    );
+                    if (target) setSelectedPackageId(target.id);
+                  }}
+                  className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-150 cursor-pointer ${
+                    !currentPackage.hasBreakfast
+                      ? "bg-[#294b3b] text-white shadow-xs"
+                      : "text-[#3e4c41] hover:text-[#1f372a]"
+                  }`}
+                  aria-pressed={!currentPackage.hasBreakfast}
+                >
+                  Room Only
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const target = PACKAGES.find(
+                      (p) => p.hasAc === currentPackage.hasAc && p.hasBreakfast
+                    );
+                    if (target) setSelectedPackageId(target.id);
+                  }}
+                  className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-150 cursor-pointer ${
+                    currentPackage.hasBreakfast
+                      ? "bg-[#294b3b] text-white shadow-xs"
+                      : "text-[#3e4c41] hover:text-[#1f372a]"
+                  }`}
+                  aria-pressed={currentPackage.hasBreakfast}
+                >
+                  With Breakfast
+                </button>
+              </div>
+            </div>
           </div>
 
           <div className="mt-4 pt-3.5 border-t border-[#f0ebe0] flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#6d7367]">
             <span>
-              <strong>Selected:</strong> {currentPackage.name} &bull; {currentPackage.description}
+              <strong>Active Tariff:</strong> {currentPackage.name} &bull; {currentPackage.description}
             </span>
             <span className="text-[#9b8050] font-semibold">
               Extra person: {formatCurrency(currentPackage.extraPersonCharge)}/night (above base occupancy)
@@ -158,11 +231,11 @@ export default function RoomsExplorer() {
                 </div>
               </div>
 
-              {/* Pricing & CTA Card Footer */}
-              <div className="border-t border-[#eee9df] bg-[#faf8f4] p-5 sm:p-6 pt-4">
+              {/* Pricing & CTA Card Footer - Perfectly aligned across cards */}
+              <div className="mt-auto border-t border-[#eee9df] bg-[#faf8f4] p-5 sm:p-6 pt-4 flex flex-col justify-between">
                 <div className="flex items-baseline justify-between gap-2 mb-3">
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#8a9183] block">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#9b8050] block">
                       {currentPackage.shortLabel}
                     </span>
                     <div className="flex items-baseline gap-2 mt-0.5">
@@ -176,7 +249,7 @@ export default function RoomsExplorer() {
                     </div>
                   </div>
 
-                  <span className="rounded bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 text-xs font-bold">
+                  <span className="rounded-md bg-[#294b3b]/10 text-[#294b3b] border border-[#294b3b]/20 px-2 py-0.5 text-[11px] font-bold">
                     {discountPct}% OFF
                   </span>
                 </div>
@@ -184,7 +257,7 @@ export default function RoomsExplorer() {
                 <button
                   type="button"
                   onClick={() => handleEnquireRoom(room.name)}
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#294b3b] px-4 py-3 text-xs sm:text-sm font-semibold text-white shadow-xs transition-all hover:bg-[#1d362a] active:scale-[0.99] cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#294b3b] px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-xs transition-all hover:bg-[#1d362a] active:scale-[0.99] cursor-pointer"
                   aria-label={`Enquire about ${room.name}`}
                 >
                   <span>Enquire About This Room</span>
