@@ -41,40 +41,38 @@ export default function PropertyGallerySection() {
     <section className="mx-auto max-w-7xl px-4 sm:px-6 pb-16">
       <div className="rounded-2xl border border-[#ded7c8] bg-white p-6 sm:p-8 shadow-xs">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
-          <div className="max-w-2xl">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#9b8050]">
-              COMPLETE PROPERTY ARCHITECTURE &amp; SPACES · 29 ORIGINAL PHOTOGRAPHS
-            </span>
-            <h2 className="font-serif text-2xl sm:text-3xl text-[#1f372a] mt-1">
-              Architecture, grounds &amp; common spaces.
-            </h2>
-            <p className="text-xs sm:text-sm text-[#68746b] mt-2 leading-relaxed">
-              Every authentic capture of La Vivante Homestay in Ramanathapuram, Coimbatore—including building front and side elevations, welcoming reception, open-air balcony terraces, vehicular parking, quiet garden, and guest circulation spaces.
-            </p>
-          </div>
+        <div className="mb-6">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-[#9b8050] flex items-center gap-1.5">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#9b8050]" />
+            COMPLETE PROPERTY ARCHITECTURE &amp; SPACES · 29 ORIGINAL PHOTOGRAPHS
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl text-[#1f372a] mt-1.5">
+            Architecture, grounds &amp; common spaces.
+          </h2>
+          <p className="text-xs sm:text-sm text-[#68746b] mt-2 max-w-3xl leading-relaxed">
+            Every authentic capture of La Vivante Homestay in Ramanathapuram, Coimbatore—including building front and side elevations, welcoming reception, open-air balcony terraces, vehicular parking, quiet garden, and guest circulation spaces.
+          </p>
+        </div>
 
-          {/* Filter Pills */}
-          <div className="flex flex-wrap gap-1.5" role="group" aria-label="Gallery category filter">
-            {categories.map((cat) => {
-              const isSelected = activeCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  type="button"
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-3 py-1 text-[11px] font-medium rounded-full transition-all cursor-pointer ${
-                    isSelected
-                      ? "bg-[#294b3b] text-white shadow-xs"
-                      : "bg-[#f8f6f0] border border-[#ded8cb] text-[#2c3d34] hover:bg-white"
+        {/* Filter Navigation Bar - Compact, neat with uniform spacing */}
+        <div className="mb-6 flex flex-wrap items-center gap-1.5" role="group" aria-label="Gallery category filter">
+          {categories.map((cat) => {
+            const isSelected = activeCategory === cat;
+            return (
+              <button
+                key={cat}
+                type="button"
+                onClick={() => setActiveCategory(cat)}
+                className={`px-2.5 py-1 text-[11px] font-medium rounded-full whitespace-nowrap transition-all duration-150 cursor-pointer ${isSelected
+                    ? "bg-[#294b3b] text-white shadow-xs ring-1 ring-[#294b3b]"
+                    : "bg-[#f8f6f0] border border-[#ded8cb] text-[#2c3d34] hover:bg-white hover:border-[#294b3b]"
                   }`}
-                  aria-pressed={isSelected}
-                >
-                  <span>{cat === "All" ? "All Spaces" : cat}</span>
-                </button>
-              );
-            })}
-          </div>
+                aria-pressed={isSelected}
+              >
+                <span>{cat === "All" ? "All Spaces" : cat}</span>
+              </button>
+            );
+          })}
         </div>
 
         {/* Featured Horizontal Sliding Showcase (Auto-advancing 5s with physical translateX slide) */}
@@ -82,10 +80,7 @@ export default function PropertyGallerySection() {
           <div className="p-4 border-b border-[#eee8dc] bg-[#f4f1e8] flex items-center justify-between">
             <span className="text-[11px] font-bold tracking-wider uppercase text-[#294b3b] flex items-center gap-2">
               <span className="inline-block w-2 h-2 rounded-full bg-[#9b8050] animate-pulse" />
-              Auto-Advancing Property Showcase (29 Photographs)
-            </span>
-            <span className="text-[10px] text-[#6d7568]">
-              Slides automatically every 5s &bull; Swipe or use arrows to navigate
+              Property Gallery
             </span>
           </div>
 

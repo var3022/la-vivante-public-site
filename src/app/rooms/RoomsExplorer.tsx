@@ -59,41 +59,40 @@ export default function RoomsExplorer() {
         </p>
 
         {/* Package Selector Filter */}
-        <div className="mt-8 rounded-2xl border border-[#e3dcd0] bg-white p-4 sm:p-6 shadow-xs">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#9b8050]">
-                CHOOSE COMFORT &amp; MEAL PACKAGE
-              </span>
-              <p className="text-xs text-[#6e756b] mt-0.5">
-                Tariffs vary by air-conditioning and breakfast inclusion. Extra person charges apply above base room occupancy.
-              </p>
-            </div>
-
-            {/* Package Option Buttons */}
-            <div className="inline-flex flex-wrap gap-2" role="group" aria-label="Stay package selection">
-              {PACKAGES.map((pkg) => {
-                const isSelected = pkg.id === selectedPackageId;
-                return (
-                  <button
-                    key={pkg.id}
-                    type="button"
-                    onClick={() => setSelectedPackageId(pkg.id)}
-                    className={`px-3.5 py-2 text-xs font-medium rounded-full transition-all duration-200 cursor-pointer ${
-                      isSelected
-                        ? "bg-[#294b3b] text-white shadow-sm ring-2 ring-[#294b3b]/20"
-                        : "bg-[#f8f6f0] border border-[#ded8cb] text-[#2c3d34] hover:bg-white hover:border-[#294b3b]"
-                    }`}
-                    aria-pressed={isSelected}
-                  >
-                    <span>{pkg.shortLabel}</span>
-                  </button>
-                );
-              })}
-            </div>
+        <div className="mt-8 rounded-2xl border border-[#e3dcd0] bg-white p-5 sm:p-6 shadow-xs">
+          <div>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#9b8050] flex items-center gap-1.5">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#9b8050]" />
+              CHOOSE COMFORT &amp; MEAL PACKAGE
+            </span>
+            <p className="text-xs text-[#6e756b] mt-1 max-w-2xl leading-relaxed">
+              Tariffs vary by air-conditioning and breakfast inclusion. Extra person charges apply above base room occupancy.
+            </p>
           </div>
 
-          <div className="mt-3 pt-3 border-t border-[#f0ebe0] flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#6d7367]">
+          {/* Package Option Buttons - Compact, neat, uniform spacing */}
+          <div className="mt-3.5 flex flex-wrap items-center gap-1.5" role="group" aria-label="Stay package selection">
+            {PACKAGES.map((pkg) => {
+              const isSelected = pkg.id === selectedPackageId;
+              return (
+                <button
+                  key={pkg.id}
+                  type="button"
+                  onClick={() => setSelectedPackageId(pkg.id)}
+                  className={`px-2.5 py-1 text-[11px] font-medium rounded-full whitespace-nowrap transition-all duration-150 cursor-pointer ${
+                    isSelected
+                      ? "bg-[#294b3b] text-white shadow-xs ring-1 ring-[#294b3b]"
+                      : "bg-[#f8f6f0] border border-[#ded8cb] text-[#2c3d34] hover:bg-white hover:border-[#294b3b]"
+                  }`}
+                  aria-pressed={isSelected}
+                >
+                  <span>{pkg.shortLabel}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="mt-4 pt-3.5 border-t border-[#f0ebe0] flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#6d7367]">
             <span>
               <strong>Selected:</strong> {currentPackage.name} &bull; {currentPackage.description}
             </span>
